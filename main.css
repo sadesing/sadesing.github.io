@@ -69,21 +69,6 @@ h6 {
 
 /* home page */
 
-body {
-  background-color: #ffffff; 
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-  padding: 1rem;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .nav-link {
   color: #333;
@@ -95,7 +80,10 @@ body {
   color: #666;
 }
 
-main {
-  padding: 2rem;
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: transform 400ms ease-out;
 }
 
