@@ -76,3 +76,7 @@ h6 {
 .nav-link:hover {
   color: #666;
 }
+
+@view-transition {
+  navigation: auto;
+}

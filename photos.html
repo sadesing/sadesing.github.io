@@ -1,34 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photos</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" alt="Logo">
-      </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Photos</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <h1>Photos</h1>
-    <p>Welcome to my photos page!</p>
-    <!-- Add your photos content here -->
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sade 👩🏾‍💻</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="styles/photo-gallery.css" />
+
+    <meta name="view-transition" content="same-origin" />
+  </head>
+
+  <body class="mb-28">
+          <!-- Navigation -->
+
+    <nav class="sticky top-0 bg-white w-full">
+      <div class="container mx-auto p-4">
+        <a href="index.html">
+          <img
+            src="assets/images/logo.png"
+            alt="Logo"
+            loading="lazy"
+            class="w-64 lg:w-96 mt-5 mx-auto"
+          />
+        </a>
+
+        <ul class="flex justify-center space-x-4 pt-6 pb-4">
+          <li><a href="index.html" class="nav-link">Portfolio</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="photos.html" class="nav-link">Photos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="pt-8 px-14">
+      <!-- Page title and intro -->
+      <div class="flex justify-center">
+        <img
+          class="w-20 mt-5"
+          src="assets/images/photos/photo-page-heading.png"
+          alt="photo page title"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="text-center mt-2">
+        An amateur photographer who loves capturing faces, places, things and
+        spaces.
+      </p>
+
+      <!-- Photo gallery -->
+
+      <div class="grid-container">
+        <div>
+          <img
+            class="grid-item grid-item-1"
+            src="assets/images/photos/sky-bay-area.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-2"
+            src="assets/images/photos/sf.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-3"
+            src="assets/images/photos/jardin.jpeg"
+            alt=""
+          />
+          <p>"I love you so much!"</p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-4"
+            src="assets/images/photos/elephants.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-5"
+            src="assets/images/photos/cn-tower.jpg"
+            alt=""
+          />
+          <p>"Views from the 6ix"</p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-6"
+            src="assets/images/photos/palms.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-7"
+            src="assets/images/photos/phillipsburg.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+        <div>
+          <img
+            class="grid-item grid-item-8"
+            src="assets/images/photos/elsav.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-9"
+            src="assets/images/photos/museum.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-10"
+            src="assets/images/photos/laguna.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-11"
+            src="assets/images/photos/kenya.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-12"
+            src="assets/images/photos/masaai.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-13"
+            src="assets/images/photos/cotton-candy.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-14"
+            src="assets/images/photos/dallas.jpg"
+            alt=""
+          />
+          <p>"I'm so happy today!"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-15"
+            src="assets/images/photos/sf-oak.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-16"
+            src="assets/images/photos/austin-sky.jpeg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-17"
+            src="assets/images/photos/livermore.jpg"
+            alt=""
+          />
+          <p>Wente Vineyards - Livermore, CA</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-18"
+            src="assets/images/photos/fam-trip.jpg"
+            alt=""
+          />
+          <p>Fam Bam <3</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-19"
+            src="assets/images/photos/costa-rica.jpg"
+            alt=""
+          />
+          <p>"Dis my fren!"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-20"
+            src="assets/images/photos/china-town.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-21"
+            src="assets/images/photos/palm-laguna.jpg"
+            alt=""
+          />
+          <p>"Under the palm trees"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-22"
+            src="assets/images/photos/bomas.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-23"
+            src="assets/images/photos/toronto.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-24"
+            src="assets/images/photos/belize.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-25"
+            src="assets/images/photos/cake.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-26"
+            src="assets/images/photos/hayward.jpg"
+            alt=""
+          />
+          <p>"I'm so happy today!"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-27"
+            src="assets/images/photos/peonies.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-28"
+            src="assets/images/photos/sd.jpg"
+            alt=""
+          />
+          <p>"I'm so happy today!"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-29"
+            src="assets/images/photos/kenya-ii.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-30"
+            src="assets/images/photos/alameda-beach.jpg"
+            alt=""
+          />
+          <p>"I'm so happy today!"</p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-31"
+            src="assets/images/photos/niagara.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-32"
+            src="assets/images/photos/costa.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-33"
+            src="assets/images/photos/hells-gate.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+
+        <div>
+          <img
+            class="grid-item grid-item-34"
+            src="assets/images/photos/amboseli.jpg"
+            alt=""
+          />
+          <p></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-black text-xs fixed bottom-0 w-full h-10">
+      <p class="font-sans text-white text-center pt-3">
+        Coded with
+        <span class="animate-pulse"> ❤️ </span> in TX. © 2024
+      </p>
+    </footer>
+  </body>
 </html>
