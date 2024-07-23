@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -66,24 +65,7 @@ h6 {
   isolation: isolate;
 }
 
-
 /* home page */
-
-body {
-  background-color: #ffffff; 
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-  padding: 1rem;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .nav-link {
   color: #333;
@@ -94,11 +76,3 @@ body {
 .nav-link:hover {
   color: #666;
 }
-
-main {
-  padding: 2rem;
-}
-
-
-
-/* footer */
