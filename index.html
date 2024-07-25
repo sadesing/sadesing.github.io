@@ -3,70 +3,294 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sade 👩🏾‍💻</title>
+    <title>Sade</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="./output.css" />
-    <meta name="view-transition" content="same-origin">
+    <meta name="view-transition" content="same-origin" />
   </head>
 
-  <body class="mb-28">
+  <body class="w-full mb-28">
     <nav class="sticky top-0 bg-white w-full">
       <div class="container mx-auto p-4">
         <a href="index.html">
-          <img src="assets/images/logo.png" alt="Logo" loading="lazy" class="w-64 lg:w-96 mt-5 mx-auto" />
+          <img
+            src="assets/images/logo.png"
+            alt="Logo"
+            loading="lazy"
+            class="w-64 lg:w-80 mt-5 mx-auto"
+          />
         </a>
 
-        <ul class="flex justify-center space-x-4 pt-6 pb-4">
+        <ul class="flex justify-center space-x-5 text-sm pt-6">
           <li><a href="index.html" class="nav-link">Portfolio</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="photos.html" class="nav-link">Photos</a></li>
         </ul>
       </div>
     </nav>
 
-    <main class="pt-8 px-14">
-      <div class="text-center">
-        <p class="mt-3 text-lg font-sans text-balance">
-          👋🏾 I'm Sade, a <span class="font-bold">software engineer</span> and
+    <!-- Introduction -->
+
+    <main
+      class="pt-4 mx-auto max-w-[800px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10"
+    >
+      <section>
+        <p class="text-sm text-balance mt-2 text-center">
+          👋🏾 I'm Sade. A <span class="font-bold">software engineer</span> and
           <span class="font-bold">creative professional</span> based in Texas. I
           enjoy crafting beautiful, clean and functional websites and
           applications.
         </p>
+      </section>
+
+      <!-- Portfolio grid -->
+      <div class="flex flex-row">
+        <svg
+          class="mt-16"
+          width="30px"
+          height="30px"
+          viewBox="0 0 400 400"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          transform="matrix(-1, 0, 0, 1, 0, 0)rotate(90)"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M35 262C160.529 140.938 328.006 207.285 361 215.518"
+              stroke="#000000"
+              stroke-opacity="0.9"
+              stroke-width="16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M343.69 143C355.23 190.289 361 214.681 361 216.177C361 218.421 327.488 234.13 312 258"
+              stroke="#000000"
+              stroke-opacity="0.9"
+              stroke-width="16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+
+        <p class="text-sm mt-12">Check out some of my recent work.</p>
       </div>
 
-        <!-- Image grid -->
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 justify-center">
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-6"
+      >
         <a class="block" href="#">
-          <img class="w-full h-full object-cover" src="assets/images/kai.gif" alt="Logo" loading="lazy"/>
-        </a>
-
-        <a class="block" href="#">
-          <img class="w-full h-full object-cover" src="assets/images/pourri.jpeg" alt="Logo" loading="lazy"/>
-        </a>
-
-        <a class="block" href="#">
-          <img class="w-full h-full object-cover" src="assets/images/pourri.jpeg" alt="Logo" loading="lazy"/>
+          <img
+            class="w-full h-full object-cover hover:scale-95"
+            src="assets/images/downtown.gif"
+            alt=""
+            loading="lazy"
+          />
         </a>
 
         <a class="block" href="#">
-          <img class="w-full h-full object-cover" src="assets/images/downtown.gif" alt="Logo" loading="lazy"/>
+          <img
+            class="w-full h-full object-cover hover:scale-95"
+            src="assets/images/downtown.gif"
+            alt=""
+            loading="lazy"
+          />
         </a>
 
+        <a class="block" href="#">
+          <img
+            class="w-full h-full object-cover hover:scale-95"
+            src="assets/images/downtown.gif"
+            alt=""
+            loading="lazy"
+          />
         </a>
-      </div>
+
+        <!-- Add more grid items here -->
+      </section>
+
+      <!-- About section -->
+
+      <section class="pt-20">
+        <div class="flex flex-col">
+          <div class="flex flex-col items-center lg:flex-row lg:flex-row-reverse lg:gap-6">
+
+
+
+
+            
+            <div class="lg:w-2/5">
+              <img
+                class="w-64 rounded-full hover:grayscale"
+                src="assets/images/profile2.jpg"
+                alt="Profile picture"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="lg:w-3/5">
+              <img
+                class="w-40 mt-5"
+                src="assets/images/about-heading2.png"
+                alt="About heading"
+                loading="lazy"
+              />
+
+              <p class="text-sm font-sans mt-4">
+                I currently work as a Front-End Software Engineer at
+                <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://airmail.news/">AIR MAIL</a>. Alumna of
+                <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://engineering.buffalo.edu/">University at Buffalo</a> and
+                <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://www.tsu.edu/">Texas Southern University</a>.
+                My love for all things code began in my early teens, during the
+                Myspace era, customizing layouts for myself and friends. I enjoy
+                bridging the gap between design and engineering, combining my
+                technical knowledge and keen eye for design to create meaningful
+                products. <br /><br />
+                Aside from coding, I enjoy serving my community, traveling, spending time with loved ones, eating good food and
+                <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="photos.html">photography</a>. I
+                also serve on the Leadership Board as the Community Outreach
+                Lead for the <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://www.wearebgc.org/">Black Girls CODE</a> Dallas Chapter and as Webmaster
+                for the  <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://www.ewb-texas.com/">Engineers Without Borders</a> North Texas Chapter. Previously,
+                I was an Evangelist/Advocate for <a class="font-bold no-underline hover:underline decoration-4 decoration-lime-500/30" href="https://www.womenwhocode.com/">Women Who Code DFW</a>.
+                <br /><br />
+                I seek to be inspired, to envision the unlikely, to work hard
+                for things that are worth it, and to be surrounded by those who
+                bring out the best in me.
+              </p>
+              <div class="flex flex-row">
+                <a href="https://www.linkedin.com/in/snsingleton/">
+                  <svg
+                    class="pt-1"
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 400 400"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M101.233 269.812C101.064 249.243 90.8019 121.708 99.4819 107.424C103.453 100.888 283.598 87.8692 295.568 107.023C307.538 126.176 307.538 291.259 290.547 297.938C265.229 307.89 153.005 300.548 118.644 297.938"
+                        stroke="#000000"
+                        stroke-opacity="0.9"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M152 251C154.25 227.679 152 204.362 152 181"
+                        stroke="#000000"
+                        stroke-opacity="0.9"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M151 152C151 149.71 152 150.902 152 149"
+                        stroke="#000000"
+                        stroke-opacity="0.9"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M192 181C190.478 203.876 191.146 227.015 191.146 250"
+                        stroke="#000000"
+                        stroke-opacity="0.9"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M192 200.435C192 190.538 204.438 182.539 211.503 180.778C256.825 169.483 254.094 192.707 252.092 249"
+                        stroke="#000000"
+                        stroke-opacity="0.9"
+                        stroke-width="16"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/sadesing">
+                  <svg
+                    class="pt-2"
+                    width="36px"
+                    height="36px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z"
+                        stroke="#000000"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+
+                <a href="mailto:sadensingleton@gmail.com">
+                  <svg class="pt-2" fill="#000000" width="36px" height="36px" viewBox="0 -15.98 110 110" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="mail" d="M184.416,263.969c.461-.2-.035-.385,0,0-1.445.17-1.908-.641-2.867-.955a33.229,33.229,0,0,1-1.275-6.048c-.04-1.34-1.231-1.527-1.272-2.865-1.3-15.255-2.058-31.044-3.5-46.155.492-2.478.18-5.763.638-8.277,1.291-1.252,1.735-3.358,3.184-4.457,7.7-1.166,16.056-.91,24.189-.953,8.267-.045,16.056-1.753,23.555-1.909,11.923-.519,25.311-.458,37.243,0,.339.722,2,.121,2.868.317.991.066,2.334-.215,2.864.32h3.182c.329.728,2.272-.152,2.547.636,1.506.125,1.45-1.308,3.182-.956,1.686.965,5.2.1,6.047,1.91.976,1,.273,2.4,0,3.819-.112,1.587-.873,2.521-.636,4.457-.327,3.071-.823,5.968-.954,9.231-.623,6.168-.286,13.3-.956,19.417-.053,6.738-.519,13.062-.955,19.416V261.1a17.8,17.8,0,0,1-.318,4.773c-.266,1.43-.841,2.554-2.228,2.867-1.211.151-1.987-.135-2.226-.955-1.154-.013-.075-2.261-1.592-1.912-7.181.568-13.545,1.951-21.328,1.912-6.757.988-14.258,1.232-21.009,2.228H204.15c-2.524-.343-5.208-.524-7.639-.954a64.99,64.99,0,0,1-7.959-.319c-2.279-.585-4.886-.844-4.775-3.82C184.227,264.839,184.142,264.226,184.416,263.969Zm96.127-65.253c0-.177-.255-.362-.317,0C280.223,198.892,280.483,199.076,280.543,198.716Zm-27.055.318a33.259,33.259,0,0,0-4.454,0c-1.215-.033-2.473.177-2.867-.318-.159-.2-.405.316-.318.318-1.057-.015-2.222.085-2.865,0-.227-.03-.295-.315-.319-.318-.26-.054-.325.318-.325.318a18.556,18.556,0,0,0-2.222,0,2.376,2.376,0,0,1-.636,0,5.3,5.3,0,0,0-1.911,0c-.008,0,.012-.3,0-.318s-1.258.649-1.592.318c-.127-.545-.407.067-.955,0a189.855,189.855,0,0,0-26.1,1.59H187.282c-1.117.448-2.04-.892-2.547,0,7.739,3.721,14.979,7.94,22.918,11.46,3.96,1.768,7.4,4.059,11.457,5.73,1.495,1.368,3.467,2.262,5.091,3.5,1.957,1.018,3.523,2.422,5.729,3.183a33.932,33.932,0,0,0,5.733,4.139c2.891-2.731,6.242-5.007,9.229-7.639,1.929-.834,3.042-2.479,5.094-3.184.106-.445.647-.739.954-.955a7.3,7.3,0,0,1,1.593-.955c.629-.033.738-.927,1.273-.954.705-.038.426-.911,1.273-.637a87.991,87.991,0,0,1,9.87-7,42.492,42.492,0,0,1,5.092-3.184,16.721,16.721,0,0,1,2.227-1.91,5.461,5.461,0,0,1,1.272-.953c0-.468,1.345-1.011,0-.956A132.772,132.772,0,0,0,253.488,199.034Zm-71.3,1.59c-.272-.269-.91.232-.956.319C180.9,201.567,182.419,200.86,182.188,200.624Zm6.683,55.069c-.463.2.035.386,0,0,2.213-2.346,3.535-5.588,7.32-6.366-.786,2.925-2.395,5.03-3.818,7.321a20.555,20.555,0,0,1-2.228,3.5,3.626,3.626,0,0,1-2.547,2.865c-.848,0-.691-1.005-1.591-.955.15,1-.858.841-.956,1.591,1.658.042,2.8.594,4.457.638.471-.14-.126-.409,0-.955a1.5,1.5,0,0,0,.318-.955c1.088-.6,1.438-1.916,2.229-2.864.716-.866,1.4-2.176,2.863-2.23.108,1.489-.687,2.071-.955,3.184,1.717-.513,2.081-2.378,4.138-2.547,1.283-.327,1.414.495,1.913.955,1.824-1.676,3.546-3.452,6.683-3.819.488.9-.682,1.471,0,2.864.878,1.775,1.049,4.254,1.591,6.367a64.176,64.176,0,0,1,7.958-.319c.983-.925.842-2.975,2.545-3.183.665.975-.945,1.878-.955,3.183h12.416c-.229-.971.327-1.16.315-1.91,1.195-.189,1.648-1.114,2.549-1.591a7.877,7.877,0,0,1,1.908-2.547c.524-.624,1.247-2.1,2.228-1.273-.7,3.008-2.841,4.582-4.136,7,3.212-.184,6.085-.706,9.23-.956.38-1,1.074-1.683,1.274-2.863.653-.089.633-.851.955-1.274.458.17.779-1.24.955-.317-.321,1.8-1.658,2.588-1.91,4.454,7.807-1.634,17.351-1.534,25.145-3.18,2.474.244,3.971-.489,6.369-.32,1.208-2.821.16-7.9.952-11.14v-4.776c-.129-.765.582-.691.317-1.592V237.55c.823-9.367,1.353-19.022,1.914-28.649.254-.822.715-3.085,0-3.821-5.724,5.633-13.568,9.14-19.735,14.326-1.679,1.187-3.522,2.207-5.094,3.5-1.928.832-3.042,2.476-5.094,3.183-1.316,1.548-3.459,2.273-4.774,3.82-1.84.919-3.073,2.446-5.094,3.184a3.645,3.645,0,0,1-2.547,2.547c-2.127.321-2.889-.72-4.454-.956-1.048-.76-1.831-1.777-3.182-2.229-1.518-1.985-4.292-2.71-6.049-4.457-2.455-1.046-4.157-2.848-6.367-4.138a28.3,28.3,0,0,0-6.687-3.82c-4.239-2.761-9.27-4.733-13.367-7.638-2.488-1.015-4.3-2.707-6.685-3.82-2.138-1.361-4-3.006-6.366-4.139-.567-.6-.859-1.472-1.59-1.908.513,5.109.967,10.279,1.59,15.278.2.864-.4,2.526.317,2.865.2.76-.4,2.309.32,2.545.906-1.534,1.742-3.138,4.456-2.864,1.146,3.936-1.726,6.526-2.23,9.867-.665.393-.2,1.917-.95,2.229.081,1.148-.589,1.534-.639,2.547-.334.728-.2,1.919-.637,2.547.2.861-.4,2.525.318,2.865.705-2.375,2.161-3.993,2.864-6.367,1.2-.713,1.68-2.144,3.5-2.228.759.407,1.725.609,1.91,1.591-.111,2.013-1.378,2.869-1.91,4.456-.4,1.616-1.266,2.768-1.593,4.457-.8,1.317-1.013,3.231-1.911,4.456-.047,1.012-.721,1.4-.634,2.547-.3.268-1.068,1.642-.322,1.909.857-2.645,2.806-4.2,3.823-6.684,1.927-1.47,2.544-4.245,6.046-4.137,1.172,3.61-1.827,5.522-2.864,7.956C191.5,250.9,189.939,253.048,188.871,255.693Zm-2.864,4.456c.8.03,1.553-1.6.955-1.909C186.5,258.735,185.68,258.868,186.007,260.149Zm14.958,4.139h3.5c-.289-1.622.657-4.478-.637-5.094C203.008,261.021,201.791,262.46,200.965,264.288Zm-8.91,0a2.079,2.079,0,0,0,1.589.317,6.223,6.223,0,0,0-.954-2.227A7.066,7.066,0,0,0,192.055,264.288Z" transform="translate(-175.5 -191.983)" fill-rule="evenodd"></path> </g></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 justify-center">
+          <div class="flex flex-col justify-center">
+            <a class="block" href="#">
+              <img
+                class="w-full h-full object-cover bg-black"
+                src=""
+                alt="Logo"
+                loading="lazy"
+              />
+            </a>
+            <p>Text here</p>
+          </div>
+
+          <div class="flex flex-col justify-center">
+            <img
+              class="w-full h-full object-cover bg-black"
+              src=""
+              alt="Logo"
+              loading="lazy"
+            />
+
+            <p>Text here</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-
-
-    <footer class="bg-black text-xs fixed bottom-0 w-full h-10">
-      <p class="font-sans text-white text-center pt-3">
-        Coded with
-        <span class="animate-pulse"> ❤️ </span> in TX. ©
-        2024
+    <footer class="bg-black text-xs fixed bottom-0 w-full h-20">
+      <p class="font-sans text-white text-center pt-8">
+        Coded with 🍵 and
+        <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024
       </p>
     </footer>
-
   </body>
 </html>
