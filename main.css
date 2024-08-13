@@ -1,17 +1,28 @@
 /* Tailwind */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@font-face {
+  font-family: "SangGuru";
+  src: url(fonts/SangGuru.ttf) format("truetype");
+}
 
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 /* Main styles */
-
 body {
-background-color: white;
+  background-color: white;
 }
 
 .nav-link {
@@ -24,9 +35,19 @@ background-color: white;
   color: #666;
 }
 
+.heading-h1 {
+  font-family: "SangGuru", cursive;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.heading-h5 {
+  font-family: "SangGuru", cursive;
+  font-style: normal;
+  font-size: 20px;
+}
 
 /* Photo gallery */
-
 .grid-container {
   columns: 5 200px;
   column-gap: 1.5rem;
@@ -66,9 +87,21 @@ background-color: white;
   }
 }
 
-
 /* View transition */
 
 @view-transition {
   navigation: auto;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
