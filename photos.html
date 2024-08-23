@@ -1,434 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sade Singleton</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    <meta name="view-transition" content="same-origin" />
-  </head>
 
-  <body class="w-full">
-    <nav class="sticky top-0 bg-white border-b border-slate-300 w-full z-50">
-      <div class="container mx-auto pt-6">
-        <h1 class="heading-h1 text-center">
-          <a href="index.html">Sade Singleton</a>
-        </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sade Singleton</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <meta name="view-transition" content="same-origin" />
+</head>
 
-        <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
-          <li><a href="index.html" class="nav-link">Portfolio</a></li>
-          <li><a href="photos.html" class="nav-link">Photos</a></li>
-        </ul>
-      </div>
-    </nav>
+<body class="w-full">
+  <nav class="sticky top-0 bg-white border-b border-slate-300 w-full z-50">
+    <div class="container mx-auto pt-6">
+      <h1 class="heading-h1 text-center">
+        <a href="index.html">Sade Singleton</a>
+      </h1>
 
-    <main
-      class="pt-14 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10"
-    >
+      <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
+        <li><a href="index.html" class="nav-link">Portfolio</a></li>
+        <li><a href="photos.html" class="nav-link">Photos</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="pl-5 md:pl-11 md:pr-6">
-    <h5 class="heading-h5">An archive of some of my favortite shots.</h5>
-</div>
+  <main class="pt-14 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
+    <!-- Photo gallery -->
 
+    <div class="photo-gallery">
 
-
-
-
-        <!-- Photo gallery -->
-
-        <div class="grid-container">
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-1"
-              src="assets/images/photos/sky-bay-area.jpg"
-              alt=""
-            />
-            <p>Catching Sunsets in the Bay</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-2"
-              src="assets/images/photos/sf.jpg"
-              alt=""
-            />
-            <p>Golden Gate Bridge - San Francisco</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-3"
-              src="assets/images/photos/jardin.jpeg"
-              alt=""
-            />
-            <p>Jardin Majorelle - Morocco 🏜️</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-4"
-              src="assets/images/photos/elephants.jpg"
-              alt=""
-            />
-            <p>Gentle Giants 🐘</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-5"
-              src="assets/images/photos/cn-tower.jpg"
-              alt=""
-            />
-            <p>""</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-6"
-              src="assets/images/photos/palms.jpg"
-              alt=""
-            />
-            <p>Palm Trees in Marrakesh 🌴</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-7"
-              src="assets/images/photos/phillipsburg.jpg"
-              alt=""
-            />
-            <p>""</p>
-          </div>
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-8"
-              src="assets/images/photos/elsav.jpg"
-              alt=""
-            />
-            <p>Santa Ana Volcano, El Salvador</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-9"
-              src="assets/images/photos/museum.jpg"
-              alt=""
-            />
-            <p>The Dallas Museum of Art</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-10"
-              src="assets/images/photos/laguna.jpg"
-              alt=""
-            />
-            <p>Laguna Beach, California</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-11"
-              src="assets/images/photos/kenya.jpg"
-              alt=""
-            />
-            <p>""</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-12"
-              src="assets/images/photos/masaai.jpg"
-              alt=""
-            />
-            <p>Maasai Adumu "Jumping Dance"</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-13"
-              src="assets/images/photos/cotton-candy.jpg"
-              alt=""
-            />
-            <p>Cotton Candy Skies ☁️</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-14"
-              src="assets/images/photos/dallas.jpg"
-              alt=""
-            />
-            <p>6pm in Dallas</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-15"
-              src="assets/images/photos/sf-oak.jpg"
-              alt=""
-            />
-            <p>""</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-16"
-              src="assets/images/photos/austin-sky.jpeg"
-              alt=""
-            />
-            <p>Little Miss Obsessed with Sunsets</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-17"
-              src="assets/images/photos/livermore.jpg"
-              alt=""
-            />
-            <p>Wente Vineyards - Livermore, CA</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-25"
-              src="assets/images/photos/cake.jpg"
-              alt=""
-            />
-            <p>February 2023 - A surprise from mom</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-18"
-              src="assets/images/photos/fam-trip.jpg"
-              alt=""
-            />
-            <p>Fam Bam <3</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-19"
-              src="assets/images/photos/costa-rica.jpg"
-              alt=""
-            />
-            <p>Dreamy Bathrooms 🧺🌿</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-20"
-              src="assets/images/photos/china-town.jpg"
-              alt=""
-            />
-            <p>Chinatown, San Francisco, CA</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-21"
-              src="assets/images/photos/palm-laguna.jpg"
-              alt=""
-            />
-            <p>...Swaying Away</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-22"
-              src="assets/images/photos/bomas.jpg"
-              alt=""
-            />
-            <p>Bomas Of Kenya - Langata, Nairobi</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-23"
-              src="assets/images/photos/toronto.jpg"
-              alt=""
-            />
-            <p>"Views From the 6ix"</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-24"
-              src="assets/images/photos/belize.jpg"
-              alt=""
-            />
-            <p>Ambergris Caye, Belize</p>
-          </div>
-
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-26"
-              src="assets/images/photos/hayward.jpg"
-              alt=""
-            />
-            <p>Hayward Japanese Gardens</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-27"
-              src="assets/images/photos/peonies.jpg"
-              alt=""
-            />
-            <p>Fresh Peonies 💐</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-28"
-              src="assets/images/photos/sd.jpg"
-              alt=""
-            />
-            <p>Harper's Topiary Garden - San Diego</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-29"
-              src="assets/images/photos/kenya-ii.jpg"
-              alt=""
-            />
-            <p>Mount Kilimanjaro - Amboseli National Park</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-30"
-              src="assets/images/photos/alameda-beach.jpg"
-              alt=""
-            />
-            <p>Alameda South Shore Beach</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-31"
-              src="assets/images/photos/niagara.jpg"
-              alt=""
-            />
-            <p>Niagara Falls, Ontario 🌊</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-32"
-              src="assets/images/photos/costa.jpg"
-              alt=""
-            />
-            <p>Puntarenas, Costa Rica</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-33"
-              src="assets/images/photos/hells-gate.jpg"
-              alt=""
-            />
-            <p>Hell's Gate National Park</p>
-          </div>
-
-          <div class="bg-white hover:scale-105">
-            <img
-              class="grid-item grid-item-34"
-              src="assets/images/photos/amboseli.jpg"
-              alt=""
-            />
-            <p>"I'm so happy today!"</p>
-          </div>
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/sky-bay-area.jpg" alt="">
+          <h5 class="photo-gallery__caption">Catching Sunsets in the Bay</h5>
         </div>
+      </div>
 
-        <!-- Photo gallery test-->
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/sf.jpg" alt="">
+          <h5 class="photo-gallery__caption">Golden Gate Bridge - San Francisco</h5>
+        </div>
+      </div>
 
-        <div class="gallery">
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/sky-bay-area.jpg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Catching sunsets in the bay</figcaption>
-            </figure>
-          </a>
-      
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/sf.jpg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-      
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/jardin.jpeg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-        
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/elephants.jpg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-          
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/cn-tower.jpg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-      
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="assets/images/photos/palms.jpg" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-        
-          <a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1495649904698-0f3670bdf61f?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Portrait by Mari Lezhava" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
-            </figure>
-          </a>
-          
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1627388020481-4330ab86d091?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Suad Kamardeen</figcaption>
-            </figure>
-          </a>
-      
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1517462964-21fdcec3f25b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-        
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1593501273289-354b4fcf3add?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
-      
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1619378607926-710cb2d2f9a3?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-            </a>
-          
-          <a class="gallery__link">
-            <figure class="gallery__thumb">
-              <img src="https://images.unsplash.com/photo-1586245895595-395fb6ffd945?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait</figcaption>
-            </figure>
-          </a>
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/jardin.jpeg" alt="">
+          <h5 class="photo-gallery__caption">Jardin Majorelle - Morocco</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/elephants.jpg" alt="">
+          <h5 class="photo-gallery__caption">"Gentle Giants"</h5>
+        </div>
       </div>
 
 
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/cn-tower.jpg" alt="">
+          <h5 class="photo-gallery__caption">CN Tower, Toronto, ON</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/palms.jpg" alt="">
+          <h5 class="photo-gallery__caption">Palm Trees in Marrakesh 🌴</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/phillipsburg.jpg" alt="">
+          <h5 class="photo-gallery__caption">Phillipsburg, Sint Maarten</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/elsav.jpg" alt="">
+          <h5 class="photo-gallery__caption">Santa Ana Volcano, El Salvador</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/museum.jpg" alt="">
+          <h5 class="photo-gallery__caption">The Dallas Museum of Art</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/laguna.jpg" alt="">
+          <h5 class="photo-gallery__caption">Laguna Beach, California</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/kenya.jpg" alt="">
+          <h5 class="photo-gallery__caption">Kenya, Africa 📍</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/masaai.jpg" alt="">
+          <h5 class="photo-gallery__caption">Maasai Adumu "Jumping Dance"</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/cotton-candy.jpg" alt="">
+          <h5 class="photo-gallery__caption">Cotton Candy Skies ☁️</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/dallas.jpg" alt="">
+          <h5 class="photo-gallery__caption">6pm in Dallas</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/sf-oak.jpg" alt="">
+          <h5 class="photo-gallery__caption">Cloudy Commutes</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/austin-sky.jpeg" alt="">
+          <h5 class="photo-gallery__caption">"Little Miss Obsessed with Sunsets"</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/livermore.jpg" alt="">
+          <h5 class="photo-gallery__caption">Wente Vineyards - Livermore, CA</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/bomas.jpg" alt="">
+          <h5 class="photo-gallery__caption">Bomas Of Kenya - Langata, Nairobi</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/cake.jpg" alt="">
+          <h5 class="photo-gallery__caption">02/2023 - A surprise from mom</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/fam-trip.jpg" alt="">
+          <h5 class="photo-gallery__caption">Fam Bam <3< /h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/costa-rica.jpg" alt="">
+          <h5 class="photo-gallery__caption">Dreamy Bathrooms 🧺🌿</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/china-town.jpg" alt="">
+          <h5 class="photo-gallery__caption">Chinatown, San Francisco, CA</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/palm-laguna.jpg" alt="">
+          <h5 class="photo-gallery__caption">...Swaying Away</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/toronto.jpg" alt="">
+          <h5 class="photo-gallery__caption">"Views From the 6ix"</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/belize.jpg" alt="">
+          <h5 class="photo-gallery__caption">Ambergris Caye, Belize</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/hayward.jpg" alt="">
+          <h5 class="photo-gallery__caption">Hayward Japanese Gardens</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/peonies.jpg" alt="">
+          <h5 class="photo-gallery__caption">Fresh Peonies 💐</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/sd.jpg" alt="">
+          <h5 class="photo-gallery__caption">Harper's Topiary Garden - San Diego</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/kenya-ii.jpg" alt="">
+          <h5 class="photo-gallery__caption">Mount Kilimanjaro - Amboseli National Park</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/alameda-beach.jpg" alt="">
+          <h5 class="photo-gallery__caption">Alameda South Shore Beach</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/niagara.jpg" alt="">
+          <h5 class="photo-gallery__caption">Niagara Falls, Ontario 🌊</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/costa.jpg" alt="">
+          <h5 class="photo-gallery__caption">Puntarenas, Costa Rica</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/hells-gate.jpg" alt="">
+          <h5 class="photo-gallery__caption">Hell's Gate National Park</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/amboseli.jpg" alt="">
+          <h5 class="photo-gallery__caption">"I'm so happy today!"</h5>
+        </div>
+      </div>
+
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/ub.jpg" alt="">
+          <h5 class="photo-gallery__caption">Baird Point - University at Buffalo
+          </h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/lombard.jpg" alt="">
+          <h5 class="photo-gallery__caption">Top of Lombard Street</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/leos.jpg" alt="">
+          <h5 class="photo-gallery__caption">Leo's Oyster Bar, San Francisco</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/rainbow.jpg" alt="">
+          <h5 class="photo-gallery__caption">🌈</h5>
+        </div>
+      </div>
+
+      <div class="photo-gallery__container">
+        <div class="relative">
+          <img class="photo-gallery__image" src="assets/images/photos/royal-mansour.jpg" alt="">
+          <h5 class="photo-gallery__caption">Royal Mansour - Marrakesh, Morocco</h5>
+        </div>
+      </div>
+
+    </div>
 
 
 
@@ -441,14 +333,17 @@
 
 
 
-      </section>
-    </main>
 
-    <footer class="bg-black text-xs bottom-0 w-full h-20 z-50">
-      <p class="font-sans text-white text-center pt-8">
-        Coded with 🍵 and
-        <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024
-      </p>
-    </footer>
-  </body>
+
+    </section>
+  </main>
+
+  <footer class="bg-black text-xs bottom-0 w-full h-20 z-50">
+    <p class="font-sans text-white text-center pt-8">
+      Coded with 🍵 and
+      <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024
+    </p>
+  </footer>
+</body>
+
 </html>
