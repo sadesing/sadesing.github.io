@@ -33,10 +33,17 @@ html {
   color: #333;
   text-decoration: none;
   transition: color 0.2s ease;
-}
+  background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 1px no-repeat;
+  transition: 0.5s;
 
-.nav-link:hover {
-  color: #666;
+  &:hover {
+    --d: 100%;
+
+  }
+
+  &.active {
+    font-weight: 600;
+  }
 }
 
 .heading-h1 {
@@ -50,10 +57,6 @@ html {
   font-style: normal;
   font-size: 20px;
 }
-
-/* View transition */
-
-
 
 /* Photo Gallery */
 .photo-gallery {
@@ -105,12 +108,11 @@ html {
     font-size: 12px;
     color: white;
     opacity: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%);
     transition: 0.3s;
   }
 }
 
+/* View transition */

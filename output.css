@@ -753,10 +753,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mb-28{
-  margin-bottom: 7rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -2719,10 +2715,14 @@ html {
   color: #333;
   text-decoration: none;
   transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #666;
+  background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 1px no-repeat;
+  transition: 0.5s;
+  &:hover {
+    --d: 100%;
+  }
+  &.active {
+    font-weight: 600;
+  }
 }
 
 .heading-h1 {
@@ -2736,8 +2736,6 @@ html {
   font-style: normal;
   font-size: 20px;
 }
-
-/* View transition */
 
 /* Photo Gallery */
 
@@ -2784,14 +2782,14 @@ html {
     font-size: 12px;
     color: white;
     opacity: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%);
     transition: 0.3s;
   }
 }
+
+/* View transition */
 
 @media (min-width: 640px){
   .sm\:container{
@@ -2888,15 +2886,15 @@ html {
   .md\:pt-10{
     padding-top: 2.5rem;
   }
+
+  .md\:pt-20{
+    padding-top: 5rem;
+  }
 }
 
 @media (min-width: 1024px){
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:pt-0{
-    padding-top: 0px;
   }
 
   .lg\:text-base{
@@ -2912,4 +2910,3 @@ html {
     }
   }
 }
-

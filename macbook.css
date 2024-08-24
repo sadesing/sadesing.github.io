@@ -1,3 +1,16 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray-light: #cacacc;
+  --gray-dark: #333;
+  --gray-medium: #ddd;
+  --shadow-dark: rgba(0, 0, 0, 0.8);
+  --shadow-light: rgba(255, 255, 255, 0.3);
+  --border-radius-screen: 3% 3% 0.5% 0.5% / 5%;
+  --border-radius-notch: 0 0 7% 7% / 0 0 95% 95%;
+  --gradient-base: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
+  --gradient-base-after: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+}
 
 .macbook {
   padding: 4% 6%;
@@ -6,21 +19,19 @@
 }
 
 .screen {
-  background: #000;
-  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  background: var(--black);
+  border-radius: var(--border-radius-screen);
   margin: 0 auto;
-  /* for aspect ratio */
   position: relative;
   width: 80%;
 }
 
 .screen:before {
-  border: 2px solid #cacacc;
-  border-radius: 3% 3% 0.5% 0.5% / 5%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--border-radius-screen);
+  box-shadow: 0 0 0 1px var(--shadow-dark) inset, 0 0 1px 2px var(--shadow-light) inset;
   content: "";
   display: block;
-  /* for aspect ratio ~67:100 */
   padding-top: 67%;
 }
 
@@ -41,11 +52,10 @@
   right: 0;
   top: 0;
   margin: 4.3% 3.2%;
-  background: #333;
+  background: var(--gray-dark);
 }
 
 .base {
-  /* for aspect ratio */
   position: relative;
   width: 100%;
 }
@@ -53,15 +63,13 @@
 .base:before {
   content: "";
   display: block;
-  /* for aspect ratio ~33:1000*/
   padding-top: 3.3%;
-  /* stylin */
-  background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
-  border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+  background: var(--gradient-base);
+  border-radius: 0 0 10% 10% / 0 0 50% 50%;
 }
 
-.base::after {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+.base:after {
+  background: var(--gradient-base-after);
   content: "";
   height: 53%;
   position: absolute;
@@ -70,14 +78,11 @@
 }
 
 .notch {
-  background: #ddd;
-  border-radius: 0 0 7% 7% / 0 0 95% 95%;
+  background: var(--gray-medium);
+  border-radius: var(--border-radius-notch);
   box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -3.5%;
+  margin: -3.5% auto 0;
   z-index: 2;
-  /* for aspect ratio */
   position: relative;
   width: 14%;
 }
@@ -85,13 +90,10 @@
 .notch:before {
   content: "";
   display: block;
-  /* for aspect ratio ~1:10 */
   padding-top: 10%;
 }
 
-
-/* Screenshot Hover Scroll Additions
--------------------------------------------------------------- */
+/* Screenshot Hover Scroll Additions */
 
 .macbook .viewport {
   transition: background-position 5s ease;
