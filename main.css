@@ -1,7 +1,7 @@
 /* Tailwind */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Fonts */
 
@@ -33,12 +33,12 @@ html {
   color: #333;
   text-decoration: none;
   transition: color 0.2s ease;
-  background: linear-gradient(currentColor 0 0) bottom /var(--d, 0) 1px no-repeat;
+  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px
+    no-repeat;
   transition: 0.5s;
 
   &:hover {
     --d: 100%;
-
   }
 
   &.active {
@@ -92,7 +92,6 @@ html {
     transition: 0.3s;
     box-shadow: 1px 2px 2px black;
 
-
     &:hover {
       transform: scale(1.1);
     }
@@ -108,9 +107,11 @@ html {
     font-size: 12px;
     color: white;
     opacity: 0;
-    background: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
     transition: 0.3s;
   }
 }
