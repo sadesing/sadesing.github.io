@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* Tailwind */
 
@@ -2349,10 +2349,6 @@ video {
   text-decoration-line: none;
 }
 
-.decoration-lime-500\/30{
-  text-decoration-color: rgb(132 204 22 / 0.3);
-}
-
 .decoration-solid{
   text-decoration-style: solid;
 }
@@ -2371,10 +2367,6 @@ video {
 
 .decoration-wavy{
   text-decoration-style: wavy;
-}
-
-.decoration-4{
-  text-decoration-thickness: 4px;
 }
 
 .antialiased{
@@ -2764,10 +2756,30 @@ html {
   font-size: 40px;
 }
 
-.heading-h5 {
+@media (max-width: 640px) {
+  .heading-h1 {
+    font-size: 30px;
+    /* Smaller font size for mobile */
+  }
+}
+
+.heading-h2 {
   font-family: "SangGuru", cursive;
   font-style: normal;
   font-size: 20px;
+}
+
+/* Styles for the shrunken header */
+
+.header-shrink {
+  padding-bottom: 0.5rem;
+  transition: padding 0.3s ease;
+}
+
+.header-shrink .heading-h1 {
+  font-size: 1.5rem;
+  /* Adjust the font size as needed */
+  transition: font-size 0.3s ease;
 }
 
 /* Photo Gallery */
@@ -2811,7 +2823,7 @@ html {
     left: 0;
     padding: 25px 20px 12px;
     width: 100%;
-    font-family: "lato", sans-serif;
+    font-family: 'Comic Neue', sans-serif;
     font-size: 12px;
     color: white;
     opacity: 0;
@@ -2823,8 +2835,6 @@ html {
     transition: 0.3s;
   }
 }
-
-/* View transition */
 
 @media (min-width: 640px){
   .sm\:container{
@@ -2875,10 +2885,6 @@ html {
 
 .hover\:font-bold:hover{
   font-weight: 700;
-}
-
-.hover\:underline:hover{
-  text-decoration-line: underline;
 }
 
 .before\:hover\:text-center:hover::before{
@@ -2954,3 +2960,4 @@ html {
     }
   }
 }
+

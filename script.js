@@ -1,6 +1,4 @@
 //Back to top button functionality
-
-// Get the button
 const backToTopButton = document.getElementById("back-to-top");
 
 // Function to check screen size and toggle button visibility
@@ -22,7 +20,6 @@ function checkScreenSize() {
     window.onscroll = null; // Remove the scroll event listener on smaller screens
   }
 }
-
 // Initial check
 checkScreenSize();
 
@@ -34,3 +31,18 @@ backToTopButton.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+
+//Header shrink upon scroll functionality
+const header = document.querySelector('header');
+
+// Function to toggle the 'header-shrink' class based on scroll position
+function toggleHeaderShrink() {
+  if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+    header.classList.add('header-shrink');
+  } else {
+    header.classList.remove('header-shrink');
+  }
+}
+// Add the scroll event listener
+window.addEventListener('scroll', toggleHeaderShrink);
