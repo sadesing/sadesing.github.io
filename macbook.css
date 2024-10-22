@@ -8,8 +8,28 @@
   --shadow-light: rgba(255, 255, 255, 0.3);
   --border-radius-screen: 3% 3% 0.5% 0.5% / 5%;
   --border-radius-notch: 0 0 7% 7% / 0 0 95% 95%;
-  --gradient-base: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
-  --gradient-base-after: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+  --gradient-base: linear-gradient(
+    #eaeced,
+    #edeef0 55%,
+    #fff 55%,
+    #8a8b8f 56%,
+    #999ba0 61%,
+    #4b4b4f 84%,
+    #262627 89%,
+    rgba(0, 0, 0, 0.01) 98%
+  );
+  --gradient-base-after: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.8) 0.5%,
+    rgba(0, 0, 0, 0.4) 3.3%,
+    transparent 15%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 85%,
+    rgba(0, 0, 0, 0.4) 96.7%,
+    rgba(255, 255, 255, 0.8) 99.5%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .macbook {
@@ -29,7 +49,8 @@
 .screen:before {
   border: 2px solid var(--gray-light);
   border-radius: var(--border-radius-screen);
-  box-shadow: 0 0 0 1px var(--shadow-dark) inset, 0 0 1px 2px var(--shadow-light) inset;
+  box-shadow: 0 0 0 1px var(--shadow-dark) inset,
+    0 0 1px 2px var(--shadow-light) inset;
   content: "";
   display: block;
   padding-top: 67%;
@@ -80,7 +101,8 @@
 .notch {
   background: var(--gray-medium);
   border-radius: var(--border-radius-notch);
-  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset,
+    5px -1px 3px rgba(0, 0, 0, 0.2) inset;
   margin: -3.5% auto 0;
   z-index: 2;
   position: relative;
@@ -108,7 +130,12 @@
 }
 
 .macbook .viewport:after {
-  background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+  background: radial-gradient(
+    circle at right bottom,
+    transparent 75%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent
+  );
   bottom: 0;
   content: "";
   left: 0;
