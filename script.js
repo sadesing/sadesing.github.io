@@ -46,3 +46,17 @@ function toggleHeaderShrink() {
 }
 // Add the scroll event listener
 window.addEventListener('scroll', toggleHeaderShrink);
+
+
+    // Get the current page's URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Loop through the nav links and add 'active' class to the current page's link
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('text-underline', 'font-bold');
+      }
+    });

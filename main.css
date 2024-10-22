@@ -39,10 +39,6 @@ html {
   &:hover {
     --d: 100%;
   }
-
-  &.active {
-    font-weight: 600;
-  }
 }
 
 .heading-h1 {
