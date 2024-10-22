@@ -2738,7 +2738,7 @@ video {
   src: url("fonts/StudyHard.ttf") format("truetype");
 }
 
-/* Main styles */
+/* Global Styles */
 
 *,
 *::before,
@@ -2746,27 +2746,30 @@ video {
   box-sizing: inherit;
 }
 
-body {
-  background-color: #faf6f0;
-  font-family: "Lato", sans-serif;
-}
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #faf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+/* Navigation Link Styles */
+
 .nav-link {
   color: #333;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-size 0.5s;
   background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px no-repeat;
-  transition: 0.5s;
 }
 
 .nav-link:hover {
   --d: 100%;
 }
+
+/* Heading Styles */
 
 .heading-h1 {
   font-family: "StudyHard", cursive;
@@ -2800,7 +2803,7 @@ html {
   transition: font-size 0.3s ease;
 }
 
-/* Photo gallery */
+/* Photo Gallery Styles */
 
 .photo-gallery {
   -moz-columns: 5 200px;
@@ -2863,6 +2866,7 @@ html {
 }
 
 .highlight-container {
+  position: relative;
   display: inline-block;
 }
 
