@@ -36,6 +36,22 @@ backToTopButton.addEventListener("click", function () {
 //Header shrink upon scroll functionality
 const header = document.querySelector('header');
 
+// Debounce function to limit the frequency of the scroll event handler
+function debounce(func, wait = 10, immediate = true) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
 // Function to toggle the 'header-shrink' class based on scroll position
 function toggleHeaderShrink() {
   if (window.scrollY > 50) { // Adjust the scroll threshold as needed
@@ -44,19 +60,20 @@ function toggleHeaderShrink() {
     header.classList.remove('header-shrink');
   }
 }
-// Add the scroll event listener
-window.addEventListener('scroll', toggleHeaderShrink);
+
+// Add the scroll event listener with debounce
+window.addEventListener('scroll', debounce(toggleHeaderShrink));
 
 
-    // Get the current page's URL
-    const currentPage = window.location.pathname.split("/").pop();
+// Get the current page's URL
+const currentPage = window.location.pathname.split("/").pop();
 
-    // Get all the nav links
-    const navLinks = document.querySelectorAll('.nav-link');
+// Get all the nav links
+const navLinks = document.querySelectorAll('.nav-link');
 
-    // Loop through the nav links and add 'active' class to the current page's link
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('text-underline', 'font-bold');
-      }
-    });
+// Loop through the nav links and add 'active' class to the current page's link
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('text-underline', 'font-bold');
+  }
+});

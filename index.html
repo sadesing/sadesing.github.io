@@ -265,24 +265,57 @@
       <section class="pt-14 md:pt-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 justify-center">
           <div class="flex flex-col justify-center">
-            <img
-              class="z-10 flex justify-center hover:scale-95 shadow-lg"
-              src="assets/images/book.jpg"
-              alt="Vinyl album cover"
-              loading="lazy"
-            />
-            <h2 class="heading-h2 text-center mt-5">Now Reading</h2>
+            <ul
+              class="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-5"
+            >
+              <li class="book">
+                <a
+                  href="https://en.wikipedia.org/wiki/The_Social_Animal_(Brooks_book)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="z-10 w-full h-full transform origin-left transition-transform duration-450 ease"
+                    src="assets/images/book.jpg"
+                    alt="The Social Animal by David Brooks Book Cover"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+
+              <li class="book">
+                <a
+                  href="https://jamesclear.com/atomic-habits"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="z-10 w-full h-full transform origin-left transition-transform duration-450 ease"
+                    src="assets/images/book1.jpg"
+                    alt="Atomic Habits by James Clear Book Cover"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <h2 class="heading-h2 text-center mt-6">Now Reading</h2>
           </div>
 
-
           <div class="flex flex-col justify-center">
+            <a
+            href="https://open.spotify.com/album/56t4B7G8h7i0hJESuWc538"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
-              class="z-10 flex justify-center hover:scale-95 shadow-lg"
-              src="assets/images/bonga.jpg"
+              class="z-10 flex justify-center hover:scale-95"
+              src="assets/images/bonga1.png"
               alt="Vinyl album cover"
               loading="lazy"
             />
-            <h2 class="heading-h2 text-center mt-5">Now Listening</h2>
+            </a>
+            <h2 class="heading-h2 text-center mt-6">Now Listening</h2>
           </div>
         </div>
       </section>
