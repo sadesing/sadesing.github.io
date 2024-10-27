@@ -10,22 +10,23 @@
   </head>
 
   <body class="w-full">
-    <header class="sticky top-0 w-full z-50">
-      <nav class="bg-white border-b border-slate-300">
+    <header class="sticky top-0 w-full z-50" role="banner">
+      <nav class="bg-white border-b border-slate-300" role="navigation" aria-label="Main Navigation">
         <div class="container mx-auto pt-6">
           <h1 class="heading-h1 text-center">
-            <a href="index.html">Sade Singleton</a>
+            <a href="index.html" aria-label="Sade Singleton Home">Sade Singleton</a>
           </h1>
           <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
-            <li><a href="index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="photos.html" class="nav-link">Photos</a></li>
+            <li><a href="index.html" class="nav-link" aria-label="Portfolio">Portfolio</a></li>
+            <li><a href="photos.html" class="nav-link" aria-label="Photos">Photos</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="pt-14 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
-      <div class="photo-gallery">
+    <main class="pt-14 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
+      <div class="photo-gallery" id="photo-gallery">
+        <!-- Initial set of images -->
         <div class="photo-gallery__container">
           <div class="relative">
             <img class="photo-gallery__image" src="assets/images/photos/sky-bay-area.jpg" alt="Sunset in the Bay Area" />
@@ -322,8 +323,8 @@
       </div>
     </main>
 
-    <button id="back-to-top" class="hidden lg:block fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce">
-      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <button id="back-to-top" class="hidden lg:block fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce" aria-label="Back to top">
+      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Up arrow icon">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
@@ -335,13 +336,14 @@
       </svg>
     </button>
 
-    <footer class="bg-black text-xs bottom-0 w-full h-20 z-50">
+    <footer class="bg-black text-xs bottom-0 w-full h-20 z-50" role="contentinfo">
       <p class="font-sans text-white text-center pt-8">
-        Coded with 🍵 and
+        Made with 🍵 and
         <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>  
   </body>
 </html>
+    

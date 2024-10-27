@@ -11,48 +11,31 @@
   </head>
 
   <body class="w-full">
-    <header class="sticky top-0 w-full z-50">
-      <nav class="bg-white border-b border-slate-300">
+    <header class="sticky top-0 w-full z-50" role="banner">
+      <nav class="bg-white border-b border-slate-300" role="navigation" aria-label="Main Navigation">
         <div class="container mx-auto pt-6">
           <h1 class="heading-h1 text-center">
-            <a href="index.html">Sade Singleton</a>
+            <a href="index.html" aria-label="Sade Singleton Home">Sade Singleton</a>
           </h1>
           <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
-            <li><a href="index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="photos.html" class="nav-link">Photos</a></li>
+            <li><a href="index.html" class="nav-link" aria-label="Portfolio">Portfolio</a></li>
+            <li><a href="photos.html" class="nav-link" aria-label="Photos">Photos</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <!-- Content -->
-    <main
-      class="pt-4 mx-auto max-w-[800px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10"
-    >
+    <main class="pt-4 mx-auto max-w-[800px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
       <section>
         <div class="flex justify-center">
-          <a
-            href="https://airmail.news/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              class="w-40 h-30 hover:scale-95 z-10 shadow-sm"
-              src="assets/images/am.jpg"
-              alt="Air Mail logo"
-              loading="lazy"
-            />
+          <a href="https://airmail.news/" target="_blank" rel="noopener noreferrer" aria-label="Visit Air Mail website">
+            <img class="w-40 h-30 hover:scale-95 z-10 shadow-sm" src="assets/images/am.jpg" alt="Air Mail logo" loading="lazy" />
           </a>
         </div>
 
         <p class="text-sm text-center pt-6">
-          <a
-            class="underline"
-            href="https://airmail.news/about"
-            target="_blank"
-            rel="noopener noreferrer"
-            >AIR MAIL</a
-          >
+          <a class="underline" href="https://airmail.news/about" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Air Mail">AIR MAIL</a>
           is a digital media startup, launched by former
           <em>Vanity Fair</em> editor-in-chief Graydon Carter.
         </p>
@@ -78,34 +61,13 @@
         </p>
 
         <div class="pt-5 flex flex-row">
-          <a
-            href="https://airmail.news/shop/products"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1"
-          >
+          <a href="https://airmail.news/shop/products" target="_blank" rel="noopener noreferrer" class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1" aria-label="Visit the Air Mail shop">
             <span>VISIT SITE</span>
-            <svg
-              width="16px"
-              height="16px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="External link icon">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
+                <path d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </g>
             </svg>
           </a>
@@ -117,31 +79,18 @@
 
         <div class="flex flex-col md:flex-row gap-4 pt-5">
           <div>
-            <img
-              class="object-cover shadow-lg z-10"
-              src="assets/images/am-checkout.jpg"
-              alt="Air Mail shopping bag screenshot"
-              loading="lazy"
-            />
+            <img class="object-cover shadow-lg z-10" src="assets/images/am-checkout.jpg" alt="Air Mail shopping bag screenshot" loading="lazy" />
           </div>
 
           <div>
-            <img
-              class="object-cover shadow-lg z-10"
-              src="assets/images/am-pdp.jpg"
-              alt="Air Mail product page screenshot"
-              loading="lazy"
-            />
+            <img class="object-cover shadow-lg z-10" src="assets/images/am-pdp.jpg" alt="Air Mail product page screenshot" loading="lazy" />
           </div>
         </div>
 
         <div class="pt-8">
           <div class="macbook">
             <div class="screen">
-              <div
-                class="viewport"
-                style="background-image: url('assets/images/air-shop.png')"
-              >
+              <div class="viewport" style="background-image: url('assets/images/air-shop.png')" role="img" aria-label="Image of Air Mail shop">
                 <span class="sr-only">Image of Air Mail shop</span>
               </div>
             </div>
@@ -169,34 +118,13 @@
         </p>
 
         <div class="pt-5 flex flex-row">
-          <a
-            href="https://airmail.news/arts-intel/city-guides"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1"
-          >
+          <a href="https://airmail.news/arts-intel/city-guides" target="_blank" rel="noopener noreferrer" class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1" aria-label="Visit the Arts Intel city guides">
             <span>VISIT SITE</span>
-            <svg
-              width="16px"
-              height="16px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="External link icon">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
+                <path d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </g>
             </svg>
           </a>
@@ -204,66 +132,32 @@
 
         <div class="flex flex-col md:flex-row lg:flex-row gap-2.5 pt-8">
           <div>
-            <img
-              class="w-full h-full object-cover z-10 shadow-lg"
-              src="assets/images/arts-city1.png"
-              alt="Arts and Culture article page"
-              loading="lazy"
-            />
+            <img class="w-full h-full object-cover z-10 shadow-lg" src="assets/images/arts-city1.png" alt="Arts and Culture article page" loading="lazy" />
           </div>
 
           <div>
-            <img
-              class="w-full h-full object-cover z-10 shadow-lg"
-              src="assets/images/arts-city.png"
-              alt="Arts and Culture city page"
-              loading="lazy"
-            />
+            <img class="w-full h-full object-cover z-10 shadow-lg" src="assets/images/arts-city.png" alt="Arts and Culture city page" loading="lazy" />
           </div>
         </div>
 
-        <img
-          class="w-full h-full object-cover z-10 pt-10 lg:pt-20"
-          src="assets/images/arts.gif"
-          alt="Arts and Culture city page gif"
-          loading="lazy"
-        />
+        <img class="w-full h-full object-cover z-10 pt-10 lg:pt-20" src="assets/images/arts.gif" alt="Arts and Culture city page gif" loading="lazy" />
       </section>
     </main>
 
-    <button
-      id="back-to-top"
-      class="fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
-    >
-      <svg
-        width="30px"
-        height="30px"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-      >
+    <button id="back-to-top" class="fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce" aria-label="Back to top">
+      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img" aria-label="Up arrow icon">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
           <g fill="#000000">
-            <path
-              d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
-              clip-rule="evenodd"
-            ></path>
+            <path d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z"></path>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z" clip-rule="evenodd"></path>
           </g>
         </g>
       </svg>
     </button>
 
-    <footer class="bg-black text-xs bottom-0 w-full h-20">
+    <footer class="bg-black text-xs bottom-0 w-full h-20" role="contentinfo">
       <p class="font-sans text-white text-center pt-8">
         Coded with 🍵 and
         <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024

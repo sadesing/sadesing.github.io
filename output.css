@@ -1460,16 +1460,16 @@ video {
   justify-items: stretch;
 }
 
+.gap-2\.5{
+  gap: 0.625rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-2\.5{
-  gap: 0.625rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
@@ -2130,6 +2130,10 @@ video {
   padding-left: 2rem;
 }
 
+.pt-10{
+  padding-top: 2.5rem;
+}
+
 .pt-12{
   padding-top: 3rem;
 }
@@ -2160,14 +2164,6 @@ video {
 
 .pt-9{
   padding-top: 2.25rem;
-}
-
-.pt-10{
-  padding-top: 2.5rem;
-}
-
-.pt-20{
-  padding-top: 5rem;
 }
 
 .text-left{
@@ -2759,12 +2755,6 @@ video {
 /* Fonts */
 
 @font-face {
-  font-family: "SangGuru";
-
-  src: url("fonts/SangGuru.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "StudyHard";
 
   src: url("fonts/StudyHard.ttf") format("truetype");
@@ -2909,7 +2899,11 @@ body {
   /* 12px */
   color: white;
   opacity: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transition: 0.3s;
 }
 
@@ -2921,8 +2915,12 @@ body {
 }
 
 .highlight-container {
-  position: relative;
   display: inline-block;
+  white-space: nowrap;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 .highlight-container:before {
@@ -2968,14 +2966,16 @@ body {
   position: relative;
   background: white;
   z-index: 1;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1), 0 0.5625rem 1.25rem 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1),
+    0 0.5625rem 1.25rem 0 rgba(0, 0, 0, 0.25);
   /* 0 2px 4px 0, 0 9px 20px 0 */
   overflow: hidden;
   transition: box-shadow 0.3s linear;
 }
 
 .book:hover {
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.25), 0 0.5625rem 1.25rem 0 rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.25),
+    0 0.5625rem 1.25rem 0 rgba(0, 0, 0, 0.45);
   /* 0 2px 4px 0, 0 9px 20px 0 */
 }
 
@@ -3146,10 +3146,6 @@ body {
 @media (min-width: 1024px){
   .lg\:block{
     display: block;
-  }
-
-  .lg\:flex{
-    display: flex;
   }
 
   .lg\:grid-cols-3{
