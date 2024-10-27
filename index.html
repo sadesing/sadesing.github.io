@@ -11,15 +11,15 @@
   </head>
 
   <body class="w-full">
-    <header class="sticky top-0 w-full z-50">
-      <nav class="bg-white border-b border-slate-300">
+    <header class="sticky top-0 w-full z-50" role="banner">
+      <nav class="bg-white border-b border-slate-300" role="navigation" aria-label="Main Navigation">
         <div class="container mx-auto pt-4">
           <h1 class="heading-h1 text-center">
-            <a href="index.html">Sade Singleton</a>
+            <a href="index.html" aria-label="Sade Singleton Home">Sade Singleton</a>
           </h1>
           <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
-            <li><a href="index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="photos.html" class="nav-link">Photos</a></li>
+            <li><a href="index.html" class="nav-link" aria-label="Portfolio">Portfolio</a></li>
+            <li><a href="photos.html" class="nav-link" aria-label="Photos">Photos</a></li>
           </ul>
         </div>
       </nav>
@@ -41,45 +41,50 @@
 
       <section class="pt-14 md:pt-20">
         <h2 class="heading-h2">Featured Work</h2>
-        <p class="text-sm">A selection of projects I&#39;ve built and companies I&#39;ve worked with.</p>
+        <p class="text-sm">
+          A selection of projects I&#39;ve built and companies I&#39;ve worked
+          with.
+        </p>
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-4"
         >
-          <a href="downtown-issue.html">
+          <a href="downtown-issue.html" aria-label="Downtown project">
             <img
               class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/downtown.gif"
-              alt="Downtown project gif"
+              alt="Animated gif of the Downtown project"
               loading="lazy"
             />
           </a>
 
-          <a href="airmail.html">
+          <a href="airmail.html" aria-label="Airmail project">
             <img
               class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/air.png"
-              alt="Airmail project screenshot"
+              alt="Screenshot of the Airmail project"
               loading="lazy"
             />
           </a>
+
           <a
             href="https://pourri.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Pourri project"
           >
             <img
-              class="w-full h-full object-cover hover:scale-95 z-10"
+              class="w-full h-full object-contain hover:scale-95 z-10"
               src="assets/images/pourri.jpeg"
-              alt="Pourri project screenshot"
+              alt="Screenshot of the Pourri project"
               loading="lazy"
             />
           </a>
 
-          <a href="kai.html">
+          <a href="kai.html" aria-label="Kai project">
             <img
               class="w-full h-full object-fill hover:scale-95 z-10"
               src="assets/images/kai.gif"
-              alt="Kai project gif"
+              alt="Animated gif of the Kai project"
               loading="lazy"
             />
           </a>
@@ -95,11 +100,11 @@
           <span class="highlight-container"
             ><span class="highlight font-bold"
               ><a
-                class="nav-link"
+                class="nav-link no-wrap"
                 href="https://engineering.buffalo.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >University at Buffalo</a
+                >The University at Buffalo</a
               ></span
             ></span
           >
@@ -107,7 +112,7 @@
           <span class="highlight-container"
             ><span class="highlight font-bold"
               ><a
-                class="nav-link"
+                class="nav-link no-wrap"
                 href="https://www.tsu.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -265,14 +270,13 @@
       <section class="pt-14 md:pt-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 justify-center">
           <div class="flex flex-col justify-center">
-            <ul
-              class="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-5"
-            >
+            <ul class="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-5">
               <li class="book">
                 <a
                   href="https://en.wikipedia.org/wiki/The_Social_Animal_(Brooks_book)"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Read more about The Social Animal by David Brooks on Wikipedia"
                 >
                   <img
                     class="z-10 w-full h-full transform origin-left transition-transform duration-450 ease"
@@ -288,6 +292,7 @@
                   href="https://jamesclear.com/atomic-habits"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Read more about Atomic Habits by James Clear on James Clear's website"
                 >
                   <img
                     class="z-10 w-full h-full transform origin-left transition-transform duration-450 ease"
@@ -304,16 +309,17 @@
 
           <div class="flex flex-col justify-center">
             <a
-            href="https://open.spotify.com/album/56t4B7G8h7i0hJESuWc538"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              class="z-10 flex justify-center hover:scale-95"
-              src="assets/images/bonga1.png"
-              alt="Vinyl album cover"
-              loading="lazy"
-            />
+              href="https://open.spotify.com/album/56t4B7G8h7i0hJESuWc538"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Listen to the album on Spotify"
+            >
+              <img
+                class="z-10 flex justify-center hover:scale-95"
+                src="assets/images/bonga.png"
+                alt="Vinyl album cover"
+                loading="lazy"
+              />
             </a>
             <h2 class="heading-h2 text-center mt-6">Now Listening</h2>
           </div>
@@ -324,6 +330,7 @@
     <button
       id="back-to-top"
       class="fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+      aria-label="Back to top"
     >
       <svg
         width="30px"
@@ -331,6 +338,8 @@
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
+        role="img"
+        aria-label="Up arrow icon"
       >
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g
@@ -353,9 +362,9 @@
       </svg>
     </button>
 
-    <footer class="bg-black text-xs bottom-0 w-full h-20 z-40">
+    <footer class="bg-black text-xs bottom-0 w-full h-20 z-40" role="contentinfo">
       <p class="font-sans text-white text-center pt-8">
-        Coded with 🍵 and
+        Made with 🍵 and
         <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2024
       </p>
     </footer>
