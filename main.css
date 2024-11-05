@@ -4,11 +4,15 @@
 @import "tailwindcss/utilities";
 
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
   font-family: "StudyHard";
   src: url("fonts/StudyHard.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shawkind";
+  src: url("fonts/Shawkind.ttf") format("truetype");
 }
 
 /* Global Styles */
@@ -23,7 +27,7 @@ html {
 }
 body {
   background-color: #faf6f0;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .sr-only {
   position: absolute;
@@ -48,19 +52,19 @@ body {
 }
 /* Heading Styles */
 .heading-h1 {
-  font-family: "StudyHard", cursive;
-  font-style: normal;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.8125rem; /* 45px */
 }
-@media (max-width: 40rem) { /* 640px */
+@media (max-width: 40rem) {
+  /* 640px */
   .heading-h1 {
     font-size: 1.875rem; /* 30px */
   }
 }
 .heading-h2 {
-  font-family: "StudyHard", cursive;
-  font-style: normal;
-  font-size: 1.5rem; /* 24px */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
 }
 /* Styles for the shrunken header */
 .header-shrink {
@@ -68,7 +72,7 @@ body {
   transition: padding 0.3s ease;
 }
 .header-shrink .heading-h1 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 30px;
   transition: font-size 0.3s ease;
 }
 /* Photo Gallery Styles */
@@ -119,33 +123,6 @@ body {
   );
   transition: 0.3s;
 }
-/* Text highlighter effect */
-.highlight-container,
-.highlight {
-  position: relative;
-}
-.highlight-container {
-  display: inline-block;
-  white-space: nowrap;
-}
-.no-wrap {
-  white-space: nowrap;
-}
-.highlight-container:before {
-  content: " ";
-  display: block;
-  height: 90%;
-  width: 100%;
-  margin-left: -0.1875rem; /* -3px */
-  margin-right: -0.1875rem; /* -3px */
-  position: absolute;
-  background: rgb(255, 213, 0);
-  transform: rotate(2deg);
-  top: -0.0625rem; /* -1px */
-  left: -0.0625rem; /* -1px */
-  border-radius: 20% 25% 20% 24%;
-  padding: 0.625rem 0.1875rem 0.1875rem 0.625rem; /* 10px 3px 3px 10px */
-}
 /* Book cover styles */
 .book,
 .book img,
@@ -186,7 +163,7 @@ body {
   top: 0;
   background: white;
   border: 0.0625rem solid #d9d9d9; /* 1px */
-} 
+}
 .book::before {
   left: -0.1875rem; /* -3px */
 }
