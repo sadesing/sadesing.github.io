@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
   font-family: "StudyHard";
@@ -26,8 +26,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #faf6f0;
-  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  font-family: "Urbanist", sans-serif;
 }
 .sr-only {
   position: absolute;
@@ -52,8 +52,8 @@ body {
 }
 /* Heading Styles */
 .heading-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.8125rem; /* 45px */
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.875rem; /* 30px */
 }
 @media (max-width: 40rem) {
   /* 640px */
@@ -62,7 +62,7 @@ body {
   }
 }
 .heading-h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-weight: 800;
   font-size: 20px;
 }
@@ -112,7 +112,7 @@ body {
   left: 0;
   padding: 1.5625rem 1.25rem 0.75rem; /* 25px 20px 12px */
   width: 100%;
-  font-family: "Comic Neue", sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 0.75rem; /* 12px */
   color: white;
   opacity: 0;

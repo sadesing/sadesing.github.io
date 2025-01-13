@@ -32,39 +32,6 @@ backToTopButton.addEventListener("click", function () {
   document.documentElement.scrollTop = 0;
 });
 
-
-//Header shrink upon scroll functionality
-const header = document.querySelector('header');
-
-// Debounce function to limit the frequency of the scroll event handler
-function debounce(func, wait = 10, immediate = true) {
-  let timeout;
-  return function() {
-    const context = this, args = arguments;
-    const later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
-
-// Function to toggle the 'header-shrink' class based on scroll position
-function toggleHeaderShrink() {
-  if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-    header.classList.add('header-shrink');
-  } else {
-    header.classList.remove('header-shrink');
-  }
-}
-
-// Add the scroll event listener with debounce
-window.addEventListener('scroll', debounce(toggleHeaderShrink));
-
-
 // Get the current page's URL
 const currentPage = window.location.pathname.split("/").pop();
 
