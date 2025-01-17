@@ -11,9 +11,9 @@
   </head>
 
   <body class="w-full">
-    <header class="sticky top-0 w-full z-80" role="banner">
+    <header class="sticky top-0 w-full z-50" role="banner">
       <nav
-        class="bg-white"
+        class="bg-white border-b border-lightGray"
         role="navigation"
         aria-label="Main Navigation"
       >
@@ -23,21 +23,17 @@
               ><span class="font-semibold">Sade.</span></a
             >
           </h1>
-          <ul class="flex justify-center space-x-5 mt-2 text-sm pb-4">
+          <ul class="flex justify-center space-x-5 mt-2 text-base pb-4">
             <li>
-              <a href="index.html" class="nav-link" aria-label="Portfolio"
+              <a href="#portfolio" class="nav-link" aria-label="Portfolio"
                 >Portfolio</a
               >
             </li>
             <li>
-              <a href=".html" class="nav-link" aria-label="About"
-                >About</a
-              >
+              <a href="#about" class="nav-link" aria-label="About">About</a>
             </li>
             <li>
-              <a href="photos.html" class="nav-link" aria-label="Photos"
-                >Photos</a
-              >
+              <a href="#photos" class="nav-link" aria-label="Photos">Photos</a>
             </li>
           </ul>
         </div>
@@ -48,42 +44,41 @@
       class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10"
     >
       <section>
-        <p class="text-3xl text-balance mt-2">
-          Hi! I&#39;m Sade. <br>A
-
-          <span class="font-bold">front-end developer</span> and
-          <span class="font-bold">creative professional</span> based in Texas. I
-          enjoy crafting clean, functional and accessible websites and
-          applications.
+        <p
+          class="text-base md:text-xl lg:text-2xl text-center text-balance mt-2"
+        >
+          Hi, I&#39;m Sade. A
+          <span class="font-bold">front-end engineer</span> and
+          <span class="font-bold">accessibility specialist</span> based in
+          Texas. I enjoy crafting clean, functional, and accessible digital
+          experiences that put users first.
         </p>
       </section>
 
-      <section class="pt-14 md:pt-20">
-        <h2 class="heading-h2">Featured Work (updating)</h2>
-        <p class="text-sm">
-          A selection of projects I&#39;ve worked
-          on.
+      <section id="portfolio" class="pt-14 md:pt-20">
+        <h2 class="heading-h2">Featured Work 📌</h2>
+
+        <p class="text-base">
+          All | Web Development/Design | Accessibility | Data Visualization
         </p>
 
-        <p class="text-sm">
-          All | Web Development/Design | Accessibility | Miscellaneous 
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-4"
         >
-          <a href=".html" aria-label="">
+          <a href="ewb.html" aria-label="Engineers without Borders project">
             <img
-              class="w-full h-full object-cover hover:scale-95 z-10 bg-black"
-              src=""
-              alt=""
+              class="w-full h-full object-fill hover:scale-95 z-10 bg-pink-400"
+              src="assets/images/ewb-cover.png"
+              alt="Engineers without Borders North Texas"
               loading="lazy"
             />
           </a>
 
-          <a href=".html" aria-label="">
+          <a href="dallas.html" aria-label="Dallas traffic project">
             <img
-              class="w-full h-full object-cover hover:scale-95 z-10 bg-black"
-              src=""
-              alt=""
+              class="w-full h-full object-cover hover:scale-95 z-10"
+              src="assets/images/dallas-placeholder.jpg"
+              alt="Dallas, Texas traffic map"
               loading="lazy"
             />
           </a>
@@ -99,22 +94,27 @@
 
           <a href="kai.html" aria-label="Kai project">
             <img
-              class="w-full h-full object-fill hover:scale-95 z-10"
+              class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/kai.gif"
               alt="Animated gif of the Kai project"
               loading="lazy"
             />
           </a>
-
         </div>
       </section>
 
-      <section class="pt-14 md:pt-20">
-        <h2 class="heading-h2">A little about me</h2>
+      <section id="about" class="pt-14 md:pt-20">
+        <div class="flex flex-row space-x-2">
+          <img
+            class="h-12 max-w-full"
+            src="assets/images/profile.png"
+            alt="Black and white profile image of Sade"
+          />
+          <h2 class="heading-h2 pt-2">About Me</h2>
+        </div>
 
-        <p class="text-sm pt-0.5">
-          I currently work as a Front-End Software Developer in the e-commerce
-          space. Alumna of
+        <p class="text-base pt-0.5">
+          Alumna of
           <a
             class="nav-link font-bold"
             href="https://engineering.buffalo.edu/"
@@ -129,50 +129,51 @@
             target="_blank"
             rel="noopener noreferrer"
             >Texas Southern University</a
-          >. My love for all things code began in my early teens, during the
-          Myspace era, customizing layouts for myself and friends. I enjoy
-          bridging the gap between design and engineering, combining my
-          technical knowledge and keen eye for design to create meaningful and
-          inclusive products. <br />
+          >
+          — my work bridges the intersection of technology and human needs.
+          Whether I&#39;m crafting user-friendly websites or making digital
+          experiences more accessible, I love turning ideas into solutions that
+          are both beautiful and inclusive for everyone.
           <br />
-          Aside from coding, I enjoy empowering underrepresented groups in STEM,
-          traveling, spending time with loved ones, discovering new cuisines and
+          <br />
 
-          <a class="nav-link font-bold" href="photos.html">photography</a>
-          . I also serve on the Leadership Board as the Community Outreach Lead
-          for the
-
+          Outside of work, I&#39;m all about giving back and empowering
+          underrepresented communities in STEM. I&#39;m the Community Outreach
+          Lead for
           <a
             class="nav-link font-bold"
             href="https://www.wearebgc.org/"
             target="_blank"
             rel="noopener noreferrer"
-            >Black Girls CODE</a
           >
-
-          Dallas Chapter and as Webmaster for the
-
+            Black Girls CODE</a
+          >
+          Dallas and the Webmaster for
           <a
             class="nav-link font-bold"
             href="https://www.ewb-texas.com/"
             target="_blank"
             rel="noopener noreferrer"
-            >Engineers Without Borders</a
-          >
-
-          North Texas Chapter. Previously, I was an Evangelist/Advocate for
-
+            >Engineers Without Borders North Texas</a
+          >. I&#39;ve also connected with amazing communities as an Evangelist
+          for
           <a
             class="nav-link font-bold"
             href="https://www.womenwhocode.com/"
             target="_blank"
             rel="noopener noreferrer"
-            >Women Who Code DFW</a
-          >. <br />
+          >
+            Women Who Code DFW</a
+          >. When I&#39;m not volunteering, you&#39;ll find me traveling,
+          spending time with loved ones, discovering new cuisines, or capturing
+          moments through
+          <a class="nav-link font-bold" href="#photos"> photography</a>.
+
+          <br />
           <br />
           I seek to be inspired, to envision the unlikely, to work hard for
-          things that are worth it, and to be surrounded by those who bring out
-          the best in me.
+          what’s worth it, and to surround myself with those who bring out the
+          best in me.
         </p>
 
         <div class="flex flex-row justify-center pt-4 space-x-2">
@@ -268,47 +269,6 @@
         </div>
       </section>
 
-      <section class="md:pt-12">
-        <h2 class="heading-h2 pt-8">Skills</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-          <div class="w-full">
-            <h3 class="font-bold mb-4 text-center">Development</h3>
-            <ul class="list-none space-y-2 text-center">
-              <li>⎯ HTML5/CSS3</li>
-              <li>⎯ JavaScript</li>
-              <li>⎯ Node.JS</li>
-              <li>⎯ Shopify</li>
-              <li>⎯ WordPress</li>
-              <li>⎯ Version Control (Git)</li>
-              <li>⎯ Web Accessibility (A11y)</li>
-            </ul>
-          </div>
-
-          <div class="w-full">
-            <h3 class="font-bold mb-4 text-center">Tools</h3>
-            <ul class="list-none space-y-2 text-center">
-              <li>⎯ Asana</li>
-              <li>⎯ Notion</li>
-              <li>⎯ Figma</li>
-              <li>⎯ Slack</li>
-              <li>⎯ Loom</li>
-            </ul>
-          </div>
-
-          <div class="w-full">
-            <h3 class="font-bold mb-4 text-center">Design</h3>
-            <ul class="list-none space-y-2 text-center">
-              <li>⎯ Human Factors</li>
-              <li>⎯ Data Visualization</li>
-              <li>⎯ A/B Testing</li>
-              <li>⎯ User Experience (UX)</li>
-              <li>⎯ Usability Testing</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section class="pt-14 md:pt-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 justify-center">
           <div class="flex flex-col justify-center">
@@ -348,24 +308,178 @@
               </li>
             </ul>
 
-            <h2 class="heading-h2 text-center mt-6">Now Reading</h2>
+            <h2 class="heading-h2 text-center mt-4 md:mt-6">Now Reading 📚</h2>
           </div>
 
-          <div class="flex flex-col justify-center">
+          <div class="flex flex-col items-center justify-center mt-6 md:mt-0">
             <a
-              href="https://open.spotify.com/album/56t4B7G8h7i0hJESuWc538"
+              href="https://open.spotify.com/album/7Kusf5plZjl76X5ARWJbNO?si=_Q8dQZDDS324MMiQyUG3BA"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Listen to the album on Spotify"
             >
               <img
-                class="z-10 flex justify-center hover:scale-95"
-                src="assets/images/bonga.png"
-                alt="Vinyl album cover"
+                class="z-10 flex justify-center hover:scale-95 max-w-sm"
+                src="assets/images/stardust.png"
+                alt="Stardust vinyl album cover"
                 loading="lazy"
               />
             </a>
-            <h2 class="heading-h2 text-center mt-6">Now Listening</h2>
+            <h2 class="heading-h2 text-center mt-1">Listening 🎧</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="photos" class="pt-14 md:pt-20">
+        <h2 class="heading-h2">Photos</h2>
+
+        <div id="slider-wrapper" class="max-w-[540px] mx-auto p-4">
+          <div id="image-slider" class="relative overflow-hidden">
+            <ul class="relative w-full h-[359px]">
+              <!-- Active Image -->
+              <li
+                class="image-item active-img absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/palms.jpg"
+                  alt="Palm Trees in Marrakesh"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    Palm Trees in Marrakesh
+                  </p>
+                </div>
+              </li>
+
+              <!-- Other Images -->
+              <li
+                class="image-item absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/cocha.jpg"
+                  alt="Red car parked on a street beside a mural"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    The streets of Cochabomba, Bolivia
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="image-item absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/laguna.jpg"
+                  alt="Laguna Beach in California"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    Laguna Beach, California
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="image-item absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/rainbow.jpg"
+                  alt="Rainbow in the sky"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    Rainbows in Kenya
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="image-item absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/toronto.jpg"
+                  alt="Views from the 6ix in Toronto"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    Views from the 6ix
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="image-item absolute inset-0 transition-transform duration-700"
+              >
+                <img
+                  src="assets/images/photos/masaai.jpg"
+                  alt="Maasai Adumu Jumping Dance"
+                  class="w-full h-full object-cover"
+                />
+                <div class="overlay">
+                  <p class="text-white text-lg font-medium text-center">
+                    Maasai Adumu Dance
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="thumbnail" class="mt-2">
+            <ul class="flex">
+              <li class="mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/palms.jpg"
+                  alt="Palm Trees in Marrakesh"
+                  class="h-14 w-auto"
+                />
+              </li>
+
+              <li class="mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/cocha.jpg"
+                  alt="Red car parked on a street beside a mural"
+                  class="h-14 w-auto"
+                />
+              </li>
+
+              <li class="active mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/laguna.jpg"
+                  alt="Laguna Beach in California"
+                  class="h-14 w-auto"
+                />
+              </li>
+
+              <li class="mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/rainbow.jpg"
+                  alt="Rainbow in the sky"
+                  class="h-14 w-auto"
+                />
+              </li>
+
+              <li class="mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/toronto.jpg"
+                  alt="Views from the 6ix in Toronto"
+                  class="h-14 w-auto"
+                />
+              </li>
+
+              <li class="mr-1.5 cursor-pointer">
+                <img
+                  src="assets/images/photos/masaai.jpg"
+                  alt="Maasai Adumu Jumping Dance"
+                  class="h-14 w-auto"
+                />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -407,7 +521,7 @@
     </button>
 
     <footer
-      class="bg-lightGray text-xs bottom-0 w-full h-20 z-40"
+      class="bg-black text-xs bottom-0 w-full h-20 z-40"
       role="contentinfo"
     >
       <p class="text-white text-center pt-8">

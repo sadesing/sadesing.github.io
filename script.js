@@ -1,6 +1,28 @@
 //Back to top button functionality
 const backToTopButton = document.getElementById("back-to-top");
 
+//Home page scroll navigation
+document.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 60) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
 // Function to check screen size and toggle button visibility
 function checkScreenSize() {
   if (window.innerWidth >= 1024) {
@@ -44,3 +66,22 @@ navLinks.forEach(link => {
     link.classList.add('text-underline', 'font-bold');
   }
 });
+
+// Photo carousel gallery
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbnails = document.querySelectorAll("#thumbnail li");
+  const sliderImages = document.querySelectorAll("#image-slider ul li");
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      // Remove active class from all thumbnails and slider images
+      thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+      sliderImages.forEach((image) => image.classList.remove("active-img"));
+
+      // Add active class to the clicked thumbnail and corresponding slider image
+      thumbnail.classList.add("active");
+      sliderImages[index].classList.add("active-img");
+    });
+  });
+});
+
