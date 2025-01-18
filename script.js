@@ -1,6 +1,28 @@
 //Back to top button functionality
 const backToTopButton = document.getElementById("back-to-top");
 
+//Home page top navigation starts here
+document.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 60) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
 // Function to check screen size and toggle button visibility
 function checkScreenSize() {
   if (window.innerWidth >= 1024) {
@@ -32,48 +54,80 @@ backToTopButton.addEventListener("click", function () {
   document.documentElement.scrollTop = 0;
 });
 
-
-//Header shrink upon scroll functionality
-const header = document.querySelector('header');
-
-// Debounce function to limit the frequency of the scroll event handler
-function debounce(func, wait = 10, immediate = true) {
-  let timeout;
-  return function() {
-    const context = this, args = arguments;
-    const later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
-
-// Function to toggle the 'header-shrink' class based on scroll position
-function toggleHeaderShrink() {
-  if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-    header.classList.add('header-shrink');
-  } else {
-    header.classList.remove('header-shrink');
-  }
-}
-
-// Add the scroll event listener with debounce
-window.addEventListener('scroll', debounce(toggleHeaderShrink));
-
-
 // Get the current page's URL
 const currentPage = window.location.pathname.split("/").pop();
 
 // Get all the nav links
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll(".nav-link");
 
 // Loop through the nav links and add 'active' class to the current page's link
-navLinks.forEach(link => {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('text-underline', 'font-bold');
+navLinks.forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("text-underline", "font-bold");
   }
+});
+
+// Photo carousel gallery starts here
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbnails = document.querySelectorAll("#thumbnail li");
+  const sliderImages = document.querySelectorAll("#image-slider ul li");
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      // Remove active class from all thumbnails and slider images
+      thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+      sliderImages.forEach((image) => image.classList.remove("active-img"));
+
+      // Add active class to the clicked thumbnail and corresponding slider image
+      thumbnail.classList.add("active");
+      sliderImages[index].classList.add("active-img");
+    });
+  });
+});
+
+// Portfolio filter starts here
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const category = button.dataset.category;
+
+      // Update ARIA attributes for active button
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("bg-black", "text-white", "border-black");
+        btn.classList.add("bg-white", "text-gray-800", "border-black");
+        btn.setAttribute("aria-selected", "false");
+        btn.setAttribute("tabindex", "-1");
+      });
+
+      button.classList.remove("bg-white", "text-gray-800", "border-black");
+      button.classList.add("bg-black", "text-white", "border-black");
+      button.setAttribute("aria-selected", "true");
+      button.setAttribute("tabindex", "0");
+
+      // Filter portfolio items
+      portfolioItems.forEach((item) => {
+        if (category === "all" || item.dataset.category.includes(category)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+
+    // Enable keyboard navigation
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        const next = button.nextElementSibling || filterButtons[0];
+        next.focus();
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        const prev =
+          button.previousElementSibling ||
+          filterButtons[filterButtons.length - 1];
+        prev.focus();
+      }
+    });
+  });
 });
