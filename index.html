@@ -11,34 +11,37 @@
   </head>
 
   <body class="w-full">
-    <header class="sticky top-0 w-full z-50" role="banner">
-      <nav
-        class="bg-white border-b border-lightGray"
-        role="navigation"
-        aria-label="Main Navigation"
-      >
+    <header class="sticky top-0 w-full z-50">
+      <nav class="bg-white border-b border-lightGray" aria-label="Main Navigation">
         <div class="container mx-auto pt-4">
+          <!-- Main Site Title -->
           <h1 class="heading-h1 text-center">
-            <a href="index.html" aria-label="Sade Portfolio Home"
-              ><span class="font-semibold">Sade.</span></a
-            >
+            <a href="index.html" class="font-semibold" aria-label="Sade Portfolio Home">
+              Sade.
+            </a>
           </h1>
+    
           <ul class="flex justify-center space-x-5 mt-2 text-base pb-4">
             <li>
-              <a href="#portfolio" class="nav-link" aria-label="Portfolio"
-                >Portfolio</a
-              >
+              <a href="#portfolio" class="nav-link" aria-label="Go to Portfolio">Portfolio</a>
             </li>
             <li>
-              <a href="#about" class="nav-link" aria-label="About">About</a>
+              <a href="#about" class="nav-link" aria-label="Go to About Section">About</a>
             </li>
             <li>
-              <a href="#photos" class="nav-link" aria-label="Photos">Photos</a>
+              <a href="#photos" class="nav-link" aria-label="Go to Photos Section">Photos</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+    
+
+
+
+
+
+    <!-- Content -->
 
     <main
       class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10"
@@ -115,7 +118,7 @@
             data-category="web accessibility"
           >
             <img
-              class="w-full h-full object-fill hover:scale-95 z-10 bg-pink-400"
+              class="w-full h-full object-fill hover:scale-95 z-10"
               src="assets/images/ewb-cover.png"
               alt="Cover for Engineers Without Borders North Texas project"
               loading="lazy"
@@ -125,7 +128,7 @@
           <!-- Dallas Traffic -->
 
           <a
-            href="dallas.html"
+            href="javascript:void(0)"
             aria-label="Dallas traffic project"
             class="portfolio-item relative group"
             data-category="data-viz"
