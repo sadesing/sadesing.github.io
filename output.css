@@ -2151,10 +2151,6 @@ video {
      object-fit: scale-down;
 }
 
-.p-12{
-  padding: 3rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -3246,14 +3242,6 @@ body {
 
   .md\:mt-6{
     margin-top: 1.5rem;
-  }
-
-  .md\:max-w-xl{
-    max-width: 36rem;
-  }
-
-  .md\:max-w-2xl{
-    max-width: 42rem;
   }
 
   .md\:max-w-lg{
