@@ -2151,10 +2151,6 @@ video {
      object-fit: scale-down;
 }
 
-.p-12{
-  padding: 3rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -2672,6 +2668,12 @@ video {
 .shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -3248,12 +3250,16 @@ body {
     margin-top: 1.5rem;
   }
 
-  .md\:max-w-xl{
-    max-width: 36rem;
+  .md\:mt-4{
+    margin-top: 1rem;
   }
 
-  .md\:max-w-2xl{
-    max-width: 42rem;
+  .md\:mt-2{
+    margin-top: 0.5rem;
+  }
+
+  .md\:mt-8{
+    margin-top: 2rem;
   }
 
   .md\:max-w-lg{
@@ -3306,6 +3312,11 @@ body {
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-sm{
