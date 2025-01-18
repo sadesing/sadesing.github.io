@@ -777,6 +777,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-12{
+  margin-top: 3rem;
+}
+
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -787,10 +791,6 @@ video {
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
 }
 
 .box-border{
@@ -1508,6 +1508,10 @@ video {
   justify-items: stretch;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-2\.5{
   gap: 0.625rem;
 }
@@ -1520,20 +1524,8 @@ video {
   gap: 1.25rem;
 }
 
-.gap-2{
-  gap: 0.5rem;
-}
-
 .gap-6{
   gap: 1.5rem;
-}
-
-.gap-8{
-  gap: 2rem;
-}
-
-.gap-1{
-  gap: 0.25rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
@@ -2030,16 +2022,6 @@ video {
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
-.border-slate-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(203 213 225 / var(--tw-border-opacity));
-}
-
-.border-sky-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(14 165 233 / var(--tw-border-opacity));
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2169,6 +2151,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-12{
+  padding: 3rem;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -2177,12 +2163,8 @@ video {
   padding: 1rem;
 }
 
-.p-16{
-  padding: 4rem;
-}
-
-.p-12{
-  padding: 3rem;
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-1{
@@ -2220,9 +2202,8 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.px-2\.5{
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .pb-24{
@@ -2279,14 +2260,6 @@ video {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-2{
-  padding-bottom: 0.5rem;
-}
-
-.pt-20{
-  padding-top: 5rem;
 }
 
 .text-left{
@@ -2382,10 +2355,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.font-black{
-  font-weight: 900;
 }
 
 .font-bold{
@@ -3279,6 +3248,14 @@ body {
     margin-top: 1.5rem;
   }
 
+  .md\:max-w-xl{
+    max-width: 36rem;
+  }
+
+  .md\:max-w-2xl{
+    max-width: 42rem;
+  }
+
   .md\:max-w-lg{
     max-width: 32rem;
   }
@@ -3293,6 +3270,10 @@ body {
 
   .md\:gap-4{
     gap: 1rem;
+  }
+
+  .md\:p-12{
+    padding: 3rem;
   }
 
   .md\:px-4{
