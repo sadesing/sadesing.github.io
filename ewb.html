@@ -1,45 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sade</title>
-  <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="./output.css" />
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-</head>
-
-<body class="w-full">
-  <header class="sticky top-0 w-full z-50">
-    <nav class="bg-white border-b border-lightGray" aria-label="Main Navigation">
-      <div class="container mx-auto pt-4">
-        <h1 class="heading-h1 text-center">
-          <a href="index.html" class="font-semibold" aria-label="Sade Portfolio Home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sade</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body class="w-full">
+    <header class="sticky top-0 w-full z-50">
+      <nav class="bg-white border-b border-lightGray" aria-label="Main Navigation">
+        <div class="container mx-auto pt-4">
+          <h1 class="heading-h1 text-center">
+            <a href="index.html" class="font-semibold" aria-label="Sade Portfolio Home">
             Sade.
-          </a>
-        </h1>
-
-        <div class="flex justify-center items-center pb-2">
-          <a href="index.html" class="flex items-center gap-2" aria-label="Go back to the homepage">
-            <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none"
-              stroke="#000000" aria-hidden="true">
-              <polyline points="20 24 12 32 20 40"></polyline>
-              <line x1="52" y1="32" x2="12" y2="32"></line>
-            </svg>
-            <span class="nav-link">Back to Home</span>
+            </a>
+          </h1>
+          <div class="flex justify-center items-center pb-2">
+            <a href="index.html" class="flex items-center gap-2" aria-label="Go back to the homepage">
+              <svg width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none"
+                stroke="#000000" aria-hidden="true">
+                <polyline points="20 24 12 32 20 40"></polyline>
+                <line x1="52" y1="32" x2="12" y2="32"></line>
+              </svg>
+              <span class="nav-link">Back to Home</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Content -->
+    <main class="pt-4 mx-auto max-w-[800px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
+      <section>
+        <div class="flex justify-center">
+          <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit EWB North Texas website">
+          <img class="w-60 h-50 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb-logo.png"
+            alt="EWB North Texas logo" loading="lazy" />
           </a>
         </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Content -->
-  <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
-    <section>
-      <p>SECTION STARTS HERE</p>
-    </section>
-  </main>
-</body>
-
+        <p class="text-base text-center pt-6">
+          <a class="underline" href="https://ewb-usa.org/" target="_blank" rel="noopener noreferrer"
+            aria-label="Learn more about Engineers Without Borders USA">Engineers Without Borders USA </a>(EWB-USA) is a
+          national non-profit, 501(c)(3) tax-exempt organization dedicated to creating a world where every community has
+          the capacity to sustainably meet its basic human needs. EWB-USA tackles critical challenges faced by underserved
+          communities, focusing on areas such as water supply and distribution, sanitation, transportation, and
+          infrastructure.<br> <br>
+          I serve as Webmaster on the leadership team for the <a class="underline" href="https://www.ewb-texas.com/about/"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Learn more about Engineers Without Borders North Texas Chapter">North Texas Professional
+          Chapter</a>.
+        </p>
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12">
+        <h1 class="heading-h2">EWB-North Texas Website Redesign & Accessibility Audit</h1>
+        <h2 class="text-base font-bold pt-2">OVERVIEW</h2>
+        <p class="pt-2 text-base">
+          <em>(2024 - 2025)</em><br />I am redesigning the website to enhance the user experience and simplify navigation,
+          ensuring visitors and sponsors can easily find information. Throughout the process, I am prioritizing
+          accessibility best practices to create an inclusive digital experience.
+        </p>
+        <div class="pt-12">
+          <h2 class="heading-h2">Accessibility Audits
+          </h2>
+          <p class="pt-2 text-base">
+            Below are the results of audits conducted on the <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
+              rel="noopener noreferrer">homepage</a> using aXe DevTools and Lighthouse. These tools
+            helped identify issues that were missed during the design process:
+          </p>
+          <img class="w-full h-full object-cover z-10 pt-4" src="assets/images/ewb-aXe.png"
+            alt="EWB aXe dev tools audit" loading="lazy" />
+          <img class="w-full h-full object-cover z-10 pt-4" src="assets/images/ewb-lighthouse.png"
+            alt="EWB Lighthouse audit" loading="lazy" />
+        </div>
+        <div class="pt-12 md:pt-20">
+        <h2 class="heading-h2">Before the Redesign
+        </h2>
+        <p class="pt-2 text-base">
+          To provide a visual reference, here is what the site design looked like before the redesign.
+        </p>
+        <div class="pt-8">
+          <div class="flex items-center justify-center">
+            <svg class="mt-6" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 415.262 415.261"
+              xml:space="preserve" transform="rotate(45)matrix(1, 0, 0, 1, 0, 0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path
+                    d="M414.937,374.984c-7.956-24.479-20.196-47.736-30.601-70.992c-1.224-3.06-6.12-3.06-7.956-1.224 c-10.403,11.016-22.031,22.032-28.764,35.496h-0.612c-74.664,5.508-146.88-58.141-198.288-104.652 c-59.364-53.244-113.22-118.116-134.64-195.84c-1.224-9.792-2.448-20.196-2.448-30.6c0-4.896-6.732-4.896-7.344,0 c0,1.836,0,3.672,0,5.508C1.836,12.68,0,14.516,0,17.576c0.612,6.732,2.448,13.464,3.672,20.196 C8.568,203.624,173.808,363.356,335.376,373.76c-5.508,9.792-10.403,20.195-16.523,29.988c-3.061,4.283,1.836,8.567,6.12,7.955 c30.6-4.283,58.14-18.972,86.292-29.987C413.712,381.104,416.16,378.656,414.937,374.984z M332.928,399.464 c3.673-7.956,6.12-15.912,10.404-23.868c1.225-3.061-0.612-5.508-2.448-6.12c0-1.836-1.224-3.061-3.06-3.672 c-146.268-24.48-264.996-124.236-309.06-259.489c28.764,53.244,72.828,99.756,116.28,138.924 c31.824,28.765,65.484,54.468,102.204,75.888c28.764,16.524,64.872,31.824,97.92,21.421l0,0c-1.836,4.896,5.508,7.344,7.956,3.672 c7.956-10.404,15.912-20.196,24.48-29.376c8.567,18.972,17.748,37.943,24.479,57.527 C379.44,382.94,356.796,393.956,332.928,399.464z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+            <p class="text-xs pb-2"> <strong>Press</strong> and hold on mobile, <strong>hover</strong> on desktop 😊</p>
+          </div>
+          <div class="macbook">
+            <div class="screen">
+              <div class="viewport" style="background-image: url('assets/images/ewb-old-design.png')" role="img"
+                aria-label="Image of EWB North Texas site home page">
+                <span class="sr-only">Image of EWB North Texas site home page</span>
+              </div>
+            </div>
+            <div class="base"></div>
+            <div class="notch"></div>
+          </div>
+        </div>
+        <div class="pt-12 md:pt-20">
+          <h2 class="heading-h2">Accessibility Improvements
+          </h2>
+          <p class="pt-2 text-base">
+            I am maintaining a running log of other accessibility issues that I am actively working to remediate. You can view the log via Notion HERE.
+          </p>
+          <img class="w-full h-full object-cover z-10 pt-4" src="assets/images/"
+            alt="" loading="lazy" />
+        </div>
+        <div class="pt-12 md:pt-20">
+          <h2 class="heading-h2">Challenges</h2>
+          <ul class="list-disc list-inside pt-2 space-y-2">
+            <li class="text-base"><strong class="font-semibold">Pre-built WordPress Theme</strong>: The restrictive
+              nature of working with a pre-built WordPress theme has posed challenges for customization
+            </li>
+            <li class="text-base"><strong class="font-semibold">Branding Guidelines</strong>: Balancing accessibility
+              improvements with the National Organization&#39;s branding guidelines, including specific color palettes
+              and design requirements
+            </li>
+          </ul>
+          <img class="w-full h-full object-cover z-10 pt-4" src="assets/images/ewb-branding.png"
+            alt="EWB branding colors" loading="lazy" />
+        </div>
+        <div class="pt-12 md:pt-20">
+          <h2 class="heading-h2">Results
+          </h2>
+          <p class="pt-2 text-base">
+            Here are the results of the homepage accessibility audit, showcasing improvements before and after
+            implementing fixes:
+          </p>
+          <img class="w-full h-full object-cover z-10 pt-4" src="assets/images/"
+            alt="" loading="lazy" />
+        </div>
+      </section>
+    </main>
+    <button id="back-to-top" class="fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+      aria-label="Back to top">
+      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+        aria-label="Up arrow icon">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g fill="#000000">
+            <path
+              d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z">
+            </path>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              clip-rule="evenodd"></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <footer class="bg-black text-xs bottom-0 w-full h-20" role="contentinfo">
+      <p class="text-white text-center pt-8">
+        Made with 🍵 and
+        <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2025
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

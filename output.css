@@ -773,10 +773,6 @@ video {
   margin-right: 0.375rem;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
 .mt-12{
   margin-top: 3rem;
 }
@@ -914,6 +910,10 @@ video {
 
 .w-40{
   width: 10rem;
+}
+
+.w-60{
+  width: 15rem;
 }
 
 .w-\[this-is\\\\\]{
@@ -1187,6 +1187,10 @@ video {
 
 .list-outside{
   list-style-position: outside;
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .appearance-none{
@@ -1544,6 +1548,12 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
@@ -2665,15 +2675,15 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2911,6 +2921,10 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 
+p {
+  color: #020101;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2928,8 +2942,7 @@ body {
   color: #333;
   text-decoration: none;
   transition: color 0.2s ease, background-size 0.5s;
-  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px
-    no-repeat;
+  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px no-repeat;
 }
 
 .nav-link:hover {
@@ -3020,11 +3033,9 @@ body {
   /* 12px */
   color: white;
   opacity: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%);
   transition: 0.3s;
 }
 
@@ -3092,37 +3103,148 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
-  /* Fully transparent by default */
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  /* Hidden by default */
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  /* Prevent interaction issues */
 }
 
 .image-item:hover .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  /* Darken the image */
   opacity: 1;
-  /* Show the overlay */
 }
 
 .active-img .overlay {
   background-color: rgba(0, 0, 0, 0);
-  /* Fully transparent by default */
   opacity: 0;
-  /* Hidden by default */
   pointer-events: none;
 }
 
 .active-img:hover .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  /* Darken the image */
   opacity: 1;
-  /* Show the overlay */
+}
+
+/* Macbook styles */
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray-light: #cacacc;
+  --gray-dark: #333;
+  --gray-medium: #ddd;
+  --shadow-dark: rgba(0, 0, 0, 0.8);
+  --shadow-light: rgba(255, 255, 255, 0.3);
+  --border-radius-screen: 3% 3% 0.5% 0.5%/5%;
+  --border-radius-notch: 0 0 7% 7%/0 0 95% 95%;
+  --gradient-base: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4b4b4f 84%, #262627 89%, rgba(0, 0, 0, 0.01) 98%);
+  --gradient-base-after: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%)
+
+}
+
+.macbook {
+  padding: 4% 6%;
+  margin: 0 auto;
+  max-width: 800px
+}
+
+.screen {
+  background: var(--black);
+  border-radius: var(--border-radius-screen);
+  margin: 0 auto;
+  position: relative;
+  width: 80%
+}
+
+.screen:before {
+  border: 2px solid var(--gray-light);
+  border-radius: var(--border-radius-screen);
+  box-shadow: 0 0 0 1px var(--shadow-dark) inset, 0 0 1px 2px var(--shadow-light) inset;
+  content: "";
+  display: block;
+  padding-top: 67%
+}
+
+.screen:after {
+  content: "";
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  bottom: 0.75%;
+  left: 0.5%;
+  padding-top: 1%;
+  width: 99%
+}
+
+.viewport {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 4.3% 3.2%;
+  background: var(--gray-dark)
+}
+
+.base {
+  position: relative;
+  width: 100%
+}
+
+.base:before {
+  content: "";
+  display: block;
+  padding-top: 3.3%;
+  background: var(--gradient-base);
+  border-radius: 0 0 10% 10%/0 0 50% 50%
+}
+
+.base:after {
+  background: var(--gradient-base-after);
+  content: "";
+  height: 53%;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+.notch {
+  background: var(--gray-medium);
+  border-radius: var(--border-radius-notch);
+  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+  margin: -3.5% auto 0;
+  z-index: 2;
+  position: relative;
+  width: 14%
+}
+
+.notch:before {
+  content: "";
+  display: block;
+  padding-top: 10%
+}
+
+.macbook .viewport {
+  transition: background-position 5s ease;
+  background-position: 0 0;
+  background-size: 100% auto;
+  overflow: hidden;
+  cursor: pointer
+}
+
+.macbook:hover .viewport {
+  background-position: 0 100%
+}
+
+.macbook .viewport:after {
+  background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0
 }
 
 @media (min-width: 640px){
@@ -3248,18 +3370,6 @@ body {
 
   .md\:mt-6{
     margin-top: 1.5rem;
-  }
-
-  .md\:mt-4{
-    margin-top: 1rem;
-  }
-
-  .md\:mt-2{
-    margin-top: 0.5rem;
-  }
-
-  .md\:mt-8{
-    margin-top: 2rem;
   }
 
   .md\:max-w-lg{
