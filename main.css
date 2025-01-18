@@ -349,3 +349,15 @@ p {
   right: 0;
   top: 0
 }
+/* General CSS */
+.arrow-down {
+  transform: rotate(0deg); /* Default rotation for other browsers */
+}
+
+/* Safari-specific CSS */
+@supports (-webkit-transform: rotate(0deg)) {
+  .arrow-down {
+    transform: rotate(90deg); /* Fix the upside-down issue for Safari */
+  }
+}
+

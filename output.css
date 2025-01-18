@@ -2220,6 +2220,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
 .pl-6{
   padding-left: 1.5rem;
 }
@@ -3247,6 +3251,22 @@ p {
   top: 0
 }
 
+/* General CSS */
+
+.arrow-down {
+  transform: rotate(0deg);
+  /* Default rotation for other browsers */
+}
+
+/* Safari-specific CSS */
+
+@supports (-webkit-transform: rotate(0deg)) {
+  .arrow-down {
+    transform: rotate(90deg);
+    /* Fix the upside-down issue for Safari */
+  }
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
@@ -3466,3 +3486,4 @@ p {
     }
   }
 }
+
