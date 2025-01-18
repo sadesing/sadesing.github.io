@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
   font-family: "StudyHard";
@@ -194,4 +194,3 @@ body {
   background-color: rgba(0, 0, 0, 0.5); /* Darken the image */
   opacity: 1; /* Show the overlay */
 }
-

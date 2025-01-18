@@ -58,45 +58,121 @@
       <section id="portfolio" class="pt-14 md:pt-20">
         <h2 class="heading-h2">Featured Work 📌</h2>
 
-        <p class="text-base">
-          All | Web Development/Design | Accessibility | Data Visualization
-        </p>
+        <!-- Filter Buttons -->
+        <div
+          class="text-sm space-y-4 space-x-2 mb-4 mt-2 md:text-base"
+          role="tablist"
+          aria-label="Filter portfolio items"
+        >
+          <button
+            class="filter-btn rounded-full border px-3 py-1 font-semibold text-gray-800 bg-white border-black transition-colors duration-200 hover:bg-black hover:text-white focus:outline-none md:px-4 md:py-2 md:text-sm"
+            data-category="all"
+            role="tab"
+            aria-selected="true"
+            tabindex="0"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn rounded-full border px-3 py-1 font-semibold text-gray-800 bg-white border-black transition-colors duration-200 hover:bg-black hover:text-white focus:outline-none md:px-4 md:py-2 md:text-sm"
+            data-category="web"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Web Development/Design
+          </button>
+          <button
+            class="filter-btn rounded-full border px-3 py-1 font-semibold text-gray-800 bg-white border-black transition-colors duration-200 hover:bg-black hover:text-white focus:outline-none md:px-4 md:py-2 md:text-sm"
+            data-category="accessibility"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Accessibility
+          </button>
+          <button
+            class="filter-btn rounded-full border px-3 py-1 font-semibold text-gray-800 bg-white border-black transition-colors duration-200 hover:bg-black hover:text-white focus:outline-none md:px-4 md:py-2 md:text-sm"
+            data-category="data-viz"
+            role="tab"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Data Visualization
+          </button>
+        </div>
 
+        <!-- Portfolio Items -->
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-4"
+          aria-live="polite"
         >
-          <a href="ewb.html" aria-label="Engineers without Borders project">
+          <!-- Engineers Without Borders -->
+          <a
+            href="ewb.html"
+            aria-label="Engineers without Borders project"
+            class="portfolio-item"
+            data-category="web accessibility"
+          >
             <img
               class="w-full h-full object-fill hover:scale-95 z-10 bg-pink-400"
               src="assets/images/ewb-cover.png"
-              alt="Engineers without Borders North Texas"
+              alt="Cover for Engineers Without Borders North Texas project"
               loading="lazy"
             />
           </a>
 
-          <a href="dallas.html" aria-label="Dallas traffic project">
+          <!-- Dallas Traffic -->
+
+          <a
+            href="dallas.html"
+            aria-label="Dallas traffic project"
+            class="portfolio-item relative group"
+            data-category="data-viz"
+          >
+            <!-- Image -->
             <img
               class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/dallas-placeholder.jpg"
-              alt="Dallas, Texas traffic map"
+              alt="Cover for Dallas, Texas traffic map project"
               loading="lazy"
             />
+
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              aria-hidden="true"
+            >
+              <span class="text-white text-lg font-bold">UPDATING PROJECT</span>
+            </div>
           </a>
 
-          <a href="airmail.html" aria-label="Airmail projects">
+          <!-- Air Mail -->
+          <a
+            href="airmail.html"
+            aria-label="Air Mail project"
+            class="portfolio-item"
+            data-category="web"
+          >
             <img
               class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/downtown.gif"
-              alt="Animated gif of the Downtown project"
+              alt="Cover for Air Mail Downtown project"
               loading="lazy"
             />
           </a>
 
-          <a href="kai.html" aria-label="Kai project">
+          <!-- Kai Project -->
+          <a
+            href="kai.html"
+            aria-label="Kai project"
+            class="portfolio-item"
+            data-category="web accessibility"
+          >
             <img
               class="w-full h-full object-cover hover:scale-95 z-10"
               src="assets/images/kai.gif"
-              alt="Animated gif of the Kai project"
+              alt="Cover for Kai project"
               loading="lazy"
             />
           </a>
@@ -319,7 +395,7 @@
               aria-label="Listen to the album on Spotify"
             >
               <img
-                class="z-10 flex justify-center hover:scale-95 max-w-sm"
+                class="max-w-xs z-10 flex justify-center hover:scale-95"
                 src="assets/images/stardust.png"
                 alt="Stardust vinyl album cover"
                 loading="lazy"
@@ -333,7 +409,7 @@
       <section id="photos" class="pt-14 md:pt-20">
         <h2 class="heading-h2">Photos</h2>
 
-        <div id="slider-wrapper" class="max-w-[540px] mx-auto p-4">
+        <div id="slider-wrapper" class="max-w-xs md:max-w-lg mx-auto p-4">
           <div id="image-slider" class="relative overflow-hidden">
             <ul class="relative w-full h-[359px]">
               <!-- Active Image -->

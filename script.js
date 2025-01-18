@@ -1,7 +1,7 @@
 //Back to top button functionality
 const backToTopButton = document.getElementById("back-to-top");
 
-//Home page scroll navigation
+//Home page top navigation starts here
 document.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -58,16 +58,16 @@ backToTopButton.addEventListener("click", function () {
 const currentPage = window.location.pathname.split("/").pop();
 
 // Get all the nav links
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll(".nav-link");
 
 // Loop through the nav links and add 'active' class to the current page's link
-navLinks.forEach(link => {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('text-underline', 'font-bold');
+navLinks.forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("text-underline", "font-bold");
   }
 });
 
-// Photo carousel gallery
+// Photo carousel gallery starts here
 document.addEventListener("DOMContentLoaded", () => {
   const thumbnails = document.querySelectorAll("#thumbnail li");
   const sliderImages = document.querySelectorAll("#image-slider ul li");
@@ -85,3 +85,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Portfolio filter starts here
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const category = button.dataset.category;
+
+      // Update ARIA attributes for active button
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("bg-black", "text-white", "border-black");
+        btn.classList.add("bg-white", "text-gray-800", "border-black");
+        btn.setAttribute("aria-selected", "false");
+        btn.setAttribute("tabindex", "-1");
+      });
+
+      button.classList.remove("bg-white", "text-gray-800", "border-black");
+      button.classList.add("bg-black", "text-white", "border-black");
+      button.setAttribute("aria-selected", "true");
+      button.setAttribute("tabindex", "0");
+
+      // Filter portfolio items
+      portfolioItems.forEach((item) => {
+        if (category === "all" || item.dataset.category.includes(category)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+
+    // Enable keyboard navigation
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        const next = button.nextElementSibling || filterButtons[0];
+        next.focus();
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        const prev =
+          button.previousElementSibling ||
+          filterButtons[filterButtons.length - 1];
+        prev.focus();
+      }
+    });
+  });
+});
