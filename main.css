@@ -67,31 +67,24 @@ p {
 /* Heading Styles */
 .heading-h1 {
   font-family: "Urbanist", sans-serif;
-  font-size: 1.875rem;
-  /* 30px */
+  font-size: 1.875rem; /* 30px */
 }
 
-@media (max-width: 40rem) {
-
-  /* 640px */
+@media (max-width: 40rem) { /* 640px */
   .heading-h1 {
-    font-size: 1.875rem;
-    /* 30px */
+    font-size: 1.875rem; /* 30px */
   }
 }
 
 .heading-h2 {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
 }
-
 /* Photo Gallery Styles */
 .photo-gallery {
-  columns: 5 12.5rem;
-  /* 200px */
-  gap: 1.5rem;
-  /* 24px */
+  columns: 5 12.5rem; /* 200px */
+  gap: 1.5rem; /* 24px */
   width: 90%;
   transition: 0.3s;
   margin: 0 auto;
@@ -120,8 +113,7 @@ p {
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
-  box-shadow: 0.0625rem 0.125rem 0.125rem black;
-  /* 1px 2px 2px */
+  box-shadow: 0.0625rem 0.125rem 0.125rem black; /* 1px 2px 2px */
 }
 
 .photo-gallery .photo-gallery__image:hover {
@@ -132,12 +124,10 @@ p {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1.5625rem 1.25rem 0.75rem;
-  /* 25px 20px 12px */
+  padding: 1.5625rem 1.25rem 0.75rem; /* 25px 20px 12px */
   width: 100%;
   font-family: "Urbanist", sans-serif;
-  font-size: 0.75rem;
-  /* 12px */
+  font-size: 0.75rem; /* 12px */
   color: white;
   opacity: 0;
   background: linear-gradient(0deg,
@@ -149,18 +139,15 @@ p {
 /* Book cover styles */
 .book {
   display: block;
-  width: 10rem;
-  /* 160px */
-  height: 15rem;
-  /* 240px */
+  width: 10rem; /* 160px */
+  height: 15rem; /* 240px */
   position: relative;
   background: white;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1),
     0 0.5625rem 1.25rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
   transition: box-shadow 0.3s linear;
-  border-radius: 0.3125rem;
-  /* 5px */
+  border-radius: 0.3125rem; /* 5px */
 }
 
 .book:hover {
@@ -349,7 +336,7 @@ p {
   right: 0;
   top: 0
 }
-/* General CSS */
+/* For all other browsers */
 .arrow-down {
   transform: rotate(0deg); /* Default rotation for other browsers */
 }
