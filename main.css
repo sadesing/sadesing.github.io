@@ -48,6 +48,13 @@ p {
   border: 0;
 }
 
+:focus {
+  outline: 3px solid #4a90e2;
+  /* Define the desired blue color */
+  outline-offset: 2px;
+  /* Optional: Add some space between the element and the outline */
+}
+
 /* Navigation Link Styles */
 .nav-link {
   color: #333;
@@ -83,7 +90,8 @@ p {
 .heading-h2 {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
+  /* 20px */
 }
 
 /* Photo Gallery Styles */
@@ -349,15 +357,17 @@ p {
   right: 0;
   top: 0
 }
-/* General CSS */
+
+/* For all other browsers */
 .arrow-down {
-  transform: rotate(0deg); /* Default rotation for other browsers */
+  transform: rotate(0deg);
+  /* Default rotation for other browsers */
 }
 
 /* Safari-specific CSS */
 @supports (-webkit-transform: rotate(0deg)) {
   .arrow-down {
-    transform: rotate(90deg); /* Fix the upside-down issue for Safari */
+    transform: rotate(90deg);
+    /* Fix the upside-down issue for Safari */
   }
 }
-
