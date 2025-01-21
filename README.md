@@ -1,2 +1,1 @@
-### A simple portfolio website to display my projects and current work.
-_- a work in progress_ ⏳
+### A simple portfolio website to display my projects and current work 👩🏾‍💻
