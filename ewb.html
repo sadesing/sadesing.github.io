@@ -135,7 +135,7 @@
             updates.
           </p>
 
-          <p class="font-semibold pt-2 text-base mt-12">HOMEPAGE</p>
+          <p class="font-semibold pt-2 text-base mt-8">HOMEPAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <img
               class="w-full h-full object-contain z-10 pt-4"
@@ -151,7 +151,7 @@
             />
           </div>
 
-          <p class="font-semibold pt-2 text-base mt-12">PROJECTS PAGE</p>
+          <p class="font-semibold pt-2 text-base mt-8">PROJECTS PAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <img
               class="w-full h-full object-contain z-10 pt-4"
@@ -245,7 +245,7 @@
             on Notion.
           </p>
           <img
-            class="w-full h-full object-cover z-10 pt-4"
+            class="w-full h-full object-cover z-10 pt-4 shadow-lg"
             src="assets/images/ewb-notion.png"
             alt="Image of accessibility issues Notion document"
             loading="lazy"
@@ -267,7 +267,7 @@
             </li>
           </ul>
           <img
-            class="w-full h-full object-cover z-10 pt-4"
+            class="w-full h-full object-cover z-10 pt-4 shadow-lg"
             src="assets/images/ewb-branding.png"
             alt="EWB branding colors"
             loading="lazy"
@@ -275,16 +275,79 @@
         </div>
         <div class="pt-12 md:pt-20">
           <h2 class="heading-h2">Results</h2>
-          <p class="pt-2 text-base">
-            Here are the results of the homepage and projects page accessibility
-            audits, showcasing improvements before and after implementing fixes:
+          <p class="text-base mt-2">
+            Below are the results of the Homepage and Projects page
+            accessibility audits, showcasing improvements before and after
+            implementing fixes:
           </p>
+
+          <h3 class="font-semibold mt-2 text-base mt-8">HOMEPAGE</h3>
+
+          <p class="text-base mt-2">
+            <strong class="font-semibold">Accessibiity Issues Identified</strong>:
+          </p>
+
+          <p class="text-base italic mt-2 bg-stone-100">
+            Ensure the contrast between foreground and background colors meets
+            WCAG 2 AA minimum contrast ratio thresholds
+          </p>
+
           <img
-            class="w-full h-full object-cover z-10 pt-4"
-            src="assets/images/"
+            class="w-full h-full object-cover z-10 mt-10 shadow-lg"
+            src="assets/images/ewb-home-ii.png"
             alt=""
             loading="lazy"
           />
+
+          <img
+          class="w-full h-full object-cover z-10 mt-4 shadow-lg"
+          src="assets/images/ewb-home-i.png"
+          alt=""
+          loading="lazy"
+        />
+
+        <p class="text-base italic mt-12 bg-stone-100">
+          Ensure links have discernible text
+        </p>
+
+        <p class="text-base mt-2">
+          All image links were enhanced with detailed alt attributes to provide meaningful and accessible text descriptions for users who rely on screen readers or have images disabled in their browsers.
+        </p>
+
+        <p class="text-base mt-8">
+          <strong class="font-semibold">Accessibility Audit: Post-Fixes</strong>:
+        </p>
+      
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img
+            class="w-full h-full object-contain z-10 pt-4"
+            src="assets/images/ewbhome-aXe-fixed.png"
+            alt="Screenshot of accessibility post-fix audit results for EWB homepage using aXe DevTools"
+            loading="lazy"
+          />
+          <img
+            class="w-full h-full object-contain z-10 pt-4"
+            src="assets/images/ewbhome-lighthouse-fixed.png"
+            alt="Screenshot of accessibility post-fix audit results for EWB homepage using Lighthouse"
+            loading="lazy"
+          />
+        </div>
+
+
+
+
+          <h3 class="font-semibold pt-2 text-base mt-10">PROJECTS PAGE</h3>
+
+          <p class="text-base mt-2">
+            <strong class="font-semibold">Accessibility Issues Identified</strong>:
+          </p>
+
+          <p class="text-base mt-8">
+            <strong class="font-semibold">Accessibility Audit: Post-Fixes</strong>:
+          </p>
+        
+
+
         </div>
       </section>
     </main>

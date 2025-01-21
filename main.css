@@ -49,10 +49,8 @@ p {
 }
 
 :focus {
-  outline: 3px solid #4a90e2;
-  /* Define the desired blue color */
+  outline: 1px solid #4a90e2;
   outline-offset: 2px;
-  /* Optional: Add some space between the element and the outline */
 }
 
 /* Navigation Link Styles */
