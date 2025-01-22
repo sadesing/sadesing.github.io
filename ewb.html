@@ -92,17 +92,26 @@
         <div>
           <p class="font-semibold text-base mt-8">HOMEPAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewb-aXe.png"
-              alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools" loading="lazy" />
-            <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewb-lighthouse.png"
-              alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse" loading="lazy" />
+            <div class="bg-gray-900">
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb-aXe.png"
+                alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools" loading="lazy" />
+            </div>
+            <div class="bg-zinc-800">
+              <img class="object-contain h-96 z-10 pt-4" src="assets/images/ewb-lighthouse.png"
+                alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse" loading="lazy" />
+            </div>
           </div>
           <p class="font-semibold text-base mt-12">PROJECTS PAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
-            <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewbprojects-aXe-issues.png"
-              alt="Screenshot of accessibility audit results for EWB projects page using aXe DevTools" loading="lazy" />
-            <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewbprojects-lighthouse-issues.png"
-              alt="Screenshot of accessibility audit results for EWB projects page using Lighthouse" loading="lazy" />
+            <div class="bg-gray-900">
+              <img class="object-contain z-10 pt-4" src="assets/images/ewbprojects-aXe-issues.png"
+                alt="Screenshot of accessibility audit results for EWB projects page using aXe DevTools"
+                loading="lazy" />
+            </div>
+            <div class="bg-zinc-800">
+              <img class="object-contain z-10 pt-4" src="assets/images/ewbprojects-lighthouse-issues.png"
+                alt="Screenshot of accessibility audit results for EWB projects page using Lighthouse" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
@@ -116,7 +125,7 @@
           <div class="flex items-center justify-center">
             <svg class="arrow-down" width="30px" height="30px" viewBox="0 -85 251 251" fill="none"
               xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(270)">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" stroke-width="0" aria-hidden="true"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
                 <g clip-path="url(#clip0_3_230)">
@@ -195,7 +204,7 @@
         <div class="homepage-results">
           <h3 class="font-semibold mt-2 text-base mt-8">HOMEPAGE</h3>
           <div class="homepage-results-issue">
-            <p class="text-base italic mt-2 bg-blue-50">
+            <p class="text-base italic mt-2 bg-stone-100">
               <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds
             </p>
             <p class="text-base mt-8">
@@ -226,7 +235,7 @@
               alt="Image of contrast issue after fix" loading="lazy" />
             <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb-home-iv.png"
               alt="Image of contrast issue after fix" loading="lazy" />
-            <p class="text-sm text-center mt-8">Additionally, a Color Contrast Analyzer was used to evaluate and select a
+            <p class="text-sm text-center mt-8">A Color Contrast Analyzer was used to evaluate and select a
               sufficient text color that complies with accessibility guidelines, ensuring that the contrast ratio meets
               the required standards for readability.
             </p>
@@ -236,21 +245,45 @@
             </div>
           </div>
           <div>
-            <p class="text-base italic mt-12 bg-blue-50">Ensure links have discernible text</p>
+            <p class="text-base italic mt-12 bg-stone-100"><strong>Link-name</strong>: Links must have discernible text
+            </p>
             <p class="text-base mt-2">
-              All image links were enhanced with detailed alt attributes to provide meaningful and accessible text
+              All links that contain logos or images were assigned <span class="text-code">alt</span> attributes to
+              provide meaningful and accessible text
               descriptions for users who rely on screen readers or have images disabled in their browsers.
             </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <p class="text-base font-semibold mt-2"> Before:</p>
+                <img class="object-cover z-10 pt-4" src="assets/images/ewb/ewb-westwood.png"
+                  alt="Screenshot of aXe DevTools accessibility issue for missing discernible text on EWB homepage"
+                  loading="lazy" />
+              </div>
+              <div>
+                <p class="text-base font-semibold mt-2"> After:</p>
+                <img class="object-fill z-10 pt-4" src="assets/images/ewb/ewb-westwood-alt.png"
+                  alt="Screenshot of fixed accessibility issue with missing discernible text on EWB homepage"
+                  loading="lazy" />
+                <p class="text-base mt-2">By adding alt text to images and logos inside links, we make sure that everyone
+                  can understand the link&#39;s purpose, even if they can't see the image. It helps screen readers give a
+                  clear description, making the site more accessible for all users
+                </p>
+              </div>
+            </div>
           </div>
           <div class="mt-4">
-            <p class="text-base mt-12"><strong class="font-semibold">Accessibility Audit: Post-Fixes</strong>:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewbhome-aXe-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools after resolving issues"
-                loading="lazy" />
-              <img class="object-cover h-96 z-10 pt-4" src="assets/images/ewbhome-lighthouse-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse after resolving issues"
-                loading="lazy" />
+            <p class="text-base mt-12"><strong class="font-semibold">Homepage Accessibility Audit: Post-Fixes</strong>:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div class="bg-gray-900">
+                <img class="object-contain z-10 pt-4" src="assets/images/ewbhome-aXe-fixed.png"
+                  alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools after resolving issues"
+                  loading="lazy" />
+              </div>
+              <div class="bg-zinc-800">
+                <img class="object-contain z-10 pt-4" src="assets/images/ewbhome-lighthouse-fixed.png"
+                  alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse after resolving issues"
+                  loading="lazy" />
+              </div>
             </div>
           </div>
         </div>
