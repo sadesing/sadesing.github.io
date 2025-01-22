@@ -53,6 +53,14 @@ p {
   outline-offset: 2px;
 }
 
+.text-code {
+  font-family: monospace; 
+  color:#333333;
+  background-color: #f0f0f0;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
 /* Navigation Link Styles */
 .nav-link {
   color: #333;
