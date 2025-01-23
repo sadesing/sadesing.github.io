@@ -3474,6 +3474,14 @@ p {
     margin-top: 1.5rem;
   }
 
+  .md\:mt-5{
+    margin-top: 1.25rem;
+  }
+
+  .md\:-mb-5{
+    margin-bottom: -1.25rem;
+  }
+
   .md\:max-w-lg{
     max-width: 32rem;
   }
@@ -3492,6 +3500,11 @@ p {
 
   .md\:gap-4{
     gap: 1rem;
+  }
+
+  .md\:bg-zinc-800{
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
   }
 
   .md\:p-12{

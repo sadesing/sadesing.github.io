@@ -38,7 +38,7 @@
       <div class="flex justify-center">
         <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
           aria-label="Visit EWB North Texas website">
-          <img class="w-60 h-50 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb-logo.png"
+          <img class="w-60 h-50 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb/ewb-logo.png"
             alt="EWB North Texas logo" loading="lazy" />
         </a>
       </div>
@@ -61,7 +61,8 @@
         </h1>
         <h2 class="text-base font-bold pt-2">OVERVIEW</h2>
         <p class="pt-2 text-base">
-          <em>(2024 - 2025)</em><br />I am redesigning the website to enhance
+          <em>(2024 - 2025)</em><br />I am redesigning the <a class="underline" href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit EWB North Texas website">North Texas Professional Chapter&#39;s</a> website to enhance
           the user experience and simplify navigation, ensuring visitors and
           sponsors can easily find information. Throughout the process, I am
           prioritizing accessibility best practices to create an inclusive
@@ -95,23 +96,23 @@
           <p class="font-semibold text-base mt-8">HOMEPAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="bg-gray-900">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewb-aXe.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-aXe.png"
                 alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools" loading="lazy" />
             </div>
             <div class="bg-zinc-800">
-              <img class="object-contain h-96 z-10 pt-4" src="assets/images/ewb-lighthouse.png"
+              <img class="object-contain h-96 z-10 pt-4" src="assets/images/ewb/ewb-lighthouse.png"
                 alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse" loading="lazy" />
             </div>
           </div>
           <p class="font-semibold text-base mt-12">PROJECTS PAGE</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
             <div class="bg-gray-900">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewbprojects-aXe-issues.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-aXe-issues.png"
                 alt="Screenshot of accessibility audit results for EWB projects page using aXe DevTools"
                 loading="lazy" />
             </div>
             <div class="bg-zinc-800">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewbprojects-lighthouse-issues.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-lighthouse-issues.png"
                 alt="Screenshot of accessibility audit results for EWB projects page using Lighthouse" loading="lazy" />
             </div>
           </div>
@@ -150,7 +151,7 @@
         <div class="macbook">
           <div class="screen">
             <div class="viewport" style="
-                background-image: url('assets/images/ewb-old-design.png');
+                background-image: url('assets/images/ewb/ewb-old-design.png');
                 " role="img" aria-label="Image of EWB North Texas site home page">
               <span class="sr-only">Image of EWB North Texas site home page</span>
             </div>
@@ -170,7 +171,7 @@
             aria-label="Running log of accessibility issues via Notion">here</a>
           on Notion.
         </p>
-        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb-notion.png"
+        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-notion.png"
           alt="Image of accessibility issues Notion document" loading="lazy" />
       </div>
       <div class="pt-12 md:pt-20">
@@ -188,13 +189,13 @@
             palettes and design requirements
           </li>
         </ul>
-        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb-branding.png"
+        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-branding.png"
           alt="EWB branding colors" loading="lazy" />
       </div>
     </section>
     <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results">
       <div class="audit-results-intro">
-        <h2 class="heading-h2">Results</h2>
+        <h2 class="heading-h2">Audit Results</h2>
         <p class="text-base mt-2">
           Below are the results of the <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
             rel="noopener noreferrer">Homepage</a> and <a class="nav-link font-bold"
@@ -207,7 +208,7 @@
         <h3 class="font-semibold mt-2 text-base mt-8">HOMEPAGE</h3>
         <div class="homepage-results-issue">
           <p class="text-base italic mt-2 bg-stone-100">
-            <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds
+            <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious Impact)
           </p>
           <p class="text-base mt-8">
             Manual testing was conducted using a browser color picker tool to identify the hex codes of the foreground
@@ -217,13 +218,13 @@
           <p class="text-base font-semibold mt-12">
             Before:
           </p>
-          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb-home-ii.png"
+          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-ii.png"
             alt="Image of contrast issue before fix" loading="lazy" />
           <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.46 (foreground <span
               class="text-code">color: #a5a5a5;</span>, <span class="text-code">background color: #ffffff;</span>).
             Expected contrast ratio of 4.5:1
           </p>
-          <img class="w-full h-full object-cover z-10 mt-12 shadow-lg" src="assets/images/ewb-home-i.png"
+          <img class="w-full h-full object-cover z-10 mt-12 shadow-lg" src="assets/images/ewb/ewb-home-i.png"
             alt="Image of contrast issue before fix" loading="lazy" />
           <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.68 (foreground <span
               class="text-code">color:
@@ -233,21 +234,21 @@
           <p class="text-base font-semibold mt-12">
             After:
           </p>
-          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb-home-iii.png"
+          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-iii.png"
             alt="Image of contrast issue after fix" loading="lazy" />
-          <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb-home-iv.png"
+          <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-home-iv.png"
             alt="Image of contrast issue after fix" loading="lazy" />
           <p class="text-sm text-center mt-8">A Color Contrast Analyzer was used to evaluate and select a
             sufficient text color that complies with accessibility guidelines, ensuring that the contrast ratio meets
             the required standards for readability.
           </p>
           <div class="flex items-center justify-center">
-            <img class="w-72 h-auto object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb-color-analyzer.png"
+            <img class="w-72 h-auto object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-color-analyzer.png"
               alt="Image of contrast contrast analyzer results" loading="lazy" />
           </div>
         </div>
         <div>
-          <p class="text-base italic mt-12 bg-stone-100"><strong>Link-name</strong>: Links must have discernible text
+          <p class="text-base italic mt-12 bg-stone-100"><strong>Link-name</strong>: Links must have discernible text - (Serious Impact)
           </p>
           <p class="text-base mt-2">
             All links that contain logos or images were assigned <span class="text-code">alt</span> attributes to
@@ -257,13 +258,13 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div>
               <p class="text-base font-semibold mt-2"> Before:</p>
-              <img class="object-cover z-10 pt-4" src="assets/images/ewb/ewb-westwood.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood.png"
                 alt="Screenshot of aXe DevTools accessibility issue for missing discernible text on EWB homepage"
                 loading="lazy" />
             </div>
             <div>
               <p class="text-base font-semibold mt-2"> After:</p>
-              <img class="object-fill z-10 pt-4" src="assets/images/ewb/ewb-westwood-alt.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood-alt.png"
                 alt="Screenshot of fixed accessibility issue with missing discernible text on EWB homepage"
                 loading="lazy" />
               <p class="text-base mt-2">By adding <span class="text-code">alt</span> text to images and logos inside
@@ -278,12 +279,12 @@
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-gray-900">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewbhome-aXe-fixed.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-aXe-fixed.png"
                 alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools after resolving issues"
                 loading="lazy" />
             </div>
             <div class="bg-zinc-800">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewbhome-lighthouse-fixed.png"
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-lighthouse-fixed.png"
                 alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse after resolving issues"
                 loading="lazy" />
             </div>
@@ -291,6 +292,76 @@
         </div>
       </div>
     </section>
+
+<section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results-continued">
+
+
+  <div class="audit-results-intro">
+    <h2 class="heading-h2">Audit Results Continued</h2>
+    </div>
+
+
+<div class="projects-page-results">
+  <h3 class="font-semibold mt-2 text-base mt-8">PROJECTS PAGE</h3>
+  <div class="homepage-results-issue">
+
+    <p class="text-base italic mt-2 bg-stone-100">
+      <strong>Target-size</strong>: All touch targets must be 24px large, or leave sufficient space - (Serious Impact)
+    </p>
+    <p class="text-base mt-2">
+      Interactive elements, such as buttons, links, and map markers, should be easily tappable on touchscreens. Adequate spacing between map markers is essential to enhance usability, especially for users with motor impairments or those navigating on smaller devices.
+    </p>
+
+    <p class="text-base font-semibold mt-6">Changes made:</p>
+
+    <ul class="list-disc list-inside pt-2 space-y-2">
+      <li class="text-base">
+        <strong class="font-semibold">Custom Icon Size</strong>:
+        By defining a custom icon with <span class="text-code">iconSize: [32, 42]</span>, the markers are now large enough to meet accessibility requirements
+      </li>
+      <li class="text-base">
+        <strong class="font-semibold">Anchor Points</strong>:
+        <span class="text-code">iconAnchor</span> ensures the marker is positioned correctly relative to its coordinates, and <span class="text-code">popupAnchor</span> aligns the popup above the marker
+      </li>
+    </ul>
+
+    <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-map-fixed.png"
+    alt="Screenshot of fixed code for map markers on EWB projects page" loading="lazy" />
+
+
+    <p class="text-base mt-8">
+      Each marker location now also includes <span class="text-code">
+        alt</span> text to ensure accessibility and provide clear, descriptive context for screen reader users.</p>
+
+    <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-map-alt.png"
+    alt="Screenshot of added alternative text for map marker locations" loading="lazy" />
+
+
+
+
+</div>
+
+
+
+
+
+
+<div> 
+  <p class="text-base italic mt-12 bg-stone-100">
+    <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious Impact)
+  </p>
+
+  <p class="text-base mt-2">
+    Explaination here about first issue 
+  </p>
+</div>
+
+
+</section>
+
+
+
+
   </main>
   <button id="back-to-top" class="fixed bottom-24 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
     aria-label="Scroll to the top of the page">
