@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Tailwind */
-
-/* ! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -2980,11 +2980,17 @@ p {
 
 .text-code {
   font-family: monospace;
-  color:#333333;
+  color: #333333;
   font-size: 0.875rem;
   background-color: #f0f0f0;
   padding: 0 4px;
   border-radius: 4px;
+}
+
+.filter-btn:hover {
+  transform: scale(.9);
+  filter: brightness(1.2);
+  transition: transform 0.8s, filter 0.3s;
 }
 
 /* Navigation Link Styles */
@@ -3004,20 +3010,14 @@ p {
   font-weight: bold;
 }
 
-/* Heading Styles */
-
 .heading-h1 {
   font-family: "Urbanist", sans-serif;
   font-size: 1.875rem;
-  /* 30px */
 }
 
 @media (max-width: 40rem) {
-  /* 640px */
-
   .heading-h1 {
     font-size: 1.875rem;
-    /* 30px */
   }
 }
 
@@ -3025,17 +3025,12 @@ p {
   font-family: "Urbanist", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  /* 20px */
 }
-
-/* Photo Gallery Styles */
 
 .photo-gallery {
   -moz-columns: 5 12.5rem;
        columns: 5 12.5rem;
-  /* 200px */
   gap: 1.5rem;
-  /* 24px */
   width: 90%;
   transition: 0.3s;
   margin: 0 auto;
@@ -3047,7 +3042,6 @@ p {
 
 .photo-gallery .photo-gallery__container {
   padding-top: 1.5rem;
-  /* 24px */
 }
 
 .photo-gallery .photo-gallery__container:hover .photo-gallery__image {
@@ -3066,7 +3060,6 @@ p {
      object-fit: cover;
   transition: 0.3s;
   box-shadow: 0.0625rem 0.125rem 0.125rem black;
-  /* 1px 2px 2px */
 }
 
 .photo-gallery .photo-gallery__image:hover {
@@ -3078,16 +3071,14 @@ p {
   bottom: 0;
   left: 0;
   padding: 1.5625rem 1.25rem 0.75rem;
-  /* 25px 20px 12px */
   width: 100%;
   font-family: "Urbanist", sans-serif;
   font-size: 0.75rem;
-  /* 12px */
   color: white;
   opacity: 0;
   background: linear-gradient(0deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%);
+rgba(0, 0, 0, 0.5) 0%,
+rgba(255, 255, 255, 0) 100%);
   transition: 0.3s;
 }
 
@@ -3096,22 +3087,19 @@ p {
 .book {
   display: block;
   width: 10rem;
-  /* 160px */
   height: 15rem;
-  /* 240px */
   position: relative;
   background: white;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1),
-    0 0.5625rem 1.25rem rgba(0, 0, 0, 0.25);
+0 0.5625rem 1.25rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
   transition: box-shadow 0.3s linear;
   border-radius: 0.3125rem;
-  /* 5px */
 }
 
 .book:hover {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25),
-    0 0.5625rem 1.25rem rgba(0, 0, 0, 0.45);
+0 0.5625rem 1.25rem rgba(0, 0, 0, 0.45);
 }
 
 .book img {
@@ -3303,7 +3291,6 @@ p {
 
 .arrow-down {
   transform: rotate(0deg);
-  /* Default rotation for other browsers */
 }
 
 /* Safari-specific CSS */
@@ -3311,7 +3298,6 @@ p {
 @supports (-webkit-transform: rotate(0deg)) {
   .arrow-down {
     transform: rotate(90deg);
-    /* Fix the upside-down issue for Safari */
   }
 }
 
@@ -3495,8 +3481,20 @@ p {
     padding-top: 2.5rem;
   }
 
+  .md\:pt-14{
+    padding-top: 3.5rem;
+  }
+
+  .md\:pt-16{
+    padding-top: 4rem;
+  }
+
   .md\:pt-20{
     padding-top: 5rem;
+  }
+
+  .md\:pt-24{
+    padding-top: 6rem;
   }
 
   .md\:text-base{
@@ -3531,6 +3529,10 @@ p {
 
   .lg\:pt-20{
     padding-top: 5rem;
+  }
+
+  .lg\:pt-14{
+    padding-top: 3.5rem;
   }
 
   .lg\:text-2xl{
