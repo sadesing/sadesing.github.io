@@ -2271,10 +2271,6 @@ video {
   padding-left: 2rem;
 }
 
-.pt-0\.5{
-  padding-top: 0.125rem;
-}
-
 .pt-1{
   padding-top: 0.25rem;
 }
@@ -3529,10 +3525,6 @@ rgba(255, 255, 255, 0) 100%);
 
   .lg\:pt-20{
     padding-top: 5rem;
-  }
-
-  .lg\:pt-14{
-    padding-top: 3.5rem;
   }
 
   .lg\:text-2xl{
