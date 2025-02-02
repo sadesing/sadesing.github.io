@@ -24,9 +24,23 @@ scroll-behavior: smooth;
 body {
 background-color: #ffffff;
 font-family: "Urbanist", sans-serif;
+
 }
 p {
 color: #020101;
+}
+
+.text-code {
+font-family: monospace;
+color: #333333;
+font-size: 0.875rem;
+background-color: #f0f0f0;
+padding: 0 4px;
+border-radius: 4px;
+}
+#back-to-top {
+  display: none;
+  /* Add other styling as needed */
 }
 .sr-only {
 position: absolute;
@@ -42,31 +56,21 @@ border: 0;
 outline: 1px solid #4a90e2;
 outline-offset: 2px;
 }
-.text-code {
-font-family: monospace;
-color: #333333;
-font-size: 0.875rem;
-background-color: #f0f0f0;
-padding: 0 4px;
-border-radius: 4px;
-}
-.filter-btn:hover {
-transform: scale(.9);
-filter: brightness(1.2);
-transition: transform 0.8s, filter 0.3s;
-}
 /* Navigation Link Styles */
 .nav-link {
-color: #333;
+color: #333333;
 text-decoration: none;
 transition: color 0.2s ease, background-size 0.5s;
 background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 1px no-repeat;
+}
+.nav-link.nav-link--header {
+color: #ffffff;
 }
 .nav-link:hover {
 --d: 100%;
 }
 .nav-link.active {
-font-weight: bold;
+font-weight: 900;
 }
 .heading-h1 {
 font-family: "Urbanist", sans-serif;
@@ -81,6 +85,9 @@ font-size: 1.875rem;
 font-family: "Urbanist", sans-serif;
 font-weight: 700;
 font-size: 1.25rem;
+}
+.header-icon {
+  color: inherit; /* Ensure it inherits color from its parent */
 }
 .photo-gallery {
 columns: 5 12.5rem;

@@ -1,7 +1,103 @@
-//Back to top button functionality
-const backToTopButton = document.getElementById("back-to-top");
+// Back to top button functionality
+function initializeBackToTop() {
+  const backToTopButton = document.getElementById("back-to-top");
 
-//Home page top navigation starts here
+  if (!backToTopButton) {
+    console.warn("Back-to-top button not found on this page.");
+    return; // Exit if the button doesn't exist on the current page
+  }
+
+  // Combined Scroll Handler for Header and Back-to-Top Button
+  function handleScroll() {
+    const scrollY = window.scrollY;
+
+    // Back-to-Top Button Logic
+    if (window.innerWidth >= 1024) {
+      backToTopButton.style.display = scrollY > 700 ? "block" : "none";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  }
+
+  // Set initial state
+  handleScroll();
+
+  // Add event listeners
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
+  // Click handler for back-to-top button
+  backToTopButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Header Scroll Effect
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.getElementById("main-header");
+  const logo = document.getElementById("header-logo");
+  const links = document.querySelectorAll(".nav-link--header");
+  const mobileLinks = document.querySelectorAll(".mobile-nav-link"); // Mobile nav links
+  const icons = document.querySelectorAll(".header-icon"); // Changed: Target the anchor elements instead of SVGs directly
+
+  // Added: Function to handle scroll logic
+  function handleHeaderScroll() {
+    if (window.scrollY > 50) {
+      // Change header background
+      header.classList.add("bg-white", "shadow-md");
+      header.classList.remove("bg-black");
+
+      // Change logo color
+      logo.classList.add("text-black");
+      logo.classList.remove("text-white");
+
+      // Change navigation links color explicitly
+      links.forEach(link => {
+        link.style.color = "#000000"; // Black text on scroll
+      });
+
+      mobileLinks.forEach(link => {
+        link.style.color = "#000000"; // Mobile menu links turn black too
+      });
+
+      // Change SVG icon colors by setting parent color
+      icons.forEach(icon => {
+        icon.style.color = "#000000"; // Black icons on scroll
+      });
+
+    } else {
+      // Revert header background
+      header.classList.add("bg-black");
+      header.classList.remove("bg-white", "shadow-md");
+
+      // Revert logo color
+      logo.classList.add("text-white");
+      logo.classList.remove("text-black");
+
+      // Revert nav links color explicitly
+      links.forEach(link => {
+        link.style.color = "#ffffff"; // White text when at the top
+      });
+
+      mobileLinks.forEach(link => {
+        link.style.color = "#ffffff"; // Mobile menu links turn white again
+      });
+
+      // Revert SVG icon colors by setting parent color
+      icons.forEach(icon => {
+        icon.style.color = "#ffffff"; // White icons when at the top
+      });
+    }
+  }
+
+  // Added: Call handleHeaderScroll immediately to set initial state
+  handleHeaderScroll();
+
+  // Bind scroll event listener
+  window.addEventListener("scroll", handleHeaderScroll);
+});
+
+// Home page top navigation starts here
 document.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -23,44 +119,10 @@ document.addEventListener("scroll", () => {
   });
 });
 
-// Function to check screen size and toggle button visibility
-function checkScreenSize() {
-  if (window.innerWidth >= 1024) {
-    // Tailwind's lg breakpoint is 1024px
-    window.onscroll = function () {
-      if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-      ) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-  } else {
-    backToTopButton.style.display = "none";
-    window.onscroll = null; // Remove the scroll event listener on smaller screens
-  }
-}
-// Initial check
-checkScreenSize();
-
-// Check screen size on resize
-window.onresize = checkScreenSize;
-
-// When the user clicks on the button, scroll to the top of the document
-backToTopButton.addEventListener("click", function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
-
 // Get the current page's URL
 const currentPage = window.location.pathname.split("/").pop();
-
-// Get all the nav links
 const navLinks = document.querySelectorAll(".nav-link");
 
-// Loop through the nav links and add 'active' class to the current page's link
 navLinks.forEach((link) => {
   if (link.getAttribute("href") === currentPage) {
     link.classList.add("text-underline", "font-bold");
@@ -74,60 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener("click", () => {
-      // Remove active class from all thumbnails and slider images
       thumbnails.forEach((thumb) => thumb.classList.remove("active"));
       sliderImages.forEach((image) => image.classList.remove("active-img"));
-
-      // Add active class to the clicked thumbnail and corresponding slider image
       thumbnail.classList.add("active");
       sliderImages[index].classList.add("active-img");
     });
   });
 });
 
-// Portfolio filter starts here
-document.addEventListener("DOMContentLoaded", () => {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const category = button.dataset.category;
-
-      // Update ARIA attributes for active button
-      filterButtons.forEach((btn) => {
-        btn.classList.remove("bg-black", "text-white", "border-black");
-        btn.classList.add("bg-white", "text-gray-800", "border-black");
-        btn.setAttribute("aria-selected", "false");
-        btn.setAttribute("tabindex", "-1");
-      });
-
-      button.classList.remove("bg-white", "text-gray-800", "border-black");
-      button.classList.add("bg-black", "text-white", "border-black");
-      button.setAttribute("aria-selected", "true");
-      button.setAttribute("tabindex", "0");
-
-      // Filter portfolio items
-      portfolioItems.forEach((item) => {
-        if (category === "all" || item.dataset.category.includes(category)) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
-
-    // Enable keyboard navigation
-    button.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
-        const next = button.nextElementSibling || filterButtons[0];
-        next.focus();
-      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
-        const prev =
-          button.previousElementSibling ||
-          filterButtons[filterButtons.length - 1];
-        prev.focus();
-      }
-    });
-  });
-});
+// Initialize back-to-top button on all pages
+document.addEventListener("DOMContentLoaded", initializeBackToTop);
