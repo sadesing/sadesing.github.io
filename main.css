@@ -137,8 +137,8 @@ transition: 0.3s;
 /* Book cover styles */
 .book {
 display: block;
-width: 10rem;
-height: 15rem;
+width: 8rem;
+height: 11rem;
 position: relative;
 background: white;
 box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1),
@@ -194,7 +194,7 @@ transition: all 0.3s ease-in-out;
 pointer-events: none;
 }
 .image-item:hover .overlay {
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.6);
 opacity: 1;
 }
 .active-img .overlay {
@@ -203,7 +203,7 @@ opacity: 0;
 pointer-events: none;
 }
 .active-img:hover .overlay {
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.6);
 opacity: 1;
 }
 /* Macbook styles */
