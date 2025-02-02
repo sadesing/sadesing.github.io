@@ -11,7 +11,7 @@
   <body class="w-full">
     <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
       <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
-        <ul class="hidden md:flex space-x-5 text-base">
+        <div class="hidden md:flex space-x-5 text-base">
           <a href="index.html" class="flex items-center gap-2" aria-label="Go back to the homepage">
             <svg class="header-icon" width="40px" height="40px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -21,7 +21,7 @@
             </svg>
             <span class="nav-link nav-link--header transition-all duration-300">Back to Home</span>
           </a>
-        </ul>
+        </div>
         <h1 id="header-logo"
           class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
           <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
@@ -336,6 +336,10 @@
             Adequate spacing between map markers is essential to enhance usability, especially for users with motor
             impairments or those navigating on smaller devices.
           </p>
+
+          <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-map-marker.png"
+          alt="Leaflet map showing Cabezas, Bolivia location marker" loading="lazy" />
+
           <p class="text-base font-semibold mt-6">Changes made:</p>
           <ul class="list-disc list-inside pt-2 space-y-2">
             <li class="text-base">
