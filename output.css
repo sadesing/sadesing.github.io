@@ -2465,6 +2465,16 @@ video {
   padding-bottom: 8rem;
 }
 
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -3744,6 +3754,11 @@ rgba(255, 255, 255, 0) 100%);
   .md\:py-2{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .md\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .md\:pb-44{
