@@ -3547,6 +3547,16 @@ rgba(255, 255, 255, 0) 100%);
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (prefers-color-scheme: dark){
