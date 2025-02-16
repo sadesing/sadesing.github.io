@@ -3,14 +3,15 @@
 @import "tailwindcss/utilities";
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&family=Gloria+Hallelujah&display=swap');
+
 @font-face {
 font-family: "StudyHard";
 src: url("fonts/StudyHard.ttf") format("truetype");
 }
-@font-face {
-font-family: "Shawkind";
-src: url("fonts/Shawkind.ttf") format("truetype");
-}
+
+
 /* Global Styles */
 *,
 *::before,
@@ -89,123 +90,7 @@ font-size: 1.25rem;
 .header-icon {
   color: inherit; /* Ensure it inherits color from its parent */
 }
-.photo-gallery {
-columns: 5 12.5rem;
-gap: 1.5rem;
-width: 90%;
-transition: 0.3s;
-margin: 0 auto;
-}
-.photo-gallery:hover .photo-gallery__image {
-filter: grayscale(1);
-}
-.photo-gallery .photo-gallery__container {
-padding-top: 1.5rem;
-}
-.photo-gallery .photo-gallery__container:hover .photo-gallery__image {
-filter: grayscale(0);
-}
-.photo-gallery .photo-gallery__container:hover .photo-gallery__caption {
-opacity: 1;
-}
-.photo-gallery .photo-gallery__image {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: 0.3s;
-box-shadow: 0.0625rem 0.125rem 0.125rem black;
-}
-.photo-gallery .photo-gallery__image:hover {
-transform: scale(1.1);
-}
-.photo-gallery .photo-gallery__caption {
-position: absolute;
-bottom: 0;
-left: 0;
-padding: 1.5625rem 1.25rem 0.75rem;
-width: 100%;
-font-family: "Urbanist", sans-serif;
-font-size: 0.75rem;
-color: white;
-opacity: 0;
-background: linear-gradient(0deg,
-rgba(0, 0, 0, 0.5) 0%,
-rgba(255, 255, 255, 0) 100%);
-transition: 0.3s;
-}
-/* Book cover styles */
-.book {
-display: block;
-width: 8rem;
-height: 11rem;
-position: relative;
-background: white;
-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1),
-0 0.5625rem 1.25rem rgba(0, 0, 0, 0.25);
-overflow: hidden;
-transition: box-shadow 0.3s linear;
-border-radius: 0.3125rem;
-}
-.book:hover {
-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25),
-0 0.5625rem 1.25rem rgba(0, 0, 0, 0.45);
-}
-.book img {
-width: 100%;
-height: 100%;
-transform-origin: left;
-transition: transform 0.45s ease;
-}
-.book:hover img {
-transform: rotateY(-25deg);
-}
-/* Image slider styles */
-#image-slider ul li {
-position: absolute;
-top: 0;
-left: 100%;
-width: 100%;
-height: 100%;
-opacity: 0;
-transition: opacity 0.6s ease-in-out, left 0.6s ease-in-out;
-}
-#image-slider ul li.active-img {
-left: 0;
-opacity: 1;
-z-index: 10;
-}
-.image-item {
-position: relative;
-overflow: hidden;
-}
-.overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0);
-display: flex;
-justify-content: center;
-align-items: center;
-opacity: 0;
-transition: all 0.3s ease-in-out;
-pointer-events: none;
-}
-.image-item:hover .overlay {
-background-color: rgba(0, 0, 0, 0.6);
-opacity: 1;
-}
-.active-img .overlay {
-background-color: rgba(0, 0, 0, 0);
-opacity: 0;
-pointer-events: none;
-}
-.active-img:hover .overlay {
-background-color: rgba(0, 0, 0, 0.6);
-opacity: 1;
-}
+
 /* Macbook styles */
 :root {
 --black: #000;
@@ -310,6 +195,7 @@ position: absolute;
 right: 0;
 top: 0
 }
+
 /* For all other browsers */
 .arrow-down {
 transform: rotate(0deg);
@@ -318,5 +204,101 @@ transform: rotate(0deg);
 @supports (-webkit-transform: rotate(0deg)) {
 .arrow-down {
 transform: rotate(90deg);
+}
+}
+
+/* Polaroid styles */
+.polaroid-group {
+  position: relative;
+  width: 100%;
+  min-height: 600px; 
+  margin: 4rem 0; 
+  padding: 40px 0; 
+}
+
+.drybn-polaroid {
+  width: 300px;
+  height: 340px;
+  background: #fff;
+  padding: 1rem;
+  position: absolute;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: rotate(-2deg);
+  z-index: 1;
+  cursor: grab;
+  user-select: none; 
+  transition: left 0.1s ease, top 0.1s ease;
+}
+
+.drybn-polaroid:focus {
+  outline: 2px solid #3b82f6; 
+  outline-offset: 2px;
+}
+
+.drybn-polaroid:active {
+  cursor: grabbing;
+  transition: none;
+}
+
+/* Random rotations for different polaroids */
+.drybn-polaroid:nth-child(1) { transform: rotate(-3deg); }
+.drybn-polaroid:nth-child(2) { transform: rotate(2deg); }
+.drybn-polaroid:nth-child(3) { transform: rotate(-1deg); }
+.drybn-polaroid:nth-child(4) { transform: rotate(4deg); }
+.drybn-polaroid:nth-child(5) { transform: rotate(-2deg); }
+
+
+.polaroid-image {
+  width: 100%;
+  height: calc(300px - 2rem);
+  background: #2a2a2a;
+  margin: 0 auto;
+  position: relative;
+}
+
+.polaroid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) inset;
+  pointer-events: none; /* Prevent image from intercepting mouse events */
+}
+
+.polaroid-date p {
+  font-family: 'Wallpoet', cursive;
+  color: #3d0400; /* Dark red for contrast */
+  letter-spacing: 3px;
+  background-color: white;
+  height: 1rem;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.polaroid-caption {
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+}
+
+.polaroid-caption h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  margin: 0.5rem;
+  transform: rotate(-2deg);
+  color: #1e293b; 
+}
+
+@media (max-width: 767px) {
+  .drybn-polaroid {
+    transform: rotate(0) !important;
+    position: static !important;
+    margin: 2rem auto;
+    cursor: default;
+  }
+
+  .polaroid-group {
+    min-height: auto; 
 }
 }
