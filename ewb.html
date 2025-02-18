@@ -46,6 +46,7 @@
     <!-- Content -->
     <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
       <section aria-labelledby="ewb-overview">
+        <span id="ewb-overview" class="sr-only">Overview of Engineers Without Borders</span>
         <div class="flex justify-center">
           <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
             aria-label="Visit EWB North Texas website">
@@ -100,7 +101,7 @@
           <p class="pt-2 text-base">
             Below are the results of audits conducted on the
             <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
-              rel="noopener noreferrer">Homepage</a>
+              rel="noopener noreferrer">EWB Homepage</a>
             and the
             <a class="nav-link font-bold" href="https://www.ewb-texas.com/projects/" target="_blank"
               rel="noopener noreferrer">Projects page</a>
@@ -185,15 +186,15 @@
           <h2 class="heading-h2">Accessibility Improvements</h2>
           <p class="pt-2 text-base">
             I am maintaining a detailed log of all accessibility issues I am
-            actively working to remediate across the site. You can view it
+            actively working to remediate across the site. You can view the
             <a class="nav-link font-bold"
               href="https://deeply-shoe-8ed.notion.site/EWB-North-Texas-Website-accessibility-audit-17df98cabbe180bab1f2ee6572521548"
               target="_blank" rel="noopener noreferrer"
-              aria-label="Running log of accessibility issues via Notion">here</a>
+              aria-label="Notion document displaying a running log of accessibility issues">EWB North Texas accessibility audit log</a>
             on Notion.
           </p>
           <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-notion.png"
-            alt="Image of accessibility issues Notion document" loading="lazy" />
+            alt="Notion document displaying accessibility issues" loading="lazy" />
         </div>
         <div class="pt-14 md:pt-24">
           <h2 class="heading-h2">Challenges</h2>
@@ -216,7 +217,7 @@
       </section>
       <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results">
         <div class="audit-results-intro">
-          <h2 class="heading-h2">Audit Results</h2>
+          <h2 id="audit-results" class="heading-h2">Audit Results</h2>
           <p class="text-base mt-2">
             Below are the results of the <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
               rel="noopener noreferrer">Homepage</a> and <a class="nav-link font-bold"
@@ -241,13 +242,13 @@
               Before:
             </p>
             <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-ii.png"
-              alt="Image of contrast issue before fix" loading="lazy" />
+              alt="Text with a 2.46 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
             <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.46 (foreground <span
               class="text-code">color: #a5a5a5</span>, <span class="text-code">background color: #ffffff</span>).
               Expected contrast ratio of 4.5:1
             </p>
             <img class="w-full h-full object-cover z-10 mt-12 shadow-lg" src="assets/images/ewb/ewb-home-i.png"
-              alt="Image of contrast issue before fix" loading="lazy" />
+              alt="Text with a 2.68 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
             <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.68 (foreground <span
               class="text-code">color:
               #999999</span>, <span class="text-code">background color: #f8f8f8</span>). Expected contrast ratio of
@@ -257,16 +258,16 @@
               After:
             </p>
             <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-iii.png"
-              alt="Image of contrast issue after fix" loading="lazy" />
+              alt="Text with a 9.29:1 contrast ratio, meeting WCAG contrast standards" loading="lazy" />
             <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-home-iv.png"
-              alt="Image of contrast issue after fix" loading="lazy" />
+              alt="Text with improved contrast meeting WCAG standards" loading="lazy" />
             <p class="text-sm text-center mt-8">A Color Contrast Analyzer was used to evaluate and select a
               sufficient text color that complies with accessibility guidelines, ensuring that the contrast ratio meets
               the required standards for readability.
             </p>
             <div class="flex items-center justify-center">
               <img class="w-72 h-auto object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-color-analyzer.png"
-                alt="Image of contrast contrast analyzer with passing results" loading="lazy" />
+                alt="Contrast checker showing passing color contrast results for gray text" loading="lazy" />
             </div>
           </div>
           <div>
@@ -317,7 +318,7 @@
       </section>
       <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results-continued">
         <div class="audit-results-intro">
-          <h2 class="heading-h2">Audit Results Continued</h2>
+          <h2 id="audit-results-continued" class="heading-h2">Audit Results Continued</h2>
         </div>
         <div class="projects-page-results">
         <h3 class="font-semibold mt-2 text-base mt-8">PROJECTS PAGE</h3>
@@ -378,14 +379,14 @@
             <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-before.png"
               alt="Screenshot of projects title on EWB website with color contrast issue" loading="lazy" />
             <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fail.png"
-              alt="Image of contrast contrast analyzer with failing results" loading="lazy" />
+              alt="Contrast checker showing failing color contrast results" loading="lazy" />
           </div>
           <div>
             <p class="text-base font-semibold mt-2"> After:</p>
             <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-fixed.png"
               alt="Screenshot of projects title on EWB website with fixed color contrast" loading="lazy" />
             <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fixed.png"
-              alt="Image of contrast contrast analyzer with passing results" loading="lazy" />
+              alt="Contrast checker showing passing color contrast results" loading="lazy" />
           </div>
         </div>
         <div class="mt-4">
@@ -395,12 +396,12 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div class="bg-gray-900">
               <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-aXe-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB Projects page using aXe DevTools after resolving issues"
+                alt="Accessibility audit results for EWB Projects page in aXe DevTools after issue resolution"
                 loading="lazy" />
             </div>
             <div class="bg-zinc-800">
               <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-lighthouse-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB Projects page using Lighthouse after resolving issues"
+                alt="Accessibility audit results for EWB Projects page in Lighthouse after issue resolution"
                 loading="lazy" />
             </div>
           </div>

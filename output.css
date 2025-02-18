@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Wallpoet&family=Gloria+Hallelujah&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&family=Gloria+Hallelujah&display=swap");
 
 /*
 ! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
@@ -3054,7 +3054,6 @@ p {
 
 .header-icon {
   color: inherit;
-  /* Ensure it inherits color from its parent */
 }
 
 /* Macbook styles */
@@ -3070,14 +3069,24 @@ p {
   --border-radius-screen: 3% 3% 0.5% 0.5%/5%;
   --border-radius-notch: 0 0 7% 7%/0 0 95% 95%;
   --gradient-base: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4b4b4f 84%, #262627 89%, rgba(0, 0, 0, 0.01) 98%);
-  --gradient-base-after: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%)
-
+  --gradient-base-after: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0.8) 0.5%,
+    rgba(0, 0, 0, 0.4) 3.3%,
+    transparent 15%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 85%,
+    rgba(0, 0, 0, 0.4) 96.7%,
+    rgba(255, 255, 255, 0.8) 99.5%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .macbook {
   padding: 4% 6%;
   margin: 0 auto;
-  max-width: 800px
+  max-width: 800px;
 }
 
 .screen {
@@ -3085,7 +3094,7 @@ p {
   border-radius: var(--border-radius-screen);
   margin: 0 auto;
   position: relative;
-  width: 80%
+  width: 80%;
 }
 
 .screen:before {
@@ -3094,7 +3103,7 @@ p {
   box-shadow: 0 0 0 1px var(--shadow-dark) inset, 0 0 1px 2px var(--shadow-light) inset;
   content: "";
   display: block;
-  padding-top: 67%
+  padding-top: 67%;
 }
 
 .screen:after {
@@ -3104,7 +3113,7 @@ p {
   bottom: 0.75%;
   left: 0.5%;
   padding-top: 1%;
-  width: 99%
+  width: 99%;
 }
 
 .viewport {
@@ -3114,12 +3123,12 @@ p {
   right: 0;
   top: 0;
   margin: 4.3% 3.2%;
-  background: var(--gray-dark)
+  background: var(--gray-dark);
 }
 
 .base {
   position: relative;
-  width: 100%
+  width: 100%;
 }
 
 .base:before {
@@ -3127,7 +3136,7 @@ p {
   display: block;
   padding-top: 3.3%;
   background: var(--gradient-base);
-  border-radius: 0 0 10% 10%/0 0 50% 50%
+  border-radius: 0 0 10% 10%/0 0 50% 50%;
 }
 
 .base:after {
@@ -3136,7 +3145,7 @@ p {
   height: 53%;
   position: absolute;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 .notch {
@@ -3146,13 +3155,13 @@ p {
   margin: -3.5% auto 0;
   z-index: 2;
   position: relative;
-  width: 14%
+  width: 14%;
 }
 
 .notch:before {
   content: "";
   display: block;
-  padding-top: 10%
+  padding-top: 10%;
 }
 
 .macbook .viewport {
@@ -3160,11 +3169,11 @@ p {
   background-position: 0 0;
   background-size: 100% auto;
   overflow: hidden;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .macbook:hover .viewport {
-  background-position: 0 100%
+  background-position: 0 100%;
 }
 
 .macbook .viewport:after {
@@ -3174,7 +3183,7 @@ p {
   left: 0;
   position: absolute;
   right: 0;
-  top: 0
+  top: 0;
 }
 
 /* For all other browsers */
@@ -3227,8 +3236,6 @@ p {
   transition: none;
 }
 
-/* Random rotations for different polaroids */
-
 .drybn-polaroid:nth-child(1) {
   transform: rotate(-3deg);
 }
@@ -3269,13 +3276,11 @@ p {
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) inset;
   pointer-events: none;
-  /* Prevent image from intercepting mouse events */
 }
 
 .polaroid-date p {
-  font-family: 'Wallpoet', cursive;
+  font-family: "Wallpoet", cursive;
   color: #3d0400;
-  /* Dark red for contrast */
   letter-spacing: 3px;
   background-color: white;
   height: 1rem;
@@ -3292,13 +3297,11 @@ p {
 }
 
 .polaroid-caption h2 {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   margin: 0.5rem;
   transform: rotate(-2deg);
   color: #1e293b;
 }
-
-/* Responsive Styles */
 
 @media (max-width: 767px) {
   .drybn-polaroid {
@@ -3307,26 +3310,20 @@ p {
     margin: 2rem auto;
     cursor: default;
     width: 200px;
-    /* Adjusted smaller width */
     height: 250px;
-    /* Adjusted smaller height */
     padding: 0.75rem;
-    /* Reduce padding to maintain proportion */
   }
 
   .polaroid-image {
     height: 160px;
-    /* Adjust height of the image */
   }
 
   .polaroid-caption h2 {
     font-size: 0.875rem;
-    /* Reduce font size of caption */
   }
 
   .polaroid-date p {
     font-size: 0.75rem;
-    /* Reduce font size of date */
   }
 
   .polaroid-group {
