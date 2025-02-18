@@ -11,7 +11,6 @@ function initializeBackToTop() {
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Back-to-Top Button Logic
     if (window.innerWidth >= 1024) {
       backToTopButton.style.display = scrollY > 700 ? "block" : "none";
     } else {
@@ -110,28 +109,25 @@ navLinks.forEach((link) => {
 document.addEventListener("DOMContentLoaded", initializeBackToTop);
 
 // Polaroid bulliten board gallery
-document.addEventListener("DOMContentLoaded", () => {
-  const polaroids = document.querySelectorAll(".drybn-polaroid");
-  const container = document.querySelector(".polaroid-group");
+document.addEventListener('DOMContentLoaded', () => {
+  const polaroids = document.querySelectorAll('.drybn-polaroid');
+  const container = document.querySelector('.polaroid-group');
 
   if (window.innerWidth > 768 && container) {
     const containerRect = container.getBoundingClientRect();
 
-    polaroids.forEach((polaroid) => {
+    polaroids.forEach(polaroid => {
       let isDragging = false;
-      let offsetX = 0,
-        offsetY = 0;
+      let offsetX = 0, offsetY = 0;
 
       // Store initial random position
-      const randomX =
-        Math.random() * (container.offsetWidth - polaroid.offsetWidth);
-      const randomY =
-        Math.random() * (container.offsetHeight - polaroid.offsetHeight);
-      polaroid.style.position = "absolute";
+      const randomX = Math.random() * (container.offsetWidth - polaroid.offsetWidth);
+      const randomY = Math.random() * (container.offsetHeight - polaroid.offsetHeight);
+      polaroid.style.position = 'absolute';
       polaroid.style.left = `${randomX}px`;
       polaroid.style.top = `${randomY}px`;
 
-      polaroid.addEventListener("mousedown", (e) => {
+      polaroid.addEventListener('mousedown', (e) => {
         isDragging = true;
 
         // Calculate the offset between mouse position and polaroid's top-left corner
@@ -139,16 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
         offsetX = e.clientX - rect.left;
         offsetY = e.clientY - rect.top;
 
-        // Bring the clicked polaroid to the front
-        polaroids.forEach((p) => (p.style.zIndex = "1")); // Reset all polaroids to a lower z-index
-        polaroid.style.zIndex = "9999"; // Bring the dragged polaroid to the front
+        // Bring the clicked polaroid to the front (but still below the nav)
+        polaroids.forEach(p => p.style.zIndex = '10'); // Reset all polaroids
+        polaroid.style.zIndex = '20'; // Bring the dragged polaroid to the front (but below nav)
 
-        polaroid.style.cursor = "grabbing";
+        polaroid.style.cursor = 'grabbing';
       });
 
       // Throttle mousemove events for smoother dragging
       let isThrottled = false;
-      document.addEventListener("mousemove", (e) => {
+      document.addEventListener('mousemove', (e) => {
         if (!isDragging || isThrottled) return;
         isThrottled = true;
 
@@ -158,14 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
           let newY = e.clientY - offsetY - containerRect.top;
 
           // Apply boundaries
-          newX = Math.max(
-            0,
-            Math.min(newX, container.offsetWidth - polaroid.offsetWidth)
-          );
-          newY = Math.max(
-            0,
-            Math.min(newY, container.offsetHeight - polaroid.offsetHeight)
-          );
+          newX = Math.max(0, Math.min(newX, container.offsetWidth - polaroid.offsetWidth));
+          newY = Math.max(0, Math.min(newY, container.offsetHeight - polaroid.offsetHeight));
 
           // Move the polaroid
           polaroid.style.left = `${newX}px`;
@@ -175,10 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      document.addEventListener("mouseup", () => {
+      document.addEventListener('mouseup', () => {
         if (isDragging) {
           isDragging = false;
-          polaroid.style.cursor = "grab";
+          polaroid.style.cursor = 'grab';
         }
       });
     });
