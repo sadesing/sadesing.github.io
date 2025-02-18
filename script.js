@@ -11,7 +11,6 @@ function initializeBackToTop() {
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Back-to-Top Button Logic
     if (window.innerWidth >= 1024) {
       backToTopButton.style.display = scrollY > 700 ? "block" : "none";
     } else {
@@ -28,7 +27,7 @@ function initializeBackToTop() {
 
   // Click handler for back-to-top button
   backToTopButton.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
@@ -52,19 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.remove("text-white");
 
       // Change navigation links color explicitly
-      links.forEach(link => {
+      links.forEach((link) => {
         link.style.color = "#000000"; // Black text on scroll
       });
 
-      mobileLinks.forEach(link => {
+      mobileLinks.forEach((link) => {
         link.style.color = "#000000"; // Mobile menu links turn black too
       });
 
       // Change SVG icon colors by setting parent color
-      icons.forEach(icon => {
+      icons.forEach((icon) => {
         icon.style.color = "#000000"; // Black icons on scroll
       });
-
     } else {
       // Revert header background
       header.classList.add("bg-black");
@@ -75,16 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.remove("text-black");
 
       // Revert nav links color explicitly
-      links.forEach(link => {
+      links.forEach((link) => {
         link.style.color = "#ffffff"; // White text when at the top
       });
 
-      mobileLinks.forEach(link => {
+      mobileLinks.forEach((link) => {
         link.style.color = "#ffffff"; // Mobile menu links turn white again
       });
 
       // Revert SVG icon colors by setting parent color
-      icons.forEach(icon => {
+      icons.forEach((icon) => {
         icon.style.color = "#ffffff"; // White icons when at the top
       });
     }
@@ -97,28 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleHeaderScroll);
 });
 
-// Home page top navigation starts here
-document.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  let currentSection = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (window.scrollY >= sectionTop - 60) {
-      currentSection = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
 // Get the current page's URL
 const currentPage = window.location.pathname.split("/").pop();
 const navLinks = document.querySelectorAll(".nav-link");
@@ -129,20 +105,120 @@ navLinks.forEach((link) => {
   }
 });
 
-// Photo carousel gallery starts here
-document.addEventListener("DOMContentLoaded", () => {
-  const thumbnails = document.querySelectorAll("#thumbnail li");
-  const sliderImages = document.querySelectorAll("#image-slider ul li");
+// Initialize back-to-top button on all pages
+document.addEventListener("DOMContentLoaded", initializeBackToTop);
 
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener("click", () => {
-      thumbnails.forEach((thumb) => thumb.classList.remove("active"));
-      sliderImages.forEach((image) => image.classList.remove("active-img"));
-      thumbnail.classList.add("active");
-      sliderImages[index].classList.add("active-img");
+// Polaroid bulliten board gallery
+document.addEventListener('DOMContentLoaded', () => {
+  const polaroids = document.querySelectorAll('.drybn-polaroid');
+  const container = document.querySelector('.polaroid-group');
+
+  if (window.innerWidth > 768 && container) {
+    const containerRect = container.getBoundingClientRect();
+
+    polaroids.forEach(polaroid => {
+      let isDragging = false;
+      let offsetX = 0, offsetY = 0;
+
+      // Store initial random position
+      const randomX = Math.random() * (container.offsetWidth - polaroid.offsetWidth);
+      const randomY = Math.random() * (container.offsetHeight - polaroid.offsetHeight);
+      polaroid.style.position = 'absolute';
+      polaroid.style.left = `${randomX}px`;
+      polaroid.style.top = `${randomY}px`;
+
+      polaroid.addEventListener('mousedown', (e) => {
+        isDragging = true;
+
+        // Calculate the offset between mouse position and polaroid's top-left corner
+        const rect = polaroid.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+
+        // Bring the clicked polaroid to the front (but still below the nav)
+        polaroids.forEach(p => p.style.zIndex = '10'); // Reset all polaroids
+        polaroid.style.zIndex = '20'; // Bring the dragged polaroid to the front (but below nav)
+
+        polaroid.style.cursor = 'grabbing';
+      });
+
+      // Throttle mousemove events for smoother dragging
+      let isThrottled = false;
+      document.addEventListener('mousemove', (e) => {
+        if (!isDragging || isThrottled) return;
+        isThrottled = true;
+
+        requestAnimationFrame(() => {
+          // Calculate new position relative to the container
+          let newX = e.clientX - offsetX - containerRect.left;
+          let newY = e.clientY - offsetY - containerRect.top;
+
+          // Apply boundaries
+          newX = Math.max(0, Math.min(newX, container.offsetWidth - polaroid.offsetWidth));
+          newY = Math.max(0, Math.min(newY, container.offsetHeight - polaroid.offsetHeight));
+
+          // Move the polaroid
+          polaroid.style.left = `${newX}px`;
+          polaroid.style.top = `${newY}px`;
+
+          isThrottled = false;
+        });
+      });
+
+      document.addEventListener('mouseup', () => {
+        if (isDragging) {
+          isDragging = false;
+          polaroid.style.cursor = 'grab';
+        }
+      });
+    });
+  }
+});
+
+
+// Portfolio filter starts here
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const category = button.dataset.category;
+
+      // Update ARIA attributes for active button
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("bg-black", "text-white", "border-black");
+        btn.classList.add("bg-white", "text-gray-800", "border-black");
+        btn.setAttribute("aria-selected", "false");
+        btn.setAttribute("tabindex", "-1");
+      });
+
+      button.classList.remove("bg-white", "text-gray-800", "border-black");
+      button.classList.add("bg-black", "text-white", "border-black");
+      button.setAttribute("aria-selected", "true");
+      button.setAttribute("tabindex", "0");
+
+      // Filter portfolio items
+      portfolioItems.forEach((item) => {
+        if (category === "all" || item.dataset.category.includes(category)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+
+    // Enable keyboard navigation
+    button.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        const next = button.nextElementSibling || filterButtons[0];
+        next.focus();
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        const prev =
+          button.previousElementSibling ||
+          filterButtons[filterButtons.length - 1];
+        prev.focus();
+      }
     });
   });
 });
-
-// Initialize back-to-top button on all pages
-document.addEventListener("DOMContentLoaded", initializeBackToTop);
