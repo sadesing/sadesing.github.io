@@ -10,6 +10,10 @@
   font-family: "StudyHard";
   src: url("fonts/StudyHard.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Stevania";
+  src: url("fonts/Stevania.otf") format("opentype");
+}
 
 /* Global Styles */
 *,
@@ -39,6 +43,10 @@ p {
   background-color: #f0f0f0;
   padding: 0 4px;
   border-radius: 4px;
+}
+
+.intro-text {
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 #back-to-top {
