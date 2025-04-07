@@ -188,12 +188,12 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update ARIA attributes for active button
       filterButtons.forEach((btn) => {
         btn.classList.remove("bg-black", "text-white", "border-black");
-        btn.classList.add("bg-white", "text-gray-800", "border-black");
+        btn.classList.add("bg-gray-100", "text-gray-800", "border-black");
         btn.setAttribute("aria-selected", "false");
         btn.setAttribute("tabindex", "-1");
       });
 
-      button.classList.remove("bg-white", "text-gray-800", "border-black");
+      button.classList.remove("bg-gray-100", "text-gray-800", "border-black");
       button.classList.add("bg-black", "text-white", "border-black");
       button.setAttribute("aria-selected", "true");
       button.setAttribute("tabindex", "0");
