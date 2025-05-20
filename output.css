@@ -1556,6 +1556,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-8{
+  gap: 2rem;
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -2115,6 +2119,136 @@ video {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.bg-green-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+.bg-green-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\/path-to-image\.jpg\'\)\]{
+  background-image: url('/path-to-image.jpg');
+}
+
+.bg-\[url\(\'\'\)\]{
+  background-image: url('');
+}
+
+.bg-\[url\(\'bg\'\)\]{
+  background-image: url('bg');
+}
+
+.bg-\[url\(\'bg-\'\)\]{
+  background-image: url('bg-');
+}
+
+.bg-\[url\(\'bg-tex\'\)\]{
+  background-image: url('bg-tex');
+}
+
+.bg-\[url\(\'bg-texured\'\)\]{
+  background-image: url('bg-texured');
+}
+
+.bg-\[url\(\'assbg-texured\'\)\]{
+  background-image: url('assbg-texured');
+}
+
+.bg-\[url\(\'assets\'\)\]{
+  background-image: url('assets');
+}
+
+.bg-\[url\(\'assets\/\'\)\]{
+  background-image: url('assets/');
+}
+
+.bg-\[url\(\'assets\/images\'\)\]{
+  background-image: url('assets/images');
+}
+
+.bg-\[url\(\'assets\/images\/\'\)\]{
+  background-image: url('assets/images/');
+}
+
+.bg-\[url\(\'assets\/images\/bg-textured\.png\'\)\]{
+  background-image: url('assets/images/bg-textured.png');
+}
+
+.bg-\[url\(\'\/\'\)\]{
+  background-image: url('/');
+}
+
+.bg-\[url\(\'a\'\)\]{
+  background-image: url('a');
+}
+
+.bg-\[url\(\'ass\'\)\]{
+  background-image: url('ass');
+}
+
+.bg-\[url\(\'assets\/images\/no\'\)\]{
+  background-image: url('assets/images/no');
+}
+
+.bg-\[url\(\'assets\/images\/notebook\.jpg\'\)\]{
+  background-image: url('assets/images/notebook.jpg');
+}
+
+.bg-\[url\(\'assets\/images\/texturiz\'\)\]{
+  background-image: url('assets/images/texturiz');
+}
+
+.bg-\[url\(\'assets\/images\/textur\'\)\]{
+  background-image: url('assets/images/textur');
+}
+
+.bg-\[url\(\'assets\/images\/textured\'\)\]{
+  background-image: url('assets/images/textured');
+}
+
+.bg-\[url\(\'assets\/images\/t\'\)\]{
+  background-image: url('assets/images/t');
+}
+
+.bg-\[url\(\'assets\/images\/textured-paper\.png\'\)\]{
+  background-image: url('assets/images/textured-paper.png');
+}
+
+.bg-\[url\(\'assets\/images\/te\'\)\]{
+  background-image: url('assets/images/te');
+}
+
+.bg-\[url\(\'assets\/images\/textu\'\)\]{
+  background-image: url('assets/images/textu');
+}
+
+.bg-\[url\(\'assets\/images\/text\'\)\]{
+  background-image: url('assets/images/text');
+}
+
+.bg-\[url\(\'assets\/image\'\)\]{
+  background-image: url('assets/image');
+}
+
+.bg-\[url\(\'assets\/images\/bull\'\)\]{
+  background-image: url('assets/images/bull');
+}
+
+.bg-\[url\(\'assets\/images\/bulletin\.png\'\)\]{
+  background-image: url('assets/images/bulletin.png');
+}
+
+.bg-\[url\(\'asset\'\)\]{
+  background-image: url('asset');
+}
+
+.bg-\[url\(\'assets\/images\/black-textured\.jpg\'\)\]{
+  background-image: url('assets/images/black-textured.jpg');
+}
+
 .decoration-slice{
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2133,6 +2267,10 @@ video {
 .box-decoration-clone{
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-cover{
+  background-size: cover;
 }
 
 .bg-fixed{
@@ -2162,6 +2300,10 @@ video {
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center{
+  background-position: center;
 }
 
 .bg-repeat{
