@@ -59,58 +59,53 @@
   </header>
   <!-- Content -->
   <div role="region" aria-labelledby="intro" class="w-full">
-    <section id="intro" class="w-full top-0 bg-[url('assets/images/black-textured.jpg')] bg-cover bg-center py-24 md:py-32">
+    <section id="intro"
+      class="w-full top-0 bg-[url('assets/images/black-textured.jpg')] bg-cover bg-center py-24 md:py-32">
       <p class="intro-text px-6 text-base md:text-xl lg:text-2xl text-center text-balance text-white">
         Hi! I&#39;m Sade. A front-end engineer and creative professional with a passion for accessible design.
       </p>
     </section>
   </div>
-  <main class="pt-4 mx-auto max-w-[1000px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
+  <main class="pt-4 mx-auto max-w-[1100px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
     <section id="portfolio">
       <h2 class="heading-h2">Featured Work 📌</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mt-4">
 
 
-
-                <a href="ewb.html" aria-label="Engineers without Borders project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/ewb/ewb-cover.png"
+        <a href="ewb.html" aria-label="Engineers without Borders project" class="portfolio-item">
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/ewb/ewb-cover.png"
             alt="Cover for Engineers Without Borders North Texas project" />
         </a>
 
-        
+
         <a href="airmail-downtown.html" aria-label="Air Mail downtown project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/downtown-cover.gif"
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/downtown-cover.gif"
             alt="Cover for Air Mail Downtown project" />
         </a>
 
 
-
-
         <a href="airmail-shopify.html" aria-label="Air Mail Shopify project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/am-shop-cover.jpg"
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/am-shop-cover.jpg"
             alt="Cover for Air Mail Shopify project" />
         </a>
 
 
-              <a href="airmail-arts.html" aria-label="Air Mail Arts Intel project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/dallas-placeholder.jpg"
+        <a href="airmail-arts.html" aria-label="Air Mail Arts Intel project" class="portfolio-item">
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/arts-cover.png"
             alt="Cover for Air Mail Arts Intel project" />
         </a>
 
 
-
-
-
-
-                      <a href="/" aria-label="Air Mail arts project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/pourri.jpeg"
-            alt="Cover for Air Mail Downtown project" />
+        <a href="pourri.html" aria-label="Pourri project" class="portfolio-item">
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/pourri-cover.png"
+            alt="Cover for Pourri project" />
         </a>
 
 
-         <a href="kai.html" aria-label="Kai project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10" src="assets/images/kai.gif" alt="Cover for Kai project" />
+        <a href="kai.html" aria-label="Kai project" class="portfolio-item">
+          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/kai.gif"
+            alt="Cover for Kai project" />
         </a>
 
       </div>
@@ -118,7 +113,7 @@
 
     </div>
   </main>
-  <button id="back-to-top" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+  <button id="back-to-top" type="button" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
     aria-label="Scroll to the top of the page">
     <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
       aria-label="Up arrow icon">
@@ -169,52 +164,8 @@
   <script src="script.js"></script>
 
 
-<!-- View Transitions Navigation Enhancer -->
-<script type="module">
-  if ('startViewTransition' in document) {
-    document.addEventListener('click', async (e) => {
-      const anchor = e.target.closest('a');
-      if (!anchor || anchor.target === '_blank' || anchor.download || anchor.href.includes('#')) return;
-      if (anchor.origin !== location.origin) return;
-
-      e.preventDefault();
-      const url = anchor.href;
-
-      document.startViewTransition(async () => {
-        const response = await fetch(url);
-        const html = await response.text();
-        const doc = new DOMParser().parseFromString(html, 'text/html');
-
-        const newMain = doc.querySelector('main');
-        document.querySelector('main').replaceWith(newMain);
-
-        const newIntro = doc.querySelector('#intro');
-        const currentIntro = document.querySelector('#intro');
-
-        if (newIntro && currentIntro) {
-          currentIntro.replaceWith(newIntro);
-        } else if (!newIntro && currentIntro) {
-          currentIntro.parentElement.remove();
-        } else if (newIntro && !currentIntro) {
-          const header = document.querySelector('header');
-          header.insertAdjacentHTML('afterend', newIntro.closest('div').outerHTML);
-        }
-
-        history.pushState(null, '', url);
-
-        // ✅ Re-initialize dynamic features after DOM replacement
-        initializeHeaderScrollEffect();
-        initializeBackToTop();
-        updateActiveNavLink();
-        initializePolaroidGallery(); // If applicable on new page
-      });
-    });
-  }
-</script>
-
-
+  <!-- View Transitions Navigation Enhancer -->
 
 
 </body>
-
 </html>

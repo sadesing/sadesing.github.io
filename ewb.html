@@ -1,87 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sade</title>
-  <link rel="stylesheet" href="main.min.css" />
-  <link rel="stylesheet" href="./output.css" />
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-</head>
-
-<body class="w-full">
-  <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
-    <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
-      <ul class="hidden md:flex space-x-5 text-base">
-        <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sade</title>
+    <link rel="stylesheet" href="main.min.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body class="w-full">
+    <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
+      <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
+        <ul class="hidden md:flex space-x-5 text-base">
+          <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300"
             aria-label="Go to Portfolio">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300"
+          <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300"
             aria-label="Go to About Section">About</a></li>
-      </ul>
-      <h1 id="header-logo"
-        class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
-        <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
-      </h1>
-      <div class="hidden md:flex space-x-4">
-        <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
-          <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
-            </path>
-          </svg>
-        </a>
-        <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer"
-          aria-label="GitHub">
-          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
-            </path>
-          </svg>
-        </a>
-        <a href="mailto:sadensingleton@gmail.com" class="header-icon" aria-label="Email">
-          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
-            </path>
-          </svg>
-        </a>
-      </div>
-    </nav>
-    <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
-      <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
+        </ul>
+        <h1 id="header-logo"
+          class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
+          <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
+        </h1>
+        <div class="hidden md:flex space-x-4">
+          <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
+              </path>
+            </svg>
+          </a>
+          <a href="mailto:sadensingleton@gmail.com" class="header-icon" aria-label="Email">
+            <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
+        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
           aria-label="Go to Portfolio">Portfolio</a></li>
-      <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
+        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
           aria-label="Go to About Section">About</a></li>
-    </ul>
-  </header>
-  <!-- Content -->
-  <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
-    <section aria-labelledby="ewb-overview">
-      <span id="ewb-overview" class="sr-only">Overview of Engineers Without Borders</span>
-      <div class="flex justify-center">
-        <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
-          aria-label="Visit EWB North Texas website">
+      </ul>
+    </header>
+    <!-- Content -->
+    <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
+      <section aria-labelledby="ewb-overview">
+        <span id="ewb-overview" class="sr-only">Overview of Engineers Without Borders</span>
+        <div class="flex justify-center">
+          <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit EWB North Texas website">
           <img class="w-48 h-30 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb/ewb-logo.png"
             alt="EWB North Texas logo" />
-        </a>
-      </div>
-      <p class="text-base text-center pt-6">
-        <a class="underline" href="https://ewb-usa.org/" target="_blank" rel="noopener noreferrer"
-          aria-label="Learn more about Engineers Without Borders USA">Engineers Without Borders USA</a> (EWB-USA) is a
-        national non-profit, 501(c)(3) tax-exempt organization
-        dedicated to creating a world where every community has the capacity
-        to sustainably meet its basic human needs.<br /><br />
-        I serve as Webmaster on the leadership team for the
-        <a class="underline" href="https://www.ewb-texas.com/about/" target="_blank" rel="noopener noreferrer"
-          aria-label="Learn more about Engineers Without Borders North Texas Chapter">North Texas Professional
+          </a>
+        </div>
+        <p class="text-base text-center pt-6">
+          <a class="underline" href="https://ewb-usa.org/" target="_blank" rel="noopener noreferrer"
+            aria-label="Learn more about Engineers Without Borders USA">Engineers Without Borders USA</a> (EWB-USA) is a
+          national non-profit, 501(c)(3) tax-exempt organization
+          dedicated to creating a world where every community has the capacity
+          to sustainably meet its basic human needs.<br /><br />
+          I serve as Webmaster on the leadership team for the
+          <a class="underline" href="https://www.ewb-texas.com/about/" target="_blank" rel="noopener noreferrer"
+            aria-label="Learn more about Engineers Without Borders North Texas Chapter">North Texas Professional
           Chapter</a>.
-      </p>
-    </section>
-    <section class="mt-12 border border-grey-500 p-6 md:p-12 shadow-lg">
-      <div>
+        </p>
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12 shadow-lg">
+        <div>
         <h1 class="heading-h2">
           EWB-North Texas Website Redesign & Accessibility Audit
         </h1>
@@ -105,7 +103,6 @@
               </path>
             </g>
           </svg>
-
           <svg class="pt-0" width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
             aria-labelledby="accessibilityIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square"
             stroke-linejoin="miter" fill="none" color="#000000">
@@ -146,7 +143,7 @@
             and the
             <a class="nav-link font-bold" href="https://www.ewb-texas.com/projects/" target="_blank"
               rel="noopener noreferrer">Projects page</a>
-            using <strong>aXe DevTools</strong> and <strong>Lighthouse</strong>, prior to implementing changes. These
+            using aXe DevTools and Lighthouse, prior to implementing changes. These
             tools identified
             accessibility issues related to design, typography, heading
             structure, contrast, and more. Manual testing for color contrast was also performed to ensure
@@ -182,189 +179,189 @@
             </div>
           </div>
         </div>
-    </section>
-    <section class="mt-12 border border-grey-500 p-6 md:p-12">
-      <h2 class="heading-h2">Before the Redesign</h2>
-      <p class="pt-2 text-base">
-        To provide a visual reference, here is what the site design looked
-        like before the redesign.
-      </p>
-      <div class="pt-8">
-        <div class="flex items-center justify-center">
-          <svg class="arrow-down" width="30px" height="30px" viewBox="0 -85 251 251" fill="none"
-            xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(270)">
-            <g id="SVGRepo_bgCarrier" stroke-width="0" aria-hidden="true"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <g clip-path="url(#clip0_3_230)">
-                <path
-                  d="M14.4435 26.0257C16.3478 34.2205 18.0405 42.2052 20.1564 51.2405C14.6551 50.6101 11.4813 47.2481 10.2118 43.4659C6.40316 32.1193 2.80616 20.5625 0.267088 8.79558C-1.21403 2.07164 3.65251 -1.50048 10.2118 0.600755C21.2144 3.96273 32.0054 7.95508 43.0081 11.7373C43.6428 11.9474 44.4892 12.1576 44.7008 12.5778C45.7587 14.0487 46.3935 15.7296 47.2398 17.4106C45.7587 18.041 44.2776 19.5119 43.0081 19.3017C38.5647 18.6714 34.3329 17.6208 30.1011 16.7803C27.7736 16.36 25.6577 15.7297 22.2723 16.7803C24.5998 19.3018 26.9273 22.0333 29.2548 24.5548C79.6129 74.5642 155.15 85.0703 217.781 51.2405C225.821 46.8279 233.227 41.5748 241.055 36.742C243.806 35.061 246.557 33.5901 249.307 31.9092C249.942 32.3294 250.365 32.9598 251 33.38C250.365 35.2711 250.154 37.7926 248.673 39.0533C244.018 43.4659 239.363 47.8785 234.073 51.6607C181.599 89.4829 108.601 90.9538 52.1064 54.8126C41.3153 47.8785 31.7938 39.0533 21.8492 31.0686C19.7333 29.3876 18.0406 27.4966 16.1363 25.6054C15.7131 25.3953 15.0783 25.6054 14.4435 26.0257Z"
-                  fill="#0D1927"></path>
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12">
+        <h2 class="heading-h2">Before the Redesign</h2>
+        <p class="pt-2 text-base">
+          To provide a visual reference, here is what the site design looked
+          like before the redesign.
+        </p>
+        <div class="pt-8">
+          <div class="flex items-center justify-center">
+            <svg class="arrow-down" width="30px" height="30px" viewBox="0 -85 251 251" fill="none"
+              xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(270)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0" aria-hidden="true"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g clip-path="url(#clip0_3_230)">
+                  <path
+                    d="M14.4435 26.0257C16.3478 34.2205 18.0405 42.2052 20.1564 51.2405C14.6551 50.6101 11.4813 47.2481 10.2118 43.4659C6.40316 32.1193 2.80616 20.5625 0.267088 8.79558C-1.21403 2.07164 3.65251 -1.50048 10.2118 0.600755C21.2144 3.96273 32.0054 7.95508 43.0081 11.7373C43.6428 11.9474 44.4892 12.1576 44.7008 12.5778C45.7587 14.0487 46.3935 15.7296 47.2398 17.4106C45.7587 18.041 44.2776 19.5119 43.0081 19.3017C38.5647 18.6714 34.3329 17.6208 30.1011 16.7803C27.7736 16.36 25.6577 15.7297 22.2723 16.7803C24.5998 19.3018 26.9273 22.0333 29.2548 24.5548C79.6129 74.5642 155.15 85.0703 217.781 51.2405C225.821 46.8279 233.227 41.5748 241.055 36.742C243.806 35.061 246.557 33.5901 249.307 31.9092C249.942 32.3294 250.365 32.9598 251 33.38C250.365 35.2711 250.154 37.7926 248.673 39.0533C244.018 43.4659 239.363 47.8785 234.073 51.6607C181.599 89.4829 108.601 90.9538 52.1064 54.8126C41.3153 47.8785 31.7938 39.0533 21.8492 31.0686C19.7333 29.3876 18.0406 27.4966 16.1363 25.6054C15.7131 25.3953 15.0783 25.6054 14.4435 26.0257Z"
+                    fill="#0D1927"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_3_230">
+                    <rect width="251" height="81" fill="white"></rect>
+                  </clipPath>
+                </defs>
               </g>
-              <defs>
-                <clipPath id="clip0_3_230">
-                  <rect width="251" height="81" fill="white"></rect>
-                </clipPath>
-              </defs>
-            </g>
-          </svg>
-          <p class="text-xs pb-8 italic">
-            <strong>Press</strong> and hold on mobile,
-            <strong>hover</strong> on desktop <span class="not-italic">😊</span>
-          </p>
-        </div>
-        <div class="macbook">
-          <div class="screen">
-            <div class="viewport" style="
+            </svg>
+            <p class="text-xs pb-8 italic">
+              <strong>Press</strong> and hold on mobile,
+              <strong>hover</strong> on desktop <span class="not-italic">😊</span>
+            </p>
+          </div>
+          <div class="macbook">
+            <div class="screen">
+              <div class="viewport" style="
                 background-image: url('assets/images/ewb/ewb-old-design.png');
                 " role="img" aria-label="Image of EWB North Texas site home page">
-              <span class="sr-only">Image of EWB North Texas site home page</span>
+                <span class="sr-only">Image of EWB North Texas site home page</span>
+              </div>
             </div>
+            <div class="base"></div>
+            <div class="notch"></div>
           </div>
-          <div class="base"></div>
-          <div class="notch"></div>
         </div>
-      </div>
-      <div class="pt-12 md:pt-20">
-        <h2 class="heading-h2">Accessibility Improvements</h2>
-        <p class="pt-2 text-base">
-          I am maintaining a detailed log of all accessibility issues I am
-          actively working to remediate across the site. You can view the
-          <a class="nav-link font-bold"
-            href="https://deeply-shoe-8ed.notion.site/EWB-North-Texas-Website-accessibility-audit-17df98cabbe180bab1f2ee6572521548"
-            target="_blank" rel="noopener noreferrer"
-            aria-label="Notion document displaying a running log of accessibility issues">EWB North Texas accessibility
+        <div class="pt-12 md:pt-20">
+          <h2 class="heading-h2">Accessibility Improvements</h2>
+          <p class="pt-2 text-base">
+            I am maintaining a detailed log of all accessibility issues I am
+            actively working to remediate across the site. You can view the
+            <a class="nav-link font-bold"
+              href="https://deeply-shoe-8ed.notion.site/EWB-North-Texas-Website-accessibility-audit-17df98cabbe180bab1f2ee6572521548"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Notion document displaying a running log of accessibility issues">EWB North Texas accessibility
             audit log</a>
-          on Notion.
-        </p>
-        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-notion.png"
-          alt="Notion document displaying accessibility issues" loading="lazy" />
-      </div>
-      <div class="pt-14 md:pt-24">
-        <h2 class="heading-h2">Challenges</h2>
-        <ul class="list-disc list-inside pt-2 space-y-2">
-          <li class="text-base">
-            <strong class="font-semibold">Pre-built WordPress Theme</strong>:
-            The restrictive nature of working with a pre-built WordPress theme
-            has posed some challenges for customization
-          </li>
-          <li class="text-base">
-            <strong class="font-semibold">Branding Guidelines</strong>:
-            Balancing accessibility improvements with the National
-            Organization&#39;s branding guidelines, including specific color
-            palettes and design requirements
-          </li>
-        </ul>
-        <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-branding.png"
-          alt="EWB branding colors" loading="lazy" />
-      </div>
-    </section>
-    <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results">
-      <div class="audit-results-intro">
-        <h2 id="audit-results" class="heading-h2">Audit Results</h2>
-        <p class="text-base mt-2">
-          Below are the results of the <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
-            rel="noopener noreferrer">Homepage</a> and <a class="nav-link font-bold"
-            href="https://www.ewb-texas.com/projects/" target="_blank" rel="noopener noreferrer">Projects page</a>
-          accessibility audits, showcasing improvements before and after implementing fixes:
-        </p>
-      </div>
-      <!-- Homepage Section -->
-      <div class="homepage-results">
-        <h3 class="font-semibold mt-2 text-base mt-8">HOMEPAGE</h3>
-        <div class="homepage-results-issue">
-          <p class="text-base italic mt-2 bg-stone-100">
-            <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious
-            Impact)
+            on Notion.
           </p>
-          <p class="text-base mt-8">
-            Manual testing was conducted using a browser color picker tool to identify the hex codes of the foreground
-            and background colors of text elements. These hex codes were entered in a Color Contrast Analyzer to
-            evaluate the sufficiency of the text color contrast.
+          <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-notion.png"
+            alt="Notion document displaying accessibility issues" loading="lazy" />
+        </div>
+        <div class="pt-14 md:pt-24">
+          <h2 class="heading-h2">Challenges</h2>
+          <ul class="list-disc list-inside pt-2 space-y-2">
+            <li class="text-base">
+              <strong class="font-semibold">Pre-built WordPress Theme</strong>:
+              The restrictive nature of working with a pre-built WordPress theme
+              has posed some challenges for customization
+            </li>
+            <li class="text-base">
+              <strong class="font-semibold">Branding Guidelines</strong>:
+              Balancing accessibility improvements with the National
+              Organization&#39;s branding guidelines, including specific color
+              palettes and design requirements
+            </li>
+          </ul>
+          <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-branding.png"
+            alt="EWB branding colors" loading="lazy" />
+        </div>
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results">
+        <div class="audit-results-intro">
+          <h2 id="audit-results" class="heading-h2">Audit Results</h2>
+          <p class="text-base mt-2">
+            Below are the results of the <a class="nav-link font-bold" href="https://www.ewb-texas.com/" target="_blank"
+              rel="noopener noreferrer">Homepage</a> and <a class="nav-link font-bold"
+              href="https://www.ewb-texas.com/projects/" target="_blank" rel="noopener noreferrer">Projects page</a>
+            accessibility audits, showcasing improvements before and after implementing fixes:
           </p>
-          <p class="text-base font-semibold mt-12">
-            Before:
-          </p>
-          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-ii.png"
-            alt="Text with a 2.46 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
-          <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.46 (foreground <span
+        </div>
+        <!-- Homepage Section -->
+        <div class="homepage-results">
+          <h3 class="font-semibold mt-2 text-base mt-8">HOMEPAGE</h3>
+          <div class="homepage-results-issue">
+            <p class="text-base italic mt-2 bg-stone-100">
+              <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious
+              Impact)
+            </p>
+            <p class="text-base mt-8">
+              Manual testing was conducted using a browser color picker tool to identify the hex codes of the foreground
+              and background colors of text elements. These hex codes were entered in a Color Contrast Analyzer to
+              evaluate the sufficiency of the text color contrast.
+            </p>
+            <p class="text-base font-semibold mt-12">
+              Before:
+            </p>
+            <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-ii.png"
+              alt="Text with a 2.46 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
+            <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.46 (foreground <span
               class="text-code">color: #a5a5a5</span>, <span class="text-code">background color: #ffffff</span>).
-            Expected contrast ratio of 4.5:1
-          </p>
-          <img class="w-full h-full object-cover z-10 mt-12 shadow-lg" src="assets/images/ewb/ewb-home-i.png"
-            alt="Text with a 2.68 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
-          <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.68 (foreground <span
+              Expected contrast ratio of 4.5:1
+            </p>
+            <img class="w-full h-full object-cover z-10 mt-12 shadow-lg" src="assets/images/ewb/ewb-home-i.png"
+              alt="Text with a 2.68 contrast ratio, failing WCAG contrast requirements" loading="lazy" />
+            <p class="text-sm text-center mt-4">Element has insufficient color contrast of 2.68 (foreground <span
               class="text-code">color:
               #999999</span>, <span class="text-code">background color: #f8f8f8</span>). Expected contrast ratio of
-            4.5:1
-          </p>
-          <p class="text-base font-semibold mt-12">
-            After:
-          </p>
-          <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-iii.png"
-            alt="Text with a 9.29:1 contrast ratio, meeting WCAG contrast standards" loading="lazy" />
-          <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-home-iv.png"
-            alt="Text with improved contrast meeting WCAG standards" loading="lazy" />
-          <p class="text-sm text-center mt-8">A Color Contrast Analyzer was used to evaluate and select a
-            sufficient text color that complies with accessibility guidelines, ensuring that the contrast ratio meets
-            the required standards for readability.
-          </p>
-          <div class="flex items-center justify-center">
-            <img class="w-72 h-auto object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-color-analyzer.png"
-              alt="Contrast checker showing passing color contrast results for gray text" loading="lazy" />
-          </div>
-        </div>
-        <div>
-          <p class="text-base italic mt-12 bg-stone-100"><strong>Link-name</strong>: Links must have discernible text -
-            (Serious Impact)
-          </p>
-          <p class="text-base mt-2">
-            All links that contain logos or images were assigned <span class="text-code">alt</span> attributes to
-            provide meaningful and accessible text
-            descriptions for users who rely on screen readers or have images disabled in their browsers.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div>
-              <p class="text-base font-semibold mt-2"> Before:</p>
-              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood.png"
-                alt="Screenshot of aXe DevTools accessibility issue for missing discernible text on EWB homepage"
-                loading="lazy" />
-            </div>
-            <div>
-              <p class="text-base font-semibold mt-2"> After:</p>
-              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood-alt.png"
-                alt="Screenshot of fixed accessibility issue with missing discernible text on EWB homepage"
-                loading="lazy" />
-              <p class="text-base mt-2">By adding <span class="text-code">alt</span> text to images and logos inside
-                links, we make sure that everyone
-                can understand the link&#39;s purpose, even if they cannot see the image.
-              </p>
+              4.5:1
+            </p>
+            <p class="text-base font-semibold mt-12">
+              After:
+            </p>
+            <img class="w-full h-full object-cover z-10 mt-4 shadow-lg" src="assets/images/ewb/ewb-home-iii.png"
+              alt="Text with a 9.29:1 contrast ratio, meeting WCAG contrast standards" loading="lazy" />
+            <img class="w-full h-full object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-home-iv.png"
+              alt="Text with improved contrast meeting WCAG standards" loading="lazy" />
+            <p class="text-sm text-center mt-8">A Color Contrast Analyzer was used to evaluate and select a
+              sufficient text color that complies with accessibility guidelines, ensuring that the contrast ratio meets
+              the required standards for readability.
+            </p>
+            <div class="flex items-center justify-center">
+              <img class="w-72 h-auto object-cover z-10 mt-6 shadow-lg" src="assets/images/ewb/ewb-color-analyzer.png"
+                alt="Contrast checker showing passing color contrast results for gray text" loading="lazy" />
             </div>
           </div>
-        </div>
-        <div class="mt-4">
-          <p class="text-base mt-12"><strong class="font-semibold">Homepage Accessibility Audit: Post-Fixes</strong>:
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div class="bg-gray-900">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-aXe-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools after resolving issues"
-                loading="lazy" />
+          <div>
+            <p class="text-base italic mt-12 bg-stone-100"><strong>Link-name</strong>: Links must have discernible text -
+              (Serious Impact)
+            </p>
+            <p class="text-base mt-2">
+              All links that contain logos or images were assigned <span class="text-code">alt</span> attributes to
+              provide meaningful and accessible text
+              descriptions for users who rely on screen readers or have images disabled in their browsers.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <p class="text-base font-semibold mt-2"> Before:</p>
+                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood.png"
+                  alt="Screenshot of aXe DevTools accessibility issue for missing discernible text on EWB homepage"
+                  loading="lazy" />
+              </div>
+              <div>
+                <p class="text-base font-semibold mt-2"> After:</p>
+                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-westwood-alt.png"
+                  alt="Screenshot of fixed accessibility issue with missing discernible text on EWB homepage"
+                  loading="lazy" />
+                <p class="text-base mt-2">By adding <span class="text-code">alt</span> text to images and logos inside
+                  links, we make sure that everyone
+                  can understand the link&#39;s purpose, even if they cannot see the image.
+                </p>
+              </div>
             </div>
-            <div class="bg-zinc-800">
-              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-lighthouse-fixed.png"
-                alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse after resolving issues"
-                loading="lazy" />
+          </div>
+          <div class="mt-4">
+            <p class="text-base mt-12"><strong class="font-semibold">Homepage Accessibility Audit: Post-Fixes</strong>:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div class="bg-gray-900">
+                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-aXe-fixed.png"
+                  alt="Screenshot of accessibility audit results for EWB homepage using aXe DevTools after resolving issues"
+                  loading="lazy" />
+              </div>
+              <div class="bg-zinc-800">
+                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbhome-lighthouse-fixed.png"
+                  alt="Screenshot of accessibility audit results for EWB homepage using Lighthouse after resolving issues"
+                  loading="lazy" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results-continued">
-      <div class="audit-results-intro">
-        <h2 id="audit-results-continued" class="heading-h2">Audit Results Continued</h2>
-      </div>
-      <div class="projects-page-results">
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12" aria-labelledby="audit-results-continued">
+        <div class="audit-results-intro">
+          <h2 id="audit-results-continued" class="heading-h2">Audit Results Continued</h2>
+        </div>
+        <div class="projects-page-results">
         <h3 class="font-semibold mt-2 text-base mt-8">PROJECTS PAGE</h3>
         <div class="homepage-results-issue">
           <p class="text-base italic mt-2 bg-stone-100">
@@ -395,120 +392,119 @@
             alt="Screenshot of fixed code for map markers on EWB projects page" loading="lazy" />
           <p class="text-base mt-8">
             Each marker location now also includes <span class="text-code">
-              alt</span> text to ensure accessibility and provide clear, descriptive context for screen reader users.
+            alt</span> text to ensure accessibility and provide clear, descriptive context for screen reader users.
           </p>
           <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewb-map-alt.png"
             alt="Screenshot of added alternative text for map marker locations" loading="lazy" />
         </div>
         <div>
-          <p class="text-base italic mt-12 bg-stone-100">
-            <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious
-            Impact)
-          </p>
-          <p class="text-base mt-2">
-            The current text color <span class="text-code">
-              #B36924</span> on a white background does not meet the minimum contrast ratio requirements of WCAG 2.1 or
-            2.2 standards for small text. This may cause readability challenges for users with visual impairments,
-            particularly those with low vision or color blindness.
-          </p>
-          <p class="text-base mt-4">
-            To address this, the text color was adjusted to <span class="text-code">#88481B</span>, a slightly darker
-            shade of orange that closely aligns with the branding guidelines. This updated color meets the WCAG 2.1 AA
-            and AAA standards for all text sizes, UI components, and graphical objects. The change ensures a visually
-            accessible experience for all users while maintaining brand consistency.
+        <p class="text-base italic mt-12 bg-stone-100">
+          <strong>Color-contrast</strong>: Elements must meet minimum color contrast ratio thresholds - (Serious
+          Impact)
+        </p>
+        <p class="text-base mt-2">
+          The current text color <span class="text-code">
+          #B36924</span> on a white background does not meet the minimum contrast ratio requirements of WCAG 2.1 or
+          2.2 standards for small text. This may cause readability challenges for users with visual impairments,
+          particularly those with low vision or color blindness.
+        </p>
+        <p class="text-base mt-4">
+          To address this, the text color was adjusted to <span class="text-code">#88481B</span>, a slightly darker
+          shade of orange that closely aligns with the branding guidelines. This updated color meets the WCAG 2.1 AA
+          and AAA standards for all text sizes, UI components, and graphical objects. The change ensures a visually
+          accessible experience for all users while maintaining brand consistency.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <p class="text-base font-semibold mt-2">Before:</p>
+            <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-before.png"
+              alt="Screenshot of projects title on EWB website with color contrast issue" loading="lazy" />
+            <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fail.png"
+              alt="Contrast checker showing failing color contrast results" loading="lazy" />
+          </div>
+          <div>
+            <p class="text-base font-semibold mt-2"> After:</p>
+            <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-fixed.png"
+              alt="Screenshot of projects title on EWB website with fixed color contrast" loading="lazy" />
+            <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fixed.png"
+              alt="Contrast checker showing passing color contrast results" loading="lazy" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="text-base mt-12"><strong class="font-semibold">Projects page Accessibility Audit:
+            Post-Fixes</strong>:
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div>
-              <p class="text-base font-semibold mt-2">Before:</p>
-              <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-before.png"
-                alt="Screenshot of projects title on EWB website with color contrast issue" loading="lazy" />
-              <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fail.png"
-                alt="Contrast checker showing failing color contrast results" loading="lazy" />
+            <div class="bg-gray-900">
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-aXe-fixed.png"
+                alt="Accessibility audit results for EWB Projects page in aXe DevTools after issue resolution"
+                loading="lazy" />
             </div>
-            <div>
-              <p class="text-base font-semibold mt-2"> After:</p>
-              <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-title-fixed.png"
-                alt="Screenshot of projects title on EWB website with fixed color contrast" loading="lazy" />
-              <img class="object-contain z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-projects-contrast-fixed.png"
-                alt="Contrast checker showing passing color contrast results" loading="lazy" />
+            <div class="bg-zinc-800">
+              <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-lighthouse-fixed.png"
+                alt="Accessibility audit results for EWB Projects page in Lighthouse after issue resolution"
+                loading="lazy" />
             </div>
           </div>
-          <div class="mt-4">
-            <p class="text-base mt-12"><strong class="font-semibold">Projects page Accessibility Audit:
-                Post-Fixes</strong>:
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div class="bg-gray-900">
-                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-aXe-fixed.png"
-                  alt="Accessibility audit results for EWB Projects page in aXe DevTools after issue resolution"
-                  loading="lazy" />
-              </div>
-              <div class="bg-zinc-800">
-                <img class="object-contain z-10 pt-4" src="assets/images/ewb/ewbprojects-lighthouse-fixed.png"
-                  alt="Accessibility audit results for EWB Projects page in Lighthouse after issue resolution"
-                  loading="lazy" />
-              </div>
-            </div>
-          </div>
-          <div class="audit-conclusion mt-12 md:pt-14">
-            <h2 class="heading-h2">Conclusion</h2>
-            <p class="text-base mt-2">
-              Additional manual testing will be conducted to ensure that all accessibility issues are fully resolved and
-              the site delivers an inclusive experience for everyone. Continuous testing will be done to maintain
-              compliance and tackle any new issues that might come up during future updates or content changes.
-            </p>
-          </div>
-    </section>
-  </main>
-  <button id="back-to-top" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
-    aria-label="Scroll to the top of the page">
-    <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
-      aria-label="Up arrow icon">
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-      <g id="SVGRepo_iconCarrier">
-        <g fill="#000000">
-          <path
-            d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z">
-          </path>
-          <path fill-rule="evenodd" d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
-            clip-rule="evenodd"></path>
+        </div>
+        <div class="audit-conclusion mt-12 md:pt-14">
+          <h2 class="heading-h2">Conclusion</h2>
+          <p class="text-base mt-2">
+            Additional manual testing will be conducted to ensure that all accessibility issues are fully resolved and
+            the site delivers an inclusive experience for everyone. Continuous testing will be done to maintain
+            compliance and tackle any new issues that might come up during future updates or content changes.
+          </p>
+        </div>
+      </section>
+    </main>
+    <button id="back-to-top" type="button" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+      aria-label="Scroll to the top of the page">
+      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+        aria-label="Up arrow icon">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g fill="#000000">
+            <path
+              d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z">
+            </path>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              clip-rule="evenodd"></path>
+          </g>
         </g>
-      </g>
-    </svg>
-  </button>
-  <footer class="bg-black text-xs bottom-0 w-full h-28 z-40" role="contentinfo">
-    <div class="flex justify-center items-center space-x-4 pt-8">
-      <a href="https://www.linkedin.com/in/snsingleton/" target="_blank" rel="noopener noreferrer"
-        aria-label="LinkedIn">
-        <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
-          </path>
-        </svg>
-      </a>
-      <a href="https://github.com/sadesing" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
-          <path
-            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
-          </path>
-        </svg>
-      </a>
-      <a href="mailto:sadensingleton@gmail.com" aria-label="Email">
-        <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
-          <path
-            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
-          </path>
-        </svg>
-      </a>
-    </div>
-    <p class="text-white text-center pt-4">
-      Made with 🍵 and
-      <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2025
-    </p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+      </svg>
+    </button>
+    <footer class="bg-black text-xs bottom-0 w-full h-28 z-40" role="contentinfo">
+      <div class="flex justify-center items-center space-x-4 pt-8">
+        <a href="https://www.linkedin.com/in/snsingleton/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://github.com/sadesing" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
+            <path
+              d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
+            </path>
+          </svg>
+        </a>
+        <a href="mailto:sadensingleton@gmail.com" aria-label="Email">
+          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <p class="text-white text-center pt-4">
+        Made with 🍵 and
+        <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2025
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

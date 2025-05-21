@@ -934,8 +934,8 @@ video {
   width: 5rem;
 }
 
-.w-40{
-  width: 10rem;
+.w-24{
+  width: 6rem;
 }
 
 .w-48{
@@ -968,6 +968,10 @@ video {
 
 .max-w-\[1000px\]{
   max-width: 1000px;
+}
+
+.max-w-\[1100px\]{
+  max-width: 1100px;
 }
 
 .max-w-\[900px\]{
@@ -2052,6 +2056,11 @@ video {
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2085,6 +2094,11 @@ video {
 .bg-zinc-800{
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'assets\/images\/black-textured\.jpg\'\)\]{
