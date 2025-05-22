@@ -10,12 +10,7 @@
   font-family: "StudyHard";
   src: url("fonts/StudyHard.ttf") format("truetype");
 }
-@font-face {
-  font-family: "Stevania";
-  src: url("fonts/Stevania.otf") format("opentype");
-}
 
-/* Global Styles */
 *,
 *::before,
 *::after {

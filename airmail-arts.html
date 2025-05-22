@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sade</title>
+    <link rel="stylesheet" href="main.min.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
+  <body class="w-full">
+    <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
+      <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
+        <ul class="hidden md:flex space-x-5 text-base">
+          <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300" aria-label="Go to Portfolio">Portfolio</a></li>
+          <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300" aria-label="Go to About Section">About</a></li>
+        </ul>
+        <h1 id="header-logo" class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
+          <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
+        </h1>
+        <div class="hidden md:flex space-x-4">
+          <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+                ></path>
+            </svg>
+          </a>
+          <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+            </svg>
+          </a>
+          <a href="mailto:sadensingleton@gmail.com" class="header-icon" aria-label="Email">
+            <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
+        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300" aria-label="Go to Portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300" aria-label="Go to About Section">About</a></li>
+      </ul>
+    </header>
+    <!-- Content -->
+    <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10" role="main">
+      <section aria-labelledby="airmail-overview">
+        <span id="airmail-overview" class="sr-only">Overview of AIR MAIL Arts Intel Project</span>
+        <div class="flex justify-center">
+          <a href="https://airmail.news/arts-intel" target="_blank" rel="noopener noreferrer" aria-label="Visit Air Mail website">
+          <img class="w-20 h-18 hover:scale-95 z-10 shadow-md" src="assets/images/air-arts-logo.png" alt="Air Arts Intel logo" />
+          </a>
+        </div>
+        <p class="text-base text-center pt-6">
+          <a class="underline" href="https://airmail.news/about" target="_blank" rel="noopener noreferrer"
+            aria-label="Learn more about Air Mail">AIR MAIL</a>
+          is a digital media startup, launched by former
+          <em>Vanity Fair</em> editor-in-chief Graydon Carter.
+        </p>
+      </section>
+      <section class="mt-12 border border-grey-500 p-6 md:p-12 shadow-lg" aria-labelledby="arts-culture">
+        <h2 id="arts-culture" class="heading-h2">AIR MAIL Arts Intel - UX Redesign</h2>
+        <h2 class="text-base font-bold pt-2">OVERVIEW</h2>
+        <p class="pt-2 text-base">
+          <em>(2024)</em><br />
+          <strong>Arts Intel</strong> is AIR MAIL&#39;s global culture vertical. It serves as a curated guide to gallery openings, movie screenings, exhibitions, restaurants, and more—spanning cities from London and Los Angeles to New York and Milan.
+        </p>
+        <p class="pt-2 text-base">
+          I collaborated with another front-end developer, back-end engineers, and the design team to overhaul the City and Events pages. Our goal was to <strong>improve navigation</strong> and <strong>create a more immersive, visually engaging experience</strong> for readers browsing cultural listings.
+        </p>
+        <p class="pt-2 text-base"></p>
+        As a <strong>front-end developer</strong> on the project, I helped implement new layouts and component structures using HTML, Tailwind CSS, and Turbo. I focused on <strong>performance</strong>, <strong>responsiveness</strong>, and <strong>visual clarity</strong> while maintaining consistency with AIR MAIL&#39;s editorial style.
+        </p>
+        <p class="pt-2 text-base">
+          This project pushed us to rethink the balance between editorial content and functional design. The result was a faster, cleaner, and more intuitive interface that supported better discovery and readability across devices.
+        </p>
+        <div class="flex flex-row pt-4 space-x-2">
+          <svg fill="#000000" width="25px" height="25px" viewBox="0 0 32 32" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>html5</title>
+              <path
+                d="M11.677 13.196l-0.289-3.387 12.536 0.004 0.287-3.268-16.421-0.004 0.87 9.983h11.374l-0.406 4.27-3.627 1.002-3.683-1.009-0.234-2.63h-3.252l0.411 5.198 6.757 1.807 6.704-1.798 0.927-10.166h-11.954zM2.914 1.045h26.172l-2.38 26.874-10.734 3.037-10.673-3.038z">
+              </path>
+            </g>
+          </svg>
+          <svg fill="#000000" width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z">
+              </path>
+            </g>
+          </svg>
+          <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="20px" height="20px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g id="5151e0c8492e5103c096af88a51e4c6f">
+                <path display="inline"
+                  d="M365.281,386.936l108.635,96.416l-213.754-16.794c41.878-25.3,76.426-55.513,102.294-79.567 c0.426,0.083,0.879,0.129,1.332,0.129C364.283,387.119,364.782,387.06,365.281,386.936z M485.518,444.55l20.008-262.045 c-9.898,25.284-25.557,54.73-45.857,86.172L485.518,444.55z M372.547,380.983l108.384,96.196l-28.936-196.865 C428.142,315.82,399.5,352.122,372.547,380.983z M245.951,474.776c-23.345,12.934-47.373,23.235-71.707,30.757l249.786-16.798 l-177.998-13.982L245.951,474.776z M37.347,348.551l65.429,152.89l53.851-178.4L37.347,348.551z M172.514,313.988l182.182,58.517 l-46.488-184.204L172.514,313.988z M318.403,170.006l169.829-11.368L355.451,50.19L318.403,170.006z M415.002,2.919L303.56,2.415 l49.543,34.69L415.002,2.919z M4.785,283.758L1.118,392.411l26.729-48.75L4.785,283.758z M65.668,327.408 c21.184,1.351,42.583-3.343,64.17-12.792c14.541-6.891,29.626-15.612,44.767-25.863c21.715-15.342,43.6-34.532,65.645-56.38 c79.292-78.583,111.895-166.467,77.246-201.459c-8.268-8.344-20.104-12.609-35.188-12.675 c-45.66-0.197-113.905,34.175-172.069,91.842c-55.586,55.098-91.631,120.496-91.824,166.618 c-0.068,16.399,4.469,29.319,13.483,38.407C39.915,323.205,51.306,326.487,65.668,327.408z M231.103,472.18 c2.486-1.286,4.963-2.586,7.408-3.909l-73.322-141.472l-55.183,182.786c0.462-0.06,4.189-0.508,4.189-0.508 c4.816-0.613,9.573-1.318,14.271-2.115c30.318-5.169,60.315-14.633,89.154-28.139C222.184,476.689,226.671,474.47,231.103,472.18z M380.843,355.491l1.739-1.996c1.214-1.424,2.437-2.875,3.654-4.331c0,0,3.768-4.486,5.232-6.268 c2.464-2.98,4.913-6.021,7.371-9.079c2.258-2.82,4.51-5.649,6.758-8.529c2.358-3.021,4.716-6.048,7.056-9.134 c5.297-6.973,10.653-14.284,16.377-22.36c6.057-8.544,11.908-17.142,17.416-25.584l-9.931-6.073 c-26.371-16.125-79.37-48.606-114.203-70.003l45.074,178.595C371.585,366.118,376.018,361.104,380.843,355.491z M508.235,67.95 l-140.23-19.689l133.688,109.327c4.697-15.496,7.756-30.524,9.088-44.699c0.192-1.987,0.315-3.985,0.435-5.998 c0.114-1.852,0.179-3.711,0.229-5.574C511.766,89.244,510.685,78.029,508.235,67.95z M454.325,259.742 c0.344-0.453,0.729-0.962,1.149-1.573c2.669-3.779,6.465-9.962,10.686-17.409c11.748-20.717,26.239-50.254,32.282-71.993 L324.03,180.403c36.379,22.356,89.521,54.924,115.942,71.084l14.087,8.598C454.143,259.98,454.229,259.865,454.325,259.742z M245.264,466.128l0.545-0.307c38.046-21.084,72.05-47.021,110.142-84.087l-185.419-59.807L245.264,466.128z M0.5,411.942 c0.819,24.146,5.943,44.081,15.241,59.391l8.658-103.113L0.5,411.942z M34.284,361.407l-9.99,119 c14.234,18.62,33.252,26.935,61.528,26.935c2.848,0,5.806-0.078,8.978-0.233l-4.995-12.412 C78.996,467.845,48.152,391.248,34.284,361.407z M506.144,60.604c-2.056-6.289-4.68-12.096-7.811-17.306 c-12.632-21.015-34.452-34.461-64.871-39.976l-67.961,37.531L506.144,60.604z">
+                </path>
+              </g>
+            </g>
+          </svg>
+          <svg fill="#000000" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="m20.89 14.987v1.164h1.982c.627-.021 1.128-.534 1.128-1.164 0-.013 0-.025-.001-.038v.002-.45c.001-.014.001-.03.001-.047 0-.628-.502-1.139-1.127-1.153h-.001-.988v-.54h1.958v-1.162h-1.879c-.633.028-1.136.549-1.136 1.187v.03-.001.405c0 .01-.001.023-.001.035 0 .633.504 1.148 1.133 1.165h.002c1.36.006-.327 0 .934 0v.566l-2.006.006zm-10.623-.283s1.061-.097 1.061-1.55c.003-.033.004-.071.004-.109 0-.753-.557-1.375-1.281-1.478l-.008-.001h-2.314v4.585h1.164v-1.106l1.006 1.106h1.722l-1.354-1.446zm-.449-.939h-.926v-1.048h.934c.159.091.265.259.265.453 0 .024-.002.048-.005.071v-.003c.002.019.004.041.004.064 0 .198-.108.37-.268.462l-.003.001zm4.384-2.167h-1.18c-.628.027-1.127.543-1.127 1.176v.025-.001 3.36h1.182v-.8h1.11v.8h1.144v-3.36c.001-.016.001-.034.001-.052 0-.627-.503-1.137-1.128-1.147h-.001zm-.015 2.45h-1.12v-1.114s0-.25.37-.25h.406c.327 0 .334.25.334.25v1.113zm1.68-2.45h1.23v4.553h-1.23zm2.96 3.376v-3.376h-1.223v4.553h2.88v-1.177z">
+              </path>
+              <path
+                d="m.424 16.151h4.79s-.915-4.43 2.116-6.225c.661-.341 2.764-1.614 6.208 1.086.109-.097.212-.174.212-.174s-3.153-3.337-6.663-2.964c-1.764.167-3.934 1.871-5.207 4.122-.71 1.196-1.221 2.596-1.447 4.09l-.008.064z">
+              </path>
+              <path
+                d="m.424 16.15h4.79s-.915-4.43 2.116-6.225c.661-.341 2.764-1.614 6.208 1.086.109-.097.212-.174.212-.174s-3.153-3.336-6.663-2.963c-1.77.167-3.94 1.871-5.214 4.122-.71 1.195-1.219 2.596-1.441 4.091l-.008.063zm9.981-7.915.024-.431c-.168-.089-.363-.166-.568-.22l-.02-.005-.024.424c.2.07.394.148.588.231z">
+              </path>
+              <path
+                d="m9.826 9.598-.024.405c.217.008.423.037.622.084l-.022-.004.024-.4c-.173-.04-.378-.07-.588-.084zm-2.242-2.006h.061l-.125-.392c-.205 0-.407.014-.605.041l.023-.003.115.379c.149-.016.322-.026.498-.026h.035-.002zm.291 2.366.139.444c.146-.079.321-.155.501-.217l.026-.008-.134-.424c-.212.066-.389.136-.559.217l.026-.011zm-2.755-1.691-.273-.444c-.151.08-.309.174-.473.277l.279.45c.16-.103.311-.2.466-.283zm1.242 2.894.291.463c.113-.171.231-.32.36-.459l-.002.002-.273-.438c-.135.131-.258.272-.369.422l-.007.009zm-.88 2.07.491.411c.028-.284.073-.54.135-.789l-.008.037-.437-.366c-.063.186-.126.424-.175.666l-.007.041zm-2.651-3.054-.431-.398c-.16.16-.309.32-.449.48l.466.424c.139-.19.274-.355.417-.514l-.005.006zm-1.831 2.874-.697-.272c-.115.277-.24.598-.303.772l.697.27c.079-.218.206-.533.303-.77zm4.395 1.814c.009.295.035.575.078.849l-.005-.039.727.277c-.054-.25-.109-.534-.146-.836l-.654-.25z">
+              </path>
+            </g>
+          </svg>
+          <svg width="20px" height="20px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  d="M220.013714,143.189333 L220.013714,143.335619 L256,143.335619 L256,188.440381 L203.288381,188.440381 C199.143619,188.440381 192.828952,186.709333 189.293714,184.600381 L176.64,177.16419 C173.104762,175.055238 167.228952,175.055238 163.693714,177.16419 L147.273143,186.782476 C143.737905,188.806095 143.737905,192.26819 147.273143,194.364952 L181.76,214.588952 C185.295238,216.697905 191.634286,218.416762 195.766857,218.416762 L256,218.416762 L256,248.478476 C256,252.623238 252.611048,256 248.466286,256 L7.53371429,256 C3.38048727,255.993312 0.0134137829,252.631687 0,248.478476 L0,218.416762 L60.2453333,218.416762 C65.1394573,218.214207 69.9240981,216.905516 74.24,214.588952 L189.293714,147.017143 C192.828952,144.920381 199.15581,143.189333 203.288381,143.189333 L220.013714,143.189333 L220.013714,143.189333 Z M220.013714,69.4247619 L256,69.4247619 L256,114.95619 L195.754667,114.95619 C190.856997,115.165808 186.071261,116.487304 181.76,118.820571 L66.7062857,187.050667 C62.3950244,189.383934 57.6092889,190.70543 52.711619,190.915048 L0,190.915048 L0,145.383619 L60.2453333,145.383619 C65.1430032,145.174002 69.9287387,143.852505 74.24,141.519238 L189.293714,73.2891429 C193.604976,70.9558758 198.390711,69.6343791 203.288381,69.4247619 L220.013714,69.4247619 L220.013714,69.4247619 Z M248.466286,8.39117136e-16 C252.611048,8.39117136e-16 256,3.38895238 256,7.3752381 L256,37.4857143 L195.754667,37.4857143 C190.860543,37.688269 186.075902,38.99696 181.76,41.3135238 L66.7062857,108.982857 C63.1710476,111.09181 56.8441905,112.822857 52.711619,112.822857 L0,112.822857 L0,67.6571429 L52.711619,67.6571429 C56.856381,67.6571429 63.1710476,69.3881905 66.7062857,71.4971429 L79.36,78.9455238 C82.8952381,81.0544762 88.7710476,81.0544762 92.3062857,78.9455238 L108.726857,69.3150476 C112.262095,67.2792381 112.262095,63.8293333 108.726857,61.7081905 L74.24,41.472 C69.9206518,39.1513936 65.1320511,37.8385919 60.2331429,37.632 L0,37.632 L0,7.52152381 C0.0200615619,3.37108554 3.38324897,0.0133401824 7.53371429,0 L248.466286,0 L248.466286,8.39117136e-16 Z"
+                  fill="#000000" fill-rule="nonzero"></path>
+              </g>
+            </g>
+          </svg>
+          <p class="text-sm pt-1">+ Turbo and GSAP</p>
+        </div>
+        <div class="pt-5 flex flex-row">
+          <a href="https://airmail.news/arts-intel/city-guides" target="_blank" rel="noopener noreferrer"
+            class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1"
+            aria-label="Visit the Arts Intel city guides">
+            <span>VISIT SITE</span>
+            <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="External link icon">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-col md:flex-row lg:flex-row gap-2.5 pt-8">
+          <div>
+            <img class="w-full h-full object-cover z-10 shadow-lg" src="assets/images/arts-city1.png"
+              alt="Arts and Culture article page" loading="lazy" />
+          </div>
+          <div>
+            <img class="mt-4 md:mt-0 w-full h-full object-cover z-10 shadow-lg" src="assets/images/arts-city.png"
+              alt="Arts and Culture city page" loading="lazy" />
+          </div>
+        </div>
+        <img class="w-full h-full object-cover z-10 pt-10 lg:pt-20" src="assets/images/arts.gif"
+          alt="Arts and Culture city page gif" loading="lazy" />
+      </section>
+    </main>
+    <button id="back-to-top" type="button" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+      aria-label="Scroll to the top of the page">
+      <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+        aria-label="Up arrow icon">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g fill="#000000">
+            <path
+              d="M4.695 7.755a.75.75 0 001.06.05l1.495-1.36v4.805a.75.75 0 001.5 0V6.445l1.495 1.36a.75.75 0 001.01-1.11l-2.75-2.5a.75.75 0 00-1.01 0l-2.75 2.5a.75.75 0 00-.05 1.06z">
+            </path>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1116 0A8 8 0 010 8zm8-6.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13z"
+              clip-rule="evenodd"></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+    <footer class="bg-black text-xs bottom-0 w-full h-28 z-40" role="contentinfo">
+      <div class="flex justify-center items-center space-x-4 pt-8">
+        <a href="https://www.linkedin.com/in/snsingleton/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
+              ></path>
+          </svg>
+        </a>
+        <a href="https://github.com/sadesing" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+          </svg>
+        </a>
+        <a href="mailto:sadensingleton@gmail.com" aria-label="Email">
+          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+          </svg>
+        </a>
+      </div>
+      <p class="text-white text-center pt-4">
+        Made with 🍵 and
+        <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2025
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

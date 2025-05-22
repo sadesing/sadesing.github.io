@@ -4,43 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sade</title>
-      <link rel="stylesheet" href="main.min.css" />
-      <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="main.min.css" />
+    <link rel="stylesheet" href="./output.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   </head>
   <body class="w-full">
     <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
       <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
         <ul class="hidden md:flex space-x-5 text-base">
-          <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300" aria-label="Go to Portfolio">Portfolio</a></li>
-          <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300" aria-label="Go to About Section">About</a></li>
+          <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300"
+            aria-label="Go to Portfolio">Portfolio</a></li>
+          <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300"
+            aria-label="Go to About Section">About</a></li>
         </ul>
-        <h1 id="header-logo" class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
+        <h1 id="header-logo"
+          class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
           <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
         </h1>
         <div class="hidden md:flex space-x-4">
-          <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
-                ></path>
+                d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
+              </path>
             </svg>
           </a>
-          <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
             <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
+              </path>
             </svg>
           </a>
           <a href="mailto:sadensingleton@gmail.com" class="header-icon" aria-label="Email">
             <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+              </path>
             </svg>
           </a>
         </div>
       </nav>
       <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
-        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300" aria-label="Go to Portfolio">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300" aria-label="Go to About Section">About</a></li>
+        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
+          aria-label="Go to Portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
+          aria-label="Go to About Section">About</a></li>
       </ul>
     </header>
     <!-- Content -->
@@ -50,7 +62,7 @@
         <div class="flex justify-center">
           <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
             aria-label="Visit EWB North Texas website">
-          <img class="w-60 h-50 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb/ewb-logo.png"
+          <img class="w-48 h-30 hover:scale-95 z-10 shadow-sm" src="assets/images/ewb/ewb-logo.png"
             alt="EWB North Texas logo" />
           </a>
         </div>
@@ -66,7 +78,7 @@
           Chapter</a>.
         </p>
       </section>
-      <section class="mt-12 border border-grey-500 p-6 md:p-12">
+      <section class="mt-12 border border-grey-500 p-6 md:p-12 shadow-lg">
         <div>
         <h1 class="heading-h2">
           EWB-North Texas Website Redesign & Accessibility Audit
@@ -79,13 +91,39 @@
           prioritizing accessibility best practices to create an inclusive
           digital experience.
         </p>
+        <div class="flex flex-row pt-4 space-x-1">
+          <svg fill="#000000" width="30px" height="30px" viewBox="-5 0 32 32" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>wordpress</title>
+              <path
+                d="M1.563 16.219c0-1.375 0.281-2.656 0.813-3.813l4.469 12.25c-3.125-1.5-5.281-4.719-5.281-8.438zM17.281 15.75c0 0.813-0.313 1.719-0.719 3.031l-0.938 3.125-3.406-10.094c0.563-0.031 1.094-0.094 1.094-0.094 0.5-0.063 0.438-0.781-0.063-0.75 0 0-1.531 0.094-2.5 0.094-0.938 0-2.469-0.094-2.469-0.094-0.5-0.031-0.563 0.719-0.063 0.75 0 0 0.469 0.063 0.969 0.094l1.469 4-2.063 6.156-3.406-10.156c0.563-0.031 1.063-0.094 1.063-0.094 0.531-0.063 0.469-0.781-0.063-0.75 0 0-1.5 0.094-2.5 0.094h-0.594c1.688-2.531 4.563-4.219 7.844-4.219 2.438 0 4.656 0.938 6.344 2.469-0.063-0.031-0.094-0.031-0.125-0.031-0.938 0-1.594 0.813-1.594 1.688 0 0.75 0.469 1.406 0.938 2.188 0.344 0.625 0.781 1.438 0.781 2.594zM8.281 25.219l2.813-8.188 2.906 7.906c0 0.063 0.031 0.094 0.063 0.125-0.969 0.344-2.031 0.531-3.125 0.531-0.906 0-1.813-0.125-2.656-0.375zM19.156 11.719c0.75 1.344 1.156 2.875 1.156 4.5 0 3.469-1.875 6.469-4.656 8.125l2.875-8.313c0.531-1.313 0.688-2.406 0.688-3.344 0-0.344 0-0.656-0.063-0.969zM10.938 5.281c6.031 0 10.938 4.906 10.938 10.938s-4.906 10.938-10.938 10.938-10.938-4.906-10.938-10.938 4.906-10.938 10.938-10.938zM10.938 26.656c5.75 0 10.438-4.688 10.438-10.438s-4.688-10.438-10.438-10.438-10.438 4.688-10.438 10.438 4.688 10.438 10.438 10.438z">
+              </path>
+            </g>
+          </svg>
+          <svg class="pt-0" width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            aria-labelledby="accessibilityIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square"
+            stroke-linejoin="miter" fill="none" color="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title id="accessibilityIconTitle">A11Y (accessibility)</title>
+              <path d="M2 16L2.8 14M6 16L5.2 14M5.2 14L4 11L2.8 14M5.2 14H2.8"></path>
+              <path d="M20 13L22 10M20 13L18 10M20 13L20 16"></path>
+              <path d="M8 12L10 10V16"></path>
+              <path d="M13 12L15 10V16"></path>
+            </g>
+          </svg>
+        </div>
         <div class="pt-5 flex flex-row">
           <a href="https://www.ewb-texas.com/" target="_blank" rel="noopener noreferrer"
             class="text-xs bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-5 border border-gray-400 rounded-full shadow focus:outline-none focus:ring-2 focus:ring-cyan-600 hover:scale-95 flex items-center space-x-1"
             aria-label="Visit the EWB North Texas website">
             <span>VISIT SITE</span>
-            <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="External link icon">
+            <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="External link icon">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
@@ -105,12 +143,14 @@
             and the
             <a class="nav-link font-bold" href="https://www.ewb-texas.com/projects/" target="_blank"
               rel="noopener noreferrer">Projects page</a>
-            using aXe DevTools and Lighthouse, prior to implementing changes. These tools identified
+            using aXe DevTools and Lighthouse, prior to implementing changes. These
+            tools identified
             accessibility issues related to design, typography, heading
             structure, contrast, and more. Manual testing for color contrast was also performed to ensure
             compliance with accessibility standards, to address any potential
-            issues not caught by automated tools. My testing has focused on resolving serious, critical,
-            moderate, and minor issues within the scope of design and content
+            issues not caught by automated tools. My testing has focused on resolving <strong>serious</strong>,
+            <strong>critical</strong>,
+            <strong>moderate</strong>, and <strong>minor</strong> issues within the scope of design and content
             updates.
           </p>
         </div>
@@ -190,7 +230,8 @@
             <a class="nav-link font-bold"
               href="https://deeply-shoe-8ed.notion.site/EWB-North-Texas-Website-accessibility-audit-17df98cabbe180bab1f2ee6572521548"
               target="_blank" rel="noopener noreferrer"
-              aria-label="Notion document displaying a running log of accessibility issues">EWB North Texas accessibility audit log</a>
+              aria-label="Notion document displaying a running log of accessibility issues">EWB North Texas accessibility
+            audit log</a>
             on Notion.
           </p>
           <img class="w-full h-full object-cover z-10 pt-4 shadow-lg" src="assets/images/ewb/ewb-notion.png"
@@ -416,7 +457,7 @@
         </div>
       </section>
     </main>
-    <button id="back-to-top" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+    <button id="back-to-top" type="button" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
       aria-label="Scroll to the top of the page">
       <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
         aria-label="Up arrow icon">
