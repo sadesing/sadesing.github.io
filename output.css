@@ -2036,6 +2036,11 @@ video {
   border-style: none;
 }
 
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .border-gray-300{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2056,11 +2061,6 @@ video {
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
-.border-black{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2069,6 +2069,11 @@ video {
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800{
@@ -2094,11 +2099,6 @@ video {
 .bg-zinc-800{
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'assets\/images\/black-textured\.jpg\'\)\]{
@@ -2965,14 +2965,6 @@ video {
   src: url("fonts/StudyHard.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "Stevania";
-
-  src: url("fonts/Stevania.otf") format("opentype");
-}
-
-/* Global Styles */
-
 *,
 *::before,
 *::after {
@@ -3548,6 +3540,21 @@ p {
 
   .lg\:flex-row{
     flex-direction: row;
+  }
+
+  .lg\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .lg\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 
   .lg\:pt-20{
