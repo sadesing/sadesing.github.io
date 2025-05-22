@@ -3542,19 +3542,14 @@ p {
     flex-direction: row;
   }
 
-  .lg\:py-8{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .lg\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 
   .lg\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:py-40{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
   }
 
   .lg\:pt-20{
