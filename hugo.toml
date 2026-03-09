@@ -1,0 +1,92 @@
+baseURL = 'https://sadesing.github.io/'
+languageCode = 'en-us'
+title = 'Sade'
+theme = 'PaperMod'
+
+[params]
+  description = "Privacy Engineering and Cybersecurity"
+  
+  # Default to light mode
+  defaultTheme = "light"
+  
+  # Show reading time
+  ShowReadingTime = true
+  
+  # Show post date
+  ShowPostNavLinks = true
+  
+  # Show breadcrumbs
+  ShowBreadCrumbs = true
+  
+  # Show code copy button
+  ShowCodeCopyButtons = true
+  
+  # Show share buttons
+  ShowShareButtons = false
+  
+  # Show table of contents
+  ShowToc = true
+  TocOpen = false
+  
+  # Enable search
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  # Home page settings
+  [params.homeInfoParams]
+    Title = "Hi there 👋🏾"
+    Content = "Transitioning into Privacy Engineering. Writing about my journey from frontend development and UX into privacy, cybersecurity, and data protection."
+    
+
+  # Social links
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/sadesing"
+  
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/yourusername"
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+    
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archives/"
+    weight = 30
+    
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+    
+
+# Enable search page
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Markdown settings
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    noClasses = false

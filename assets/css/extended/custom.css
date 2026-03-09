@@ -1,0 +1,4 @@
+/* Hide post counts on archive page */
+.archive-count {
+  display: none;
+}
