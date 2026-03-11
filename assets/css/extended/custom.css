@@ -1,14 +1,14 @@
 /* Import Bethoman font */
 @font-face {
-  font-family: 'Bethoman';
+  font-family: 'Gavabon';
   src: url('/fonts/gavabon.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
-/* Apply Bethoman to site logo/name */
+/* Apply Gavabon to site logo/name */
 .logo a {
-  font-family: 'Bethoman', cursive;
+  font-family: 'G', cursive;
   font-size: 32px;
 }
 
