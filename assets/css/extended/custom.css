@@ -2,3 +2,12 @@
 .archive-count {
   display: none;
 }
+/* Style for acceptance letter image */
+article img[alt*="acceptance letter"] {
+  max-width: 600px; /* adjust this number */
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 2rem auto;
+  display: block;
+}
