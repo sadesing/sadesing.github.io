@@ -1,6 +1,6 @@
 +++
 date = '2025-08-30T20:38:51-05:00'
-draft = true
+draft = false
 title = 'My Path to Privacy'
 tags = ["privacy", "career", "cybersecurity"]
 +++
