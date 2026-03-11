@@ -1,7 +1,51 @@
+/* Import Bethoman font */
+@font-face {
+  font-family: 'Bethoman';
+  src: url('/fonts/gavabon.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Bethoman to site logo/name */
+.logo a {
+  font-family: 'Bethoman', cursive;
+  font-size: 32px;
+}
+
+/* Changes the sun icon to dark yellow/gold */
+#sun {
+  color: #FFD700;
+}
+
+/* Sun icon hover effect - changes to orange */
+#sun:hover {
+  color: #FFA500;
+}
+
+#moon {
+  fill: #FFEB99;
+}
+
+/* Moon icon hover effect - slightly brighter yellow */
+#moon:hover {
+  fill: #FFD700;
+}
+
+/* Social icon hover animation */
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
 /* Hide post counts on archive page */
 .archive-count {
   display: none;
 }
+
 /* Style for acceptance letter image */
 article img[alt*="acceptance letter"] {
   max-width: 600px; /* adjust this number */
@@ -11,3 +55,4 @@ article img[alt*="acceptance letter"] {
   margin: 2rem auto;
   display: block;
 }
+
