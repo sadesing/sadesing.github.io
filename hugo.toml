@@ -6,9 +6,6 @@ theme = 'PaperMod'
 [params]
   description = "Privacy Engineering and Cybersecurity"
   
-  # Default to light mode
-  defaultTheme = "light"
-  
   # Show reading time
   ShowReadingTime = true
   
@@ -40,18 +37,19 @@ theme = 'PaperMod'
 
   # Home page settings
   [params.homeInfoParams]
-    Title = "Hi there 👋🏾"
+    Title = "*Hi there* 👋🏾"
     Content = "I’m Sade. Software engineer, privacy explorer, and curious about all things cybersecurity and human-centered tech."
     
 
   # Social links
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/sadesing"
-  
+ 
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/snsingleton/"
+    
+     [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/sadesing"
 
 # Menu configuration
 [menu]
