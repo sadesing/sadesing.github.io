@@ -1,7 +1,7 @@
-/* Import Bethoman font */
+/* Import Gavabon font */
 @font-face {
   font-family: 'Gavabon';
-  src: url('/fonts/gavabon.otf') format('opentype');
+  src: url('/fonts/Gavabon.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
