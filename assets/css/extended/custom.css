@@ -1,17 +1,3 @@
-/* Import Gavabon font */
-@font-face {
-  font-family: 'Bethoman';
-  src: url('/fonts/Bethoman.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Apply Gavabon to site logo/name */
-.logo a {
-  font-family: 'Bethoman', cursive;
-  font-size: 32px;
-}
-
 /* Changes the sun icon to dark yellow/gold */
 #sun {
   color: #FFD700;
