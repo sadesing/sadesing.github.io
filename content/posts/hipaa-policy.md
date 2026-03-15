@@ -2,7 +2,7 @@
 date = '2026-03-01T20:38:51-05:00'
 draft = false
 title = 'HIPAA Policy Rewrite'
-tags = ["privacy", "career", "cybersecurity"]
+tags = ["Privacy", "HIPAA"]
 featured = true
 +++
 
