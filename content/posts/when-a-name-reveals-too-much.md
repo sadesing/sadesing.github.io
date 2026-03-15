@@ -2,7 +2,7 @@
 date = '2026-01-18T20:38:51-05:00'
 draft = false
 title = 'When a Name Reveals Too Much'
-tags = ["HIPAA", "Privacy", "PHI", "Healthcare"]
+tags = ["HIPAA", "privacy", "PHI", "healthcare"]
 +++
 
 A court case about a patient's roommate ended up teaching me more about privacy than I expected.

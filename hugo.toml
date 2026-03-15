@@ -91,6 +91,8 @@ theme = 'PaperMod'
 
 # Markdown settings
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     style = "monokai"
     lineNos = false

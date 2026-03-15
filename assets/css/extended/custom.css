@@ -64,10 +64,8 @@
 }
 
 .featured-heading {
-  font-size: 1rem;
+  font-size: 24px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--primary);
   margin-bottom: 1rem;
 }
@@ -172,6 +170,16 @@
   font-weight: 600;
 }
 
+/* Section headings within blog post content */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-weight: 600;
+}
+
 
 /* =============================================================================
    ARCHIVE PAGE
@@ -186,6 +194,38 @@
 .archive-entry:hover .archive-entry-title {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+
+/* =============================================================================
+   CONTENT GRID (inline multi-column sections within posts)
+   ============================================================================= */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.content-grid-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+}
+
+.content-grid-item p {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
