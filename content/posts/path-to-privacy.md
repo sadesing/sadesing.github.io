@@ -2,7 +2,7 @@
 date = '2025-08-30T20:38:51-05:00'
 draft = false
 title = 'My Path to Privacy'
-tags = ["Privacy", Career", "Cybersecurity"]
+tags = ["Privacy", "Career", "Cybersecurity"]
 featured = true
 +++
 
