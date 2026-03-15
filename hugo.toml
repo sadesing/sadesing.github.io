@@ -78,9 +78,16 @@ theme = 'PaperMod'
     weight = 40
     
 
+[taxonomies]
+  tag = "tags"
+
 # Enable search page
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "RSS"]
 
 # Markdown settings
 [markup]

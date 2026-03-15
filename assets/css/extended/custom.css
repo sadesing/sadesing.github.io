@@ -1,9 +1,12 @@
-/* Changes the sun icon to dark yellow/gold */
+/* =============================================================================
+   THEME ICONS
+   ============================================================================= */
+
+/* Sun icon - dark yellow/gold */
 #sun {
   color: #FFD700;
 }
 
-/* Sun icon hover effect - changes to orange */
 #sun:hover {
   color: #FFA500;
 }
@@ -12,12 +15,15 @@
   fill: #FFEB99;
 }
 
-/* Moon icon hover effect - slightly brighter yellow */
 #moon:hover {
   fill: #FFD700;
 }
 
-/* Social icon hover animation */
+
+/* =============================================================================
+   SOCIAL ICONS
+   ============================================================================= */
+
 .social-icons a {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -27,18 +33,172 @@
   transform: translateY(-3px) scale(1.1);
 }
 
-/* Hide post counts on archive page */
+
+/* =============================================================================
+   POST ENTRY CARDS (homepage list)
+   ============================================================================= */
+
+.post-entry .entry-header h2,
+.first-entry .entry-header h1 {
+  font-weight: 600;
+}
+
+.post-entry,
+.first-entry {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.post-entry:hover,
+.first-entry:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+
+/* =============================================================================
+   FEATURED POSTS SECTION
+   ============================================================================= */
+
+.featured-posts {
+  margin: 2rem 0 2.5rem;
+}
+
+.featured-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.featured-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--entry);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  color: inherit;
+}
+
+.featured-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.featured-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.featured-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.featured-card-summary {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  margin: 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.featured-card-meta {
+  display: flex;
+  gap: 0;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  margin-top: 0.5rem;
+}
+
+.featured-card-meta span + span::before {
+  content: "\00a0·\00a0";
+}
+
+/* Mobile: match featured card fonts to post entry fonts */
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card-title {
+    font-size: 24px;
+  }
+
+  .featured-card-summary {
+    font-size: 14px;
+  }
+
+  .featured-card-meta {
+    font-size: 13px;
+  }
+}
+
+
+/* =============================================================================
+   TAGS PAGE
+   ============================================================================= */
+
+.terms-tags a:hover {
+  transform: scale(1.1);
+}
+
+
+/* =============================================================================
+   PAGE TITLES (Archive, Tags, About, single article)
+   ============================================================================= */
+
+/* Individual article title */
+.post-title {
+  font-weight: 600;
+}
+
+/* Archive, Tags, About page heading */
+.page-header h1 {
+  font-weight: 600;
+}
+
+
+/* =============================================================================
+   ARCHIVE PAGE
+   ============================================================================= */
+
+/* Hide post counts */
 .archive-count {
   display: none;
 }
 
-/* Style for acceptance letter image */
+/* Underline title on hover */
+.archive-entry:hover .archive-entry-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* =============================================================================
+   IMAGES
+   ============================================================================= */
+
+/* Acceptance letter image */
 article img[alt*="acceptance letter"] {
-  max-width: 600px; /* adjust this number */
+  max-width: 600px;
   width: 100%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   margin: 2rem auto;
   display: block;
 }
-
