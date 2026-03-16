@@ -7,7 +7,7 @@ featured = true
 +++
 
 
-My interest in privacy did not start with some big moment of realization. It gradually built over time, which is how the most meaningful shifts usually happen.
+My interest in privacy didn't start with some big moment of realization. It gradually built over time, which is how the most meaningful shifts usually happen.
 
 For the past few years I have been working as a frontend engineer focused on accessibility compliance. My background in systems engineering and human factors shapes how I think about technology. I tend to look at systems through the lens of how people actually experience them. Do they support people, or do they quietly make things harder?
 
