@@ -8,4 +8,3 @@ featured = true
 
 I was given a HIPAA compliance policy manual and tasked with improving the plan.
 
-

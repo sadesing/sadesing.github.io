@@ -1,81 +1,44 @@
-/* =============================================================================
-   THEME ICONS
-   ============================================================================= */
-
-/* Sun icon - dark yellow/gold */
-#sun {
-  color: #FFD700;
-}
-
-#sun:hover {
-  color: #FFA500;
-}
-
-#moon {
-  fill: #FFEB99;
-}
-
-#moon:hover {
-  fill: #FFD700;
-}
-
-
-/* =============================================================================
-   SOCIAL ICONS
-   ============================================================================= */
+#sun { color: #FFD700; }
+#sun:hover { color: #FFA500; }
+#moon { fill: #FFEB99; }
+#moon:hover { fill: #FFD700; }
 
 .social-icons a {
   display: inline-block;
   transition: transform 0.3s ease;
 }
-
 .social-icons a:hover {
   transform: translateY(-3px) scale(1.1);
 }
-
-
-/* =============================================================================
-   POST ENTRY CARDS (homepage list)
-   ============================================================================= */
 
 .post-entry .entry-header h2,
 .first-entry .entry-header h1 {
   font-weight: 600;
 }
-
 .post-entry,
 .first-entry {
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
-
 .post-entry:hover,
 .first-entry:hover {
   border-color: var(--primary);
   transform: translateY(-2px);
 }
 
-
-/* =============================================================================
-   FEATURED POSTS SECTION
-   ============================================================================= */
-
 .featured-posts {
   margin: 2rem 0 2.5rem;
 }
-
 .featured-heading {
   font-size: 24px;
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 1rem;
 }
-
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-
 .featured-card {
   display: block;
   text-decoration: none;
@@ -86,19 +49,16 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
   color: inherit;
 }
-
 .featured-card:hover {
   border-color: var(--primary);
   transform: translateY(-2px);
 }
-
 .featured-card-inner {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   height: 100%;
 }
-
 .featured-card-title {
   font-size: 1rem;
   font-weight: 600;
@@ -106,7 +66,6 @@
   color: var(--primary);
   line-height: 1.4;
 }
-
 .featured-card-summary {
   font-size: 0.875rem;
   color: var(--secondary);
@@ -114,7 +73,6 @@
   line-height: 1.5;
   flex-grow: 1;
 }
-
 .featured-card-meta {
   display: flex;
   gap: 0;
@@ -122,55 +80,22 @@
   color: var(--secondary);
   margin-top: 0.5rem;
 }
-
 .featured-card-meta span + span::before {
   content: "\00a0·\00a0";
 }
-
-/* Mobile: match featured card fonts to post entry fonts */
 @media (max-width: 768px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-card-title {
-    font-size: 24px;
-  }
-
-  .featured-card-summary {
-    font-size: 14px;
-  }
-
-  .featured-card-meta {
-    font-size: 13px;
-  }
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-card-title { font-size: 24px; }
+  .featured-card-summary { font-size: 14px; }
+  .featured-card-meta { font-size: 13px; }
 }
-
-
-/* =============================================================================
-   TAGS PAGE
-   ============================================================================= */
 
 .terms-tags a:hover {
   transform: scale(1.1);
 }
 
-
-/* =============================================================================
-   PAGE TITLES (Archive, Tags, About, single article)
-   ============================================================================= */
-
-/* Individual article title */
-.post-title {
-  font-weight: 600;
-}
-
-/* Archive, Tags, About page heading */
-.page-header h1 {
-  font-weight: 600;
-}
-
-/* Section headings within blog post content */
+.post-title { font-weight: 600; }
+.page-header h1 { font-weight: 600; }
 .post-content h1,
 .post-content h2,
 .post-content h3,
@@ -180,26 +105,11 @@
   font-weight: 600;
 }
 
-
-/* =============================================================================
-   ARCHIVE PAGE
-   ============================================================================= */
-
-/* Hide post counts */
-.archive-count {
-  display: none;
-}
-
-/* Underline title on hover */
+.archive-count { display: none; }
 .archive-entry:hover .archive-entry-title {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
-
-/* =============================================================================
-   CONTENT GRID (inline multi-column sections within posts)
-   ============================================================================= */
 
 .content-grid {
   display: grid;
@@ -207,33 +117,160 @@
   gap: 1.5rem;
   margin: 1.5rem 0;
 }
-
 .content-grid-item h3 {
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
   color: var(--primary);
 }
-
 .content-grid-item p {
   font-size: 0.9rem;
   color: var(--secondary);
   line-height: 1.6;
   margin: 0;
 }
-
 @media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
+  .content-grid { grid-template-columns: 1fr; }
 }
 
+.up-to-section {
+  max-width: 680px;
+  margin: 3rem auto 1rem;
+}
+.up-to-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 768px) {
+  .up-to-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+.up-to-card {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--entry);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.up-to-card .card-img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  display: block;
+}
+.card-visual {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.card-body { padding: 10px 14px 14px; }
+.card-label {
+  font-family: monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  margin-bottom: 3px;
+}
+.card-text {
+  font-size: 0.875rem;
+  color: var(--primary);
+  line-height: 1.45;
+}
+.vis-book { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); }
+.book-shape {
+  width: 70px;
+  height: 96px;
+  background: #e8e4dc;
+  border-radius: 2px 5px 5px 2px;
+  box-shadow: -3px 0 0 #c8c4bc, -6px 0 0 #a8a49c;
+  transform: rotate(-6deg);
+  position: relative;
+}
+.book-shape::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 2px 0 0 2px;
+}
+.vis-travel { background: linear-gradient(160deg, #f5ebe0, #e8d5c4); }
+.plane-svg { transform: rotate(-20deg); }
+.stamp {
+  position: absolute;
+  border: 2px solid #b8725d;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #b8725d;
+  transform: rotate(12deg);
+  opacity: 0.6;
+  top: 10px;
+  right: 14px;
+  letter-spacing: 0.05em;
+}
+.vis-study { background: linear-gradient(145deg, #2d2438, #3d3450); }
+.terminal-block { text-align: left; }
+.terminal-line {
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: #a89cc8;
+  line-height: 1.7;
+}
+.terminal-line.dim { opacity: 0.5; }
+.cursor-blink {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  background: #a89cc8;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 1.2s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink { animation: none; opacity: 0.5; }
+}
+.vis-life { background: linear-gradient(135deg, #1b3026, #2a4a38); }
+.leaf-shape {
+  width: 36px;
+  height: 50px;
+  border-radius: 0 50% 50% 50%;
+  border: 1.5px solid #6aaa7a;
+  transform: rotate(-30deg);
+  position: relative;
+  opacity: 0.7;
+}
+.leaf-shape::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: #6aaa7a;
+  opacity: 0.5;
+}
 
-/* =============================================================================
-   IMAGES
-   ============================================================================= */
-
-/* Acceptance letter image */
 article img[alt*="acceptance letter"] {
   max-width: 600px;
   width: 100%;
