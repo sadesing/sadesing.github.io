@@ -5,6 +5,7 @@ theme = 'PaperMod'
 
 [params]
   description = "Privacy Engineering and Cybersecurity"
+  defaultTheme = "dark"
   
   # Show reading time
   ShowReadingTime = true
