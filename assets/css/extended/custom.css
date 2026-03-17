@@ -3,6 +3,13 @@
 #moon { fill: #FFEB99; }
 #moon:hover { fill: #FFD700; }
 
+@font-face {
+  font-family: 'Bethoman';
+  src: url('/fonts/Bethoman.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
 .social-icons a {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -133,6 +140,8 @@
   .content-grid { grid-template-columns: 1fr; }
 }
 
+/* ── "What I'm up to" cards ── */
+
 .up-to-section {
   max-width: 680px;
   margin: 3rem auto 1rem;
@@ -194,28 +203,71 @@
   color: var(--primary);
   line-height: 1.45;
 }
+
+/* ── Book card ── */
+
 .vis-book { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); }
-.book-shape {
-  width: 70px;
-  height: 96px;
-  background: #e8e4dc;
-  border-radius: 2px 5px 5px 2px;
-  box-shadow: -3px 0 0 #c8c4bc, -6px 0 0 #a8a49c;
-  transform: rotate(-6deg);
+
+.book-3d,
+.book-3d::after,
+.book-3d::before {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.book-3d {
+  width: 95px;
+  height: 130px;
   position: relative;
+  background: #1a2a3a;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 9px 20px 0 rgba(0,0,0,0.25);
+  overflow: hidden;
+  transition: box-shadow 0.3s linear;
+  display: flex;
 }
-.book-shape::after {
+/* PaperMod override: .post-content img adds border-radius: 4px and margin: 1rem 0 */
+.book-3d img {
+  margin: 0 !important;
+  border-radius: 0 5px 5px 0 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all 0.45s ease;
+}
+.book-3d:hover {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25), 0 9px 20px 0 rgba(0,0,0,0.45);
+}
+.book-3d:hover img {
+  transform: rotateY(-25deg);
+  box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.2);
+}
+.book-3d::after,
+.book-3d::before {
   content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
   position: absolute;
-  left: 0;
+  z-index: -1;
   top: 0;
-  bottom: 0;
-  width: 7px;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 2px 0 0 2px;
+  background: white;
+  border: 1px solid #d9d9d9;
 }
+.book-3d::before { left: -3px; }
+.book-3d::after { left: -6px; }
+@media (max-width: 768px) {
+  .book-3d {
+    width: 120px;
+    height: 165px;
+  }
+}
+
+/* ── Travel card ── */
+
 .vis-travel { background: linear-gradient(160deg, #f5ebe0, #e8d5c4); }
-.plane-svg { transform: rotate(-20deg); }
 .stamp {
   position: absolute;
   border: 2px solid #b8725d;
@@ -235,6 +287,49 @@
   right: 14px;
   letter-spacing: 0.05em;
 }
+.polaroid {
+  width: 120px;
+  background: #fff;
+  padding: 8px 8px 10px 8px;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.12);
+  transform: rotate(-4deg);
+  position: relative;
+  z-index: 1;
+}
+.polaroid-img {
+  width: 100%;
+  aspect-ratio: 2.7/3;
+  object-fit: cover;
+  display: block;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.polaroid-caption {
+  font-family: 'Bethoman', cursive;
+  font-size: 0.85rem;
+  color: #5a5046;
+  text-align: center;
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+}
+.plane-anim {
+  position: absolute;
+  z-index: 0;
+  animation: fly-takeoff 7s ease-in-out infinite;
+}
+@keyframes fly-takeoff {
+  0% { left: -40px; top: 55%; opacity: 0; }
+  10% { opacity: 0.8; }
+  50% { top: 35%; }
+  90% { opacity: 0.8; }
+  100% { left: 105%; top: 40%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plane-anim { animation: none; opacity: 0.5; left: 40%; top: 42%; }
+}
+
+/* ── Study card ── */
+
 .vis-study { background: linear-gradient(145deg, #2d2438, #3d3450); }
 .terminal-block { text-align: left; }
 .terminal-line {
@@ -260,6 +355,9 @@
 @media (prefers-reduced-motion: reduce) {
   .cursor-blink { animation: none; opacity: 0.5; }
 }
+
+/* ── Life card ── */
+
 .vis-life { background: linear-gradient(135deg, #1b3026, #2a4a38); }
 .leaf-shape {
   width: 36px;
@@ -280,6 +378,8 @@
   background: #6aaa7a;
   opacity: 0.5;
 }
+
+/* ── Post content images ── */
 
 article img[alt*="acceptance letter"] {
   max-width: 600px;
