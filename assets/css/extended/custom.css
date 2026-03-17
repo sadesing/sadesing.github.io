@@ -147,10 +147,6 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  .up-to-section {
-    max-width: 400px;
-    margin-left: 0;
-  }
   .card-body {
     padding: 8px 12px 12px;
   }
