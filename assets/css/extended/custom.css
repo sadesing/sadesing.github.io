@@ -147,8 +147,9 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  .up-to-card .card-visual {
-    aspect-ratio: 5 / 2;
+  .up-to-section {
+    max-width: 400px;
+    margin-left: 0;
   }
   .card-body {
     padding: 8px 12px 12px;
