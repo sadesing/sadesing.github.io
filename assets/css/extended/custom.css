@@ -147,6 +147,12 @@
     grid-template-columns: 1fr;
     gap: 12px;
   }
+  .up-to-card .card-visual {
+    aspect-ratio: 5 / 2;
+  }
+  .card-body {
+    padding: 8px 12px 12px;
+  }
 }
 .up-to-card {
   border: 1px solid rgba(0, 0, 0, 0.15);
