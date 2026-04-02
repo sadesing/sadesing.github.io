@@ -39,7 +39,7 @@ theme = 'PaperMod'
   # Home page settings
   [params.homeInfoParams]
     Title = "Hi there 👋🏾"
-    Content = "I’m Sade. Software engineer, privacy explorer, and curious about all things cybersecurity and human-centered tech."
+    Content = "I'm Sade. Privacy-focused engineer, cybersecurity explorer, and curious about all things human-centered tech."
     
 
   # Social links
