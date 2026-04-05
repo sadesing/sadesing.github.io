@@ -1,3 +1,11 @@
+:root:not([data-theme="dark"]) {
+    --theme: #fbf6f0;
+}
+
+:root:not([data-theme="dark"]) .list {
+    background: #fbf6f0;
+}
+
 #sun { color: #FFD700; }
 #sun:hover { color: #FFA500; }
 #moon { fill: #FFEB99; }

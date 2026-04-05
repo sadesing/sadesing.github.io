@@ -6,7 +6,7 @@ tags = ["AI-governance", "risk-management", "NIST", "privacy"]
 featured = true
 +++
 
-Imagine you're working with a 400-person consulting firm that operates across healthcare, financial services, and government. AI is everywhere: custom models trained on proprietary client data, RAG systems pulling from internal documents, AI-assisted hiring, automated contract review, and predictive analytics delivered straight to the C-suite.
+Imagine you're working with a 400-person global consulting firm that operates across healthcare, financial services, and government. AI is everywhere: custom models trained on proprietary client data, RAG systems pulling from internal documents, AI-assisted hiring, automated contract review, and predictive analytics delivered straight to the C-suite.
 
 Now someone asks you to figure out where the risks are. Not in theory, but in practice. Which systems could cause the most damage if something goes wrong? What framework do you apply? And how do you build a governance plan that actually fits a firm this size without over-engineering it?
 
