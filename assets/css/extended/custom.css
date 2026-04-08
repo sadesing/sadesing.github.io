@@ -6,6 +6,12 @@
     background: #fbf6f0;
 }
 
+@media (min-width: 769px) {
+    .first-entry.home-info {
+        margin-bottom: var(--gap);
+    }
+}
+
 #sun { color: #FFD700; }
 #sun:hover { color: #FFA500; }
 #moon { fill: #FFEB99; }
@@ -385,6 +391,29 @@
   width: 1px;
   background: #6aaa7a;
   opacity: 0.5;
+}
+
+/* ── 3-column image grid ── */
+
+.img-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.img-grid-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .img-grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Post content images ── */
