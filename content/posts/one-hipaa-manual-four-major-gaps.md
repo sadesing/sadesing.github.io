@@ -17,8 +17,6 @@ My review identified substantive gaps, outdated provisions, technical errors, an
 ---
 ## No remote work or mobile device policy
 
-The current manual contains no policy governing remote access to PHI, use of personal devices for work purposes, or telehealth/remote work scenarios. This is a major gap, particularly post-2020.
-
 An organization operating in 2026 cannot have a HIPAA compliance program that does not address remote work. HHS has published multiple cybersecurity bulletins on mobile device security and OCR has investigated and settled numerous cases involving lost or stolen unencrypted devices.
 
 Original manual:
