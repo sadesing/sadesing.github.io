@@ -1,9 +1,16 @@
 :root:not([data-theme="dark"]) {
     --theme: #fbf6f0;
+    --entry: #ffffff;
+    --border: #d8d0c8;
 }
 
 :root:not([data-theme="dark"]) .list {
     background: #fbf6f0;
+}
+
+:root:not([data-theme="dark"]) .post-entry,
+:root:not([data-theme="dark"]) .featured-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 769px) {
@@ -74,6 +81,7 @@
   border-color: var(--primary);
   transform: translateY(-2px);
 }
+
 .featured-card-inner {
   display: flex;
   flex-direction: column;
@@ -124,6 +132,10 @@
 .post-content h5,
 .post-content h6 {
   font-weight: 600;
+}
+
+.archive-year:not(:last-of-type) {
+    border-bottom-width: 1px;
 }
 
 .archive-count { display: none; }

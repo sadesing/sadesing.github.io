@@ -10,16 +10,16 @@ Imagine you're working with a 400-person global consulting firm that operates ac
 
 Now someone asks you to figure out where the risks are. Not in theory, but in practice. Which systems could cause the most damage if something goes wrong? What framework do you apply? And how do you build a governance plan that actually fits a firm this size without over-engineering it?
 
-This is the kind of challenge that comes with an AI governance role, and it’s exactly what I tackled in a recent risk assessment.
+This is the kind of challenge I worked through in a recent risk assessment.
 ___
 
 ## Ranking the risks 
 
 I started by ranking all 12 risk categories from the NIST AI Risk Management Framework in order of priority for this organization. Not every risk carries the same weight. The goal was to figure out which ones could do the most damage given how this firm actually operates.
 
-![Risk ranking table showing NIST AI RMF risk categories ranked 1 through 6, with information security ranked highest for Sterling](/images/risk-ranking-1.png)
+![Risk ranking table showing NIST AI RMF risk categories ranked 1 through 6, with information security ranked highest for consulting firm](/images/risk-ranking-1.png)
 
-![Risk ranking table showing NIST AI RMF risk categories ranked 7 through 12, with environmental impacts ranked lowest for Sterling](/images/risk-ranking-2.png)
+![Risk ranking table showing NIST AI RMF risk categories ranked 7 through 12, with environmental impacts ranked lowest for consulting firm](/images/risk-ranking-2.png)
 
 
 **Here's where the biggest risks landed and why**.

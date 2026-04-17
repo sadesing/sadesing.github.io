@@ -4,7 +4,7 @@ draft: false
 showToc: false
 ---
 
-Hi, I’m Sade. I’m a graduate student in cybersecurity and data privacy at Albany Law School. My background in systems engineering and human factors shapes how I approach problems. I’m interested in how people interact with technology and how those interactions can surface privacy, security, and compliance challenges. Identifying gaps and finding solutions that are both practical and human-centered is something I enjoy.
+Hi, I’m Sade. I’m a graduate student in cybersecurity and data privacy at Albany Law School. My background in systems engineering and human factors shapes how I approach problems. I’m interested in how people interact with technology and how those interactions can surface privacy, security, and compliance challenges.
 
 I started this blog to document what I’m learning, share projects I’m working on, and contribute to conversations around ethical and responsible tech. If you're curious about my journey into privacy, you can read more [here](/posts/path-to-privacy/).
 

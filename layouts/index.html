@@ -15,7 +15,6 @@
 {{- $featured := where site.RegularPages "Params.featured" true }}
 {{- if and .IsHome (eq $paginator.PageNumber 1) $featured }}
 <section class="featured-posts" aria-label="Featured posts">
-  <h2 class="featured-heading"><span aria-hidden="true">📌</span> Featured Posts</h2>
   <div class="featured-grid">
     {{- range $featured }}
     <a class="featured-card" href="{{ .Permalink }}" aria-label="Read featured post: {{ .Title | plainify }}">
