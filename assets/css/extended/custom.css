@@ -1,34 +1,89 @@
+/* =============================================================
+   THEME — Light mode overrides
+   ============================================================= */
+
 :root:not([data-theme="dark"]) {
-    --theme: #fbf6f0;
-    --entry: #ffffff;
-    --border: #d8d0c8;
+  --theme: #fbf6f0;
+  --entry: #ffffff;
+  --border: #d8d0c8;
 }
 
 :root:not([data-theme="dark"]) .list {
-    background: #fbf6f0;
+  background: #fbf6f0;
 }
 
 :root:not([data-theme="dark"]) .post-entry,
 :root:not([data-theme="dark"]) .featured-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-@media (min-width: 769px) {
-    .first-entry.home-info {
-        margin-bottom: var(--gap);
-    }
+/* =============================================================
+   THEME — Risk stat card color tokens
+   ============================================================= */
+
+:root {
+  --severe-bg: #FCEBEB; --severe-num: #791F1F; --severe-label: #A32D2D;
+  --major-bg: #FAEEDA;  --major-num: #633806;  --major-label: #854F0B;
+  --moderate-bg: #EAF3DE; --moderate-num: #27500A; --moderate-label: #3B6D11;
+  --minor-bg: #E1F5EE;  --minor-num: #085041;  --minor-label: #0F6E56;
 }
 
-#sun { color: #FFD700; }
-#sun:hover { color: #FFA500; }
-#moon { fill: #FFEB99; }
-#moon:hover { fill: #FFD700; }
+[data-theme="dark"] {
+  --severe-bg: #501313; --severe-num: #F7C1C1; --severe-label: #F09595;
+  --major-bg: #412402;  --major-num: #FAC775;  --major-label: #EF9F27;
+  --moderate-bg: #173404; --moderate-num: #C0DD97; --moderate-label: #97C459;
+  --minor-bg: #04342C;  --minor-num: #9FE1CB;  --minor-label: #5DCAA5;
+}
+
+/* =============================================================
+   FONTS
+   ============================================================= */
 
 @font-face {
   font-family: 'Bethoman';
   src: url('/fonts/Bethoman.otf') format('opentype');
   font-weight: 400;
   font-display: swap;
+}
+
+/* =============================================================
+   THEME TOGGLE — Sun / moon icon colors
+   ============================================================= */
+
+#sun       { color: #FFD700; }
+#sun:hover { color: #FFA500; }
+#moon      { fill: #FFEB99; }
+#moon:hover{ fill: #FFD700; }
+
+/* =============================================================
+   TYPOGRAPHY — Headings
+   ============================================================= */
+
+.post-title   { font-weight: 600; }
+.page-header h1 { font-weight: 600; }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 { font-weight: 600; }
+
+.post-entry .entry-header h2,
+.first-entry .entry-header h1 { font-weight: 600; }
+
+/* =============================================================
+   HOME — Layout & social icons
+   ============================================================= */
+
+@media (min-width: 769px) {
+  .first-entry.home-info {
+    margin-bottom: var(--gap);
+  }
+}
+
+.home-info .social-icons a svg {
+  height: 20px;
+  width: 20px;
 }
 
 .social-icons a {
@@ -39,28 +94,12 @@
   transform: translateY(-3px) scale(1.1);
 }
 
-.post-entry .entry-header h2,
-.first-entry .entry-header h1 {
-  font-weight: 600;
-}
-.post-entry,
-.first-entry {
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-.post-entry:hover,
-.first-entry:hover {
-  border-color: var(--primary);
-  transform: translateY(-2px);
-}
+/* =============================================================
+   HOME — Featured posts grid
+   ============================================================= */
 
 .featured-posts {
   margin: 2rem 0 2.5rem;
-}
-.featured-heading {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 1rem;
 }
 .featured-grid {
   display: grid;
@@ -81,7 +120,6 @@
   border-color: var(--primary);
   transform: translateY(-2px);
 }
-
 .featured-card-inner {
   display: flex;
   flex-direction: column;
@@ -113,60 +151,50 @@
   content: "\00a0·\00a0";
 }
 @media (max-width: 768px) {
-  .featured-grid { grid-template-columns: 1fr; }
-  .featured-card-title { font-size: 24px; }
-  .featured-card-summary { font-size: 14px; }
-  .featured-card-meta { font-size: 13px; }
+  .featured-grid          { grid-template-columns: 1fr; }
+  .featured-card-title    { font-size: 24px; }
+  .featured-card-summary  { font-size: 14px; }
+  .featured-card-meta     { font-size: 13px; }
 }
 
-.terms-tags a:hover {
-  transform: scale(1.1);
+/* =============================================================
+   POST ENTRIES — Hover effects
+   ============================================================= */
+
+.post-entry,
+.first-entry {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.post-entry:hover,
+.first-entry:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
-.post-title { font-weight: 600; }
-.page-header h1 { font-weight: 600; }
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  font-weight: 600;
-}
+/* =============================================================
+   ARCHIVE PAGE
+   ============================================================= */
 
 .archive-year:not(:last-of-type) {
-    border-bottom-width: 1px;
+  border-bottom-width: 1px;
 }
-
 .archive-count { display: none; }
 .archive-entry:hover .archive-entry-title {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-.content-grid-item h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-  color: var(--primary);
-}
-.content-grid-item p {
-  font-size: 0.9rem;
-  color: var(--secondary);
-  line-height: 1.6;
-  margin: 0;
-}
-@media (max-width: 768px) {
-  .content-grid { grid-template-columns: 1fr; }
+/* =============================================================
+   TAGS PAGE
+   ============================================================= */
+
+.terms-tags a:hover {
+  transform: scale(1.1);
 }
 
-/* ── "What I'm up to" cards ── */
+/* =============================================================
+   ABOUT — "What I'm up to" cards (shared)
+   ============================================================= */
 
 .up-to-section {
   max-width: 680px;
@@ -177,34 +205,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-@media (max-width: 768px) {
-  .up-to-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .card-body {
-    padding: 8px 12px 12px;
-  }
-}
-@media (max-width: 430px) {
-  .up-to-section {
-    max-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .up-to-card {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   overflow: hidden;
   background: var(--entry);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-.up-to-card .card-img {
-  width: 100%;
-  aspect-ratio: 5 / 3;
-  object-fit: cover;
-  display: block;
 }
 .card-visual {
   width: 100%;
@@ -215,7 +221,13 @@
   position: relative;
   overflow: hidden;
 }
-.card-body { padding: 10px 14px 14px; }
+.up-to-card .card-img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  display: block;
+}
+.card-body  { padding: 10px 14px 14px; }
 .card-label {
   font-family: monospace;
   font-size: 0.65rem;
@@ -229,8 +241,17 @@
   color: var(--primary);
   line-height: 1.45;
 }
+@media (max-width: 768px) {
+  .up-to-grid  { grid-template-columns: 1fr; gap: 12px; }
+  .card-body   { padding: 8px 12px 12px; }
+}
+@media (max-width: 430px) {
+  .up-to-section { max-width: 350px; margin-left: auto; margin-right: auto; }
+}
 
-/* ── Book card ── */
+/* =============================================================
+   ABOUT — Book card
+   ============================================================= */
 
 .vis-book { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); }
 
@@ -251,7 +272,7 @@
   transition: box-shadow 0.3s linear;
   display: flex;
 }
-/* PaperMod override: .post-content img adds border-radius: 4px and margin: 1rem 0 */
+/* Override PaperMod's .post-content img styles */
 .book-3d img {
   margin: 0 !important;
   border-radius: 0 5px 5px 0 !important;
@@ -283,15 +304,14 @@
   border: 1px solid #d9d9d9;
 }
 .book-3d::before { left: -3px; }
-.book-3d::after { left: -6px; }
+.book-3d::after  { left: -6px; }
 @media (max-width: 768px) {
-  .book-3d {
-    width: 120px;
-    height: 165px;
-  }
+  .book-3d { width: 120px; height: 165px; }
 }
 
-/* ── Travel card ── */
+/* =============================================================
+   ABOUT — Travel card
+   ============================================================= */
 
 .vis-travel { background: linear-gradient(160deg, #f5ebe0, #e8d5c4); }
 .stamp {
@@ -316,7 +336,7 @@
 .polaroid {
   width: 120px;
   background: #fff;
-  padding: 8px 8px 10px 8px;
+  padding: 8px 8px 10px;
   box-shadow: 1px 2px 6px rgba(0,0,0,0.12);
   transform: rotate(-4deg);
   position: relative;
@@ -344,17 +364,19 @@
   animation: fly-takeoff 7s ease-in-out infinite;
 }
 @keyframes fly-takeoff {
-  0% { left: -40px; top: 55%; opacity: 0; }
-  10% { opacity: 0.8; }
-  50% { top: 35%; }
-  90% { opacity: 0.8; }
+  0%   { left: -40px; top: 55%; opacity: 0; }
+  10%  { opacity: 0.8; }
+  50%  { top: 35%; }
+  90%  { opacity: 0.8; }
   100% { left: 105%; top: 40%; opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .plane-anim { animation: none; opacity: 0.5; left: 40%; top: 42%; }
 }
 
-/* ── Study card ── */
+/* =============================================================
+   ABOUT — Study card
+   ============================================================= */
 
 .vis-study { background: linear-gradient(145deg, #2d2438, #3d3450); }
 .terminal-block { text-align: left; }
@@ -376,36 +398,52 @@
 }
 @keyframes blink {
   0%, 100% { opacity: 0.5; }
-  50% { opacity: 0; }
+  50%       { opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .cursor-blink { animation: none; opacity: 0.5; }
 }
 
-/* ── Life card ── */
+/* =============================================================
+   ABOUT — Life / coffee card
+   ============================================================= */
 
 .vis-life { background: linear-gradient(135deg, #1b3026, #2a4a38); }
-.leaf-shape {
-  width: 36px;
-  height: 50px;
-  border-radius: 0 50% 50% 50%;
-  border: 1.5px solid #6aaa7a;
-  transform: rotate(-30deg);
-  position: relative;
-  opacity: 0.7;
+
+.polaroid-landscape {
+  width: 150px;
+  padding: 5px 5px 16px;
+  transform: rotate(-2deg);
 }
-.leaf-shape::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 4px;
-  bottom: 4px;
-  width: 1px;
-  background: #6aaa7a;
-  opacity: 0.5;
+.polaroid-landscape .polaroid-img {
+  aspect-ratio: 3/2;
 }
 
-/* ── 3-column image grid ── */
+/* =============================================================
+   POST CONTENT — Inline image grids
+   ============================================================= */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.content-grid-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+}
+.content-grid-item p {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .content-grid { grid-template-columns: 1fr; }
+}
 
 .img-grid-3 {
   display: grid;
@@ -413,7 +451,6 @@
   gap: 1rem;
   margin: 1.5rem 0;
 }
-
 .img-grid-3 img {
   width: 100%;
   height: 100%;
@@ -421,7 +458,6 @@
   border-radius: var(--radius);
   margin: 0 !important;
 }
-
 @media (max-width: 768px) {
   .img-grid-3 {
     grid-template-columns: 1fr;
@@ -431,7 +467,9 @@
   }
 }
 
-/* ── Post content images ── */
+/* =============================================================
+   POST CONTENT — Specific image overrides
+   ============================================================= */
 
 article img[alt*="acceptance letter"] {
   max-width: 600px;
@@ -440,4 +478,42 @@ article img[alt*="acceptance letter"] {
   border-radius: 4px;
   margin: 2rem auto;
   display: block;
+}
+
+/* =============================================================
+   POST CONTENT — Risk stat cards
+   ============================================================= */
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.risk-card {
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.risk-card.severe   { background: var(--severe-bg); }
+.risk-card.major    { background: var(--major-bg); }
+.risk-card.moderate { background: var(--moderate-bg); }
+.risk-card.minor    { background: var(--minor-bg); }
+
+.risk-count { font-size: 2rem; font-weight: 700; line-height: 1; }
+.severe   .risk-count { color: var(--severe-num); }
+.major    .risk-count { color: var(--major-num); }
+.moderate .risk-count { color: var(--moderate-num); }
+.minor    .risk-count { color: var(--minor-num); }
+
+.risk-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.severe   .risk-label { color: var(--severe-label); }
+.major    .risk-label { color: var(--major-label); }
+.moderate .risk-label { color: var(--moderate-label); }
+.minor    .risk-label { color: var(--minor-label); }
+
+@media (max-width: 480px) {
+  .risk-grid { grid-template-columns: 1fr; }
 }

@@ -21,24 +21,24 @@ An organization operating in 2026 cannot have a HIPAA compliance program that do
 
 Original manual:
   <div class="img-grid-3">          
-    <img src="/images/naipta-table-of-contents.png" alt="description one">
-    <img src="/images/naipta-table-of-contents-page2.png" alt="description two">                                     
-    <img src="/images/naipta-table-of-contents-page3.png" alt="description three">
+    <img src="/images/naipta-table-of-contents.png" alt="NAIPTA HIPAA manual table of contents, page one">
+    <img src="/images/naipta-table-of-contents-page2.png" alt="NAIPTA HIPAA manual table of contents, page two">                                     
+    <img src="/images/naipta-table-of-contents-page3.png" alt="NAIPTA HIPAA manual table of contents, page three">
   </div> 
 
 Proposed changes:
-  ![alt text](/images/proposed-remote-policy.png) 
+  ![Proposed remote work and mobile device policy additions](/images/proposed-remote-policy.png) 
 
 ___
 ## "Employees" vs. "individuals"
 
 HIPAA's Privacy Rule was designed to protect the PHI of patients receiving health care services, not just employees of a covered entity. Throughout this manual, NAIPTA refers to the subjects of PHI as "employees," which is confusing and potentially limiting given NAIPTA's role as a covered entity that may handle PHI of individuals beyond its own workforce.
 
-Orginal manual:
-  ![alt text](/images/naipta-employee-category-table.png) 
+Original manual:
+  ![NAIPTA authorization table using employee as the category label](/images/naipta-employee-category-table.png) 
 
 Proposed changes:
-  ![alt text](/images/proposed-employees-vs-individuals.png) 
+  ![Proposed revision replacing employee with individual terminology](/images/proposed-employees-vs-individuals.png) 
 
 
 ---
@@ -46,22 +46,22 @@ Proposed changes:
 
 The Business Associates Policy is among the weakest sections in the manual. It is very brief and lacks substantive guidance. The 2013 Omnibus Rule substantially expanded Business Associate obligations, and the manual does not address required BAA elements under 45 CFR Section 164.504(e)(2).
 
-Orginal manual:
-  ![alt text](/images/naipta-business-associates-original.png) 
+Original manual:
+  ![Original NAIPTA Business Associates policy section](/images/naipta-business-associates-original.png) 
 
 Proposed changes:
-  ![alt text](/images/proposed-business-associates.png)
+  ![Proposed Business Associates policy additions](/images/proposed-business-associates.png)
 
 ---
 ## Missing protections for special categories of PHI
 
 Substance use disorder records are governed not only by HIPAA but also by 42 CFR Part 2, which imposes significantly more restrictive confidentiality protections. Mental health records have additional protections under Arizona law (A.R.S. Section 36-509), HIV/AIDS information is subject to heightened requirements under A.R.S. Section 36-664, and genetic information is protected under GINA and 45 CFR Section 164.514(f).
 
-Orginal manual:
-  ![alt text](/images/naipta-special-categories-original.png) 
+Original manual:
+  ![NAIPTA authorization table rows for psychiatric, substance use, and HIV/AIDS categories](/images/naipta-special-categories-original.png) 
 
 Proposed changes:
-  ![alt text](/images/proposed-special-categories-phi.png)
+  ![Proposed special categories of PHI policy additions](/images/proposed-special-categories-phi.png)
 
 ___
 The NAIPTA HIPAA Compliance Policy Manual demonstrates a genuine organizational commitment to HIPAA compliance and covers many required elements in reasonable detail. The primary concerns with the current version are its age, several significant compliance gaps, and a handful of factual errors. Addressing these issues would better align the manual with current regulatory requirements and OCR enforcement priorities.

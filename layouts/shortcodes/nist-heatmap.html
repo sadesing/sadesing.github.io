@@ -1,0 +1,568 @@
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  #nist-heatmap {
+    background: #0E0E0E;
+    border-radius: 12px;
+    padding: 28px 24px;
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  #nist-heatmap * { box-sizing: border-box; }
+
+  .nh-inner { max-width: 860px; margin: 0 auto; }
+
+  /* ── Header ── */
+  .nh-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .nh-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .nh-subtitle {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── Toggle ── */
+  .nh-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .nh-toggle button {
+    background: transparent;
+    border: 0.5px solid transparent;
+    border-radius: 7px;
+    padding: 7px 18px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    color: rgba(255,255,255,0.7);
+    transition: all 0.18s ease;
+  }
+  .nh-toggle button.active {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.18);
+    color: #fff;
+  }
+
+  /* ── Legend ── */
+  .nh-legend {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .nh-legend-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.7);
+  }
+  .nh-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.8);
+  }
+  .nh-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  /* ── Zones ── */
+  .nh-zones { display: flex; flex-direction: column; gap: 10px; }
+
+  .nh-zone { border-radius: 14px; overflow: hidden; border-width: 0.5px; border-style: solid; }
+
+  .nh-zone-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+  }
+  .nh-zone-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .nh-zone-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  .nh-zone-count {
+    margin-left: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .nh-zone-body { padding: 12px; }
+
+  .nh-empty {
+    text-align: center;
+    padding: 18px 0;
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    font-style: italic;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── Control grid ── */
+  .nh-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+  }
+
+  /* ── Control card ── */
+  .nh-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.04);
+    border: 0.5px solid rgba(255,255,255,0.1);
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  }
+  .nh-card:hover, .nh-card:focus-visible {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+    outline: none;
+  }
+  .nh-card-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 10px 10px 0 0;
+    opacity: 0.5;
+    transition: opacity 0.18s ease;
+  }
+  .nh-card:hover .nh-card-bar,
+  .nh-card:focus-visible .nh-card-bar { opacity: 1; }
+
+  .nh-card-id {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+  }
+  .nh-card-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .nh-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nh-card-priority {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.8);
+  }
+  .nh-card-tier {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── Hint ── */
+  .nh-hint {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.02);
+    border: 0.5px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    font-family: 'DM Mono', monospace;
+    text-align: center;
+  }
+
+  /* ── Modal ── */
+  .nh-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .nh-modal-backdrop.open { display: flex; }
+
+  .nh-modal {
+    background: #141414;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 540px;
+    overflow: hidden;
+    border: 0.5px solid rgba(255,255,255,0.15);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.8);
+  }
+  .nh-modal-head {
+    padding: 20px 24px 18px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .nh-modal-id {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .nh-modal-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .nh-modal-close {
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nh-modal-close:hover { background: rgba(255,255,255,0.14); }
+
+  .nh-modal-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+  .nh-modal-col {
+    background: #141414;
+    padding: 18px 20px;
+  }
+  .nh-modal-col-label {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .nh-risk-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 20px;
+    padding: 3px 10px;
+    border-width: 0.5px;
+    border-style: solid;
+    margin-bottom: 14px;
+  }
+  .nh-risk-pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .nh-risk-pill-text {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .nh-tier-label-sm {
+    font-size: 10px;
+    color: rgba(255,255,255,0.65);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .nh-tier-bar {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .nh-tier-pip {
+    width: 14px;
+    height: 5px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.12);
+    transition: background 0.3s;
+  }
+  .nh-tier-name {
+    font-size: 10px;
+    color: rgba(255,255,255,0.75);
+    font-family: 'DM Mono', monospace;
+    margin-left: 4px;
+  }
+  .nh-priority-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.65);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+    margin-top: 12px;
+  }
+  .nh-priority-val {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .nh-modal-footer {
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+  }
+  .nh-tier-move-label { color: rgba(255,255,255,0.65); }
+  .nh-tier-move-from  { color: rgba(255,255,255,0.85); }
+  .nh-tier-move-arrow { color: rgba(255,255,255,0.55); }
+</style>
+
+<div id="nist-heatmap" role="region" aria-label="NIST CSF 2.0 Risk Heat Map">
+  <div class="nh-inner">
+    <div class="nh-eyebrow">NIST CSF 2.0 Assessment</div>
+    <div class="nh-header">
+      <div>
+        <p class="nh-subtitle">Cybersecurity risk heat map · 12 controls</p>
+      </div>
+      <div class="nh-toggle" role="group" aria-label="Toggle view">
+        <button class="active" data-view="current" onclick="nhSetView('current')">Current state</button>
+        <button data-view="target" onclick="nhSetView('target')">Target state</button>
+      </div>
+    </div>
+
+    <div class="nh-legend" aria-label="Priority legend">
+      <span class="nh-legend-label">PRIORITY</span>
+      <span class="nh-legend-item"><span class="nh-dot" style="background:#E55;box-shadow:0 0 4px #E5555588" aria-hidden="true"></span>Critical</span>
+      <span class="nh-legend-item"><span class="nh-dot" style="background:#E8922A;box-shadow:0 0 4px #E8922A88" aria-hidden="true"></span>High</span>
+      <span class="nh-legend-item"><span class="nh-dot" style="background:#C8B830;box-shadow:0 0 4px #C8B83088" aria-hidden="true"></span>Medium</span>
+      <span class="nh-legend-item"><span class="nh-dot" style="background:#4CAF84;box-shadow:0 0 4px #4CAF8488" aria-hidden="true"></span>Low</span>
+    </div>
+
+    <div class="nh-zones" id="nh-zones"></div>
+
+    <p class="nh-hint">Click any control to inspect full current and target state details</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="nh-modal-backdrop" id="nh-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="nh-modal-title" onclick="nhCloseModal(event)">
+  <div class="nh-modal">
+    <div class="nh-modal-head">
+      <div>
+        <span class="nh-modal-id" id="nh-modal-id"></span>
+        <p class="nh-modal-title" id="nh-modal-title"></p>
+      </div>
+      <button class="nh-modal-close" onclick="nhCloseModal()" aria-label="Close">✕</button>
+    </div>
+    <div class="nh-modal-cols">
+      <div class="nh-modal-col" id="nh-col-current"></div>
+      <div class="nh-modal-col" id="nh-col-target"></div>
+    </div>
+    <div class="nh-modal-footer">
+      <span class="nh-tier-move-label">Tier movement:</span>
+      <span class="nh-tier-move-from" id="nh-tier-from"></span>
+      <span class="nh-tier-move-arrow">→</span>
+      <span id="nh-tier-to"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const PRIORITY_COLORS = { Critical: "#E55", High: "#E8922A", Medium: "#C8B830", Low: "#4CAF84" };
+
+  const TIER_LABELS = ["0-None", "1-Partial", "2-Risk Informed", "3-Repeatable", "4-Adaptive"];
+
+  const ZONES = [
+    { key: "red",    label: "Severe",   accent: "#C13B3B", bg: "#2D1010", text: "#F4A0A0", border: "#6B2020", pill: "#3D1515" },
+    { key: "orange", label: "Major",    accent: "#C47A1E", bg: "#2A1A08", text: "#F0B870", border: "#6A3F10", pill: "#3A2208" },
+    { key: "yellow", label: "Moderate", accent: "#8A9A2A", bg: "#1C1F08", text: "#C8D870", border: "#4A5010", pill: "#252808" },
+    { key: "green",  label: "Minor",    accent: "#2A8A5A", bg: "#0A1E14", text: "#70D4A0", border: "#1A5C30", pill: "#102818" },
+  ];
+
+  const CONTROLS = [
+    { id: "GV.RR-01", name: "Leadership accountability",    full: "Organizational leadership is responsible and accountable for cybersecurity risk",               cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "GV.SC-04", name: "Supplier prioritization",      full: "Suppliers are known and prioritized by criticality",                                           cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "ID.AM-02", name: "Software & service inventory", full: "Inventories of software, services, and systems are maintained",                                 cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Major",    tRisk: "Minor",    cZone: "orange", tZone: "green"  },
+    { id: "ID.RA-01", name: "Vulnerability identification", full: "Vulnerabilities in assets are identified, validated, and recorded",                             cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 2, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "PR.AA-01", name: "Identity & credential mgmt",  full: "Identities and credentials for authorized users, services, and hardware are managed",           cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "PR.AT-01", name: "Awareness & training",        full: "Personnel are provided with awareness and training",                                             cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Major",    tRisk: "Minor",    cZone: "orange", tZone: "green"  },
+    { id: "DE.CM-06", name: "External provider monitoring",full: "External service provider activities and services are monitored",                                cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 2, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "DE.AE-02", name: "Adverse event analysis",      full: "Potentially adverse events are analyzed to better understand associated activities",            cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 2, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "RS.MA-01", name: "Incident response execution", full: "The incident response plan is executed in coordination with relevant third parties",             cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "RS.CO-02", name: "Stakeholder notification",    full: "Internal and external stakeholders are notified of incidents",                                   cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 3, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "RC.RP-03", name: "Backup integrity verification",full: "The integrity of backups and other restoration assets is verified before restoration",          cPriority: "High",   tPriority: "High",   cTier: 1, tTier: 2, cRisk: "Severe",   tRisk: "Moderate", cZone: "red",    tZone: "yellow" },
+    { id: "RC.CO-04", name: "Public incident messaging",   full: "Public updates on incident recovery are shared using approved methods and messaging",            cPriority: "Medium", tPriority: "Medium", cTier: 0, tTier: 2, cRisk: "Major",    tRisk: "Minor",    cZone: "orange", tZone: "green"  },
+  ];
+
+  let currentView = "current";
+
+  function buildTierBar(tier, accent) {
+    const pips = Array.from({ length: 5 }, (_, i) => {
+      const bg = i <= tier ? accent : "rgba(255,255,255,0.12)";
+      return `<div class="nh-tier-pip" style="background:${bg}"></div>`;
+    }).join("");
+    return `<div class="nh-tier-bar" role="img" aria-label="Tier ${tier}: ${TIER_LABELS[tier]}">${pips}<span class="nh-tier-name">${TIER_LABELS[tier]}</span></div>`;
+  }
+
+  function buildCard(control, view) {
+    const zone     = view === "current" ? control.cZone : control.tZone;
+    const priority = view === "current" ? control.cPriority : control.tPriority;
+    const tier     = view === "current" ? control.cTier : control.tTier;
+    const risk     = view === "current" ? control.cRisk : control.tRisk;
+    const z        = ZONES.find(z => z.key === zone);
+    const dotColor = PRIORITY_COLORS[priority] || "#888";
+
+    return `
+      <div class="nh-card" role="button" tabindex="0"
+        aria-label="${control.name} — ${risk} risk, ${priority} priority"
+        data-id="${control.id}">
+        <div class="nh-card-bar" style="background:${z.accent}" aria-hidden="true"></div>
+        <div class="nh-card-id" style="color:${z.text}">${control.id}</div>
+        <div class="nh-card-name">${control.name}</div>
+        <div class="nh-card-meta">
+          <div class="nh-card-priority">
+            <span class="nh-dot" style="background:${dotColor};box-shadow:0 0 4px ${dotColor}88" aria-hidden="true"></span>
+            ${priority}
+          </div>
+          <span class="nh-card-tier">T${tier}</span>
+        </div>
+      </div>`;
+  }
+
+  function buildModalCol(label, zone, tier, priority, risk) {
+    const z        = ZONES.find(z => z.key === zone);
+    const dotColor = PRIORITY_COLORS[priority] || "#888";
+    return `
+      <div class="nh-modal-col">
+        <div class="nh-modal-col-label">${label}</div>
+        <div class="nh-risk-pill" style="background:${z.pill};border-color:${z.border}">
+          <span class="nh-risk-pill-dot" style="background:${z.accent}" aria-hidden="true"></span>
+          <span class="nh-risk-pill-text" style="color:${z.text}">${risk}</span>
+        </div>
+        <div class="nh-tier-label-sm">CSF TIER</div>
+        ${buildTierBar(tier, z.accent)}
+        <div class="nh-priority-label">PRIORITY</div>
+        <div class="nh-priority-val">
+          <span class="nh-dot" style="background:${dotColor};box-shadow:0 0 4px ${dotColor}88" aria-hidden="true"></span>
+          ${priority}
+        </div>
+      </div>`;
+  }
+
+  function renderZones() {
+    const container = document.getElementById("nh-zones");
+    container.innerHTML = ZONES.map(zone => {
+      const filtered = CONTROLS.filter(c => (currentView === "current" ? c.cZone : c.tZone) === zone.key);
+      const cards    = filtered.length
+        ? `<div class="nh-grid">${filtered.map(c => buildCard(c, currentView)).join("")}</div>`
+        : `<div class="nh-empty">No controls in this zone</div>`;
+
+      return `
+        <div class="nh-zone" style="background:${zone.bg};border-color:${zone.border}">
+          <div class="nh-zone-header" style="border-bottom-color:${zone.border}">
+            <div class="nh-zone-dot" style="background:${zone.accent};box-shadow:0 0 6px ${zone.accent}88" aria-hidden="true"></div>
+            <span class="nh-zone-name" style="color:${zone.text}">${zone.label.toUpperCase()}</span>
+            <span class="nh-zone-count">${filtered.length} control${filtered.length !== 1 ? "s" : ""}</span>
+          </div>
+          <div class="nh-zone-body">${cards}</div>
+        </div>`;
+    }).join("");
+
+    container.querySelectorAll(".nh-card").forEach(card => {
+      card.addEventListener("click", () => nhOpenModal(card.dataset.id));
+      card.addEventListener("keydown", e => { if (e.key === "Enter") nhOpenModal(card.dataset.id); });
+    });
+  }
+
+  window.nhSetView = function (view) {
+    currentView = view;
+    document.querySelectorAll(".nh-toggle button").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.view === view);
+    });
+    renderZones();
+  };
+
+  window.nhOpenModal = function (id) {
+    const c = CONTROLS.find(c => c.id === id);
+    if (!c) return;
+    const tz = ZONES.find(z => z.key === c.tZone);
+
+    document.getElementById("nh-modal-id").textContent    = c.id;
+    document.getElementById("nh-modal-title").textContent = c.full;
+    document.getElementById("nh-col-current").outerHTML   = buildModalCol("Current state", c.cZone, c.cTier, c.cPriority, c.cRisk).replace('class="nh-modal-col"', 'class="nh-modal-col" id="nh-col-current"');
+    document.getElementById("nh-col-target").outerHTML    = buildModalCol("Target state",  c.tZone, c.tTier, c.tPriority, c.tRisk).replace('class="nh-modal-col"', 'class="nh-modal-col" id="nh-col-target"');
+    document.getElementById("nh-tier-from").textContent   = TIER_LABELS[c.cTier];
+    document.getElementById("nh-tier-to").textContent     = TIER_LABELS[c.tTier];
+    document.getElementById("nh-tier-to").style.color     = tz.accent;
+
+    document.getElementById("nh-modal-backdrop").classList.add("open");
+    document.getElementById("nh-modal-backdrop").querySelector(".nh-modal-close").focus();
+  };
+
+  window.nhCloseModal = function (e) {
+    if (e && e.target !== document.getElementById("nh-modal-backdrop")) return;
+    document.getElementById("nh-modal-backdrop").classList.remove("open");
+  };
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") document.getElementById("nh-modal-backdrop").classList.remove("open");
+  });
+
+  renderZones();
+})();
+</script>

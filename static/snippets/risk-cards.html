@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Level Cards</title>
+  <style>
+    :root {
+      --severe-bg: #FCEBEB;
+      --severe-num: #791F1F;
+      --severe-label: #A32D2D;
+
+      --major-bg: #FAEEDA;
+      --major-num: #633806;
+      --major-label: #854F0B;
+
+      --moderate-bg: #EAF3DE;
+      --moderate-num: #27500A;
+      --moderate-label: #3B6D11;
+
+      --minor-bg: #E1F5EE;
+      --minor-num: #085041;
+      --minor-label: #0F6E56;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --severe-bg: #501313;
+        --severe-num: #F7C1C1;
+        --severe-label: #F09595;
+
+        --major-bg: #412402;
+        --major-num: #FAC775;
+        --major-label: #EF9F27;
+
+        --moderate-bg: #173404;
+        --moderate-num: #C0DD97;
+        --moderate-label: #97C459;
+
+        --minor-bg: #04342C;
+        --minor-num: #9FE1CB;
+        --minor-label: #5DCAA5;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+
+    .risk-card {
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .risk-card.severe   { background: var(--severe-bg); }
+    .risk-card.major    { background: var(--major-bg); }
+    .risk-card.moderate { background: var(--moderate-bg); }
+    .risk-card.minor    { background: var(--minor-bg); }
+
+    .risk-count {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .severe   .risk-count { color: var(--severe-num); }
+    .major    .risk-count { color: var(--major-num); }
+    .moderate .risk-count { color: var(--moderate-num); }
+    .minor    .risk-count { color: var(--minor-num); }
+
+    .risk-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .severe   .risk-label { color: var(--severe-label); }
+    .major    .risk-label { color: var(--major-label); }
+    .moderate .risk-label { color: var(--moderate-label); }
+    .minor    .risk-label { color: var(--minor-label); }
+
+    @media (max-width: 480px) {
+      .risk-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="risk-grid">
+    <div class="risk-card severe">
+      <span class="risk-count">9</span>
+      <span class="risk-label">Severe</span>
+    </div>
+    <div class="risk-card major">
+      <span class="risk-count">3</span>
+      <span class="risk-label">Major</span>
+    </div>
+    <div class="risk-card moderate">
+      <span class="risk-count">0</span>
+      <span class="risk-label">Moderate</span>
+    </div>
+    <div class="risk-card minor">
+      <span class="risk-count">0</span>
+      <span class="risk-label">Minor</span>
+    </div>
+  </div>
+</body>
+</html>

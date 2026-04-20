@@ -32,7 +32,7 @@ In my free time, I enjoy traveling, photography, exploring new cuisines, and spe
 <div class="up-to-card">
   <div class="card-visual vis-travel">
     <div class="polaroid">
-      <img src="/images/sxm.jpg" alt="Sint Maarten" class="polaroid-img">
+      <img src="/images/sxm.jpg" alt="Holding a coconut with a straw on the beach" class="polaroid-img">
       <div class="polaroid-caption"> with love, from sxm</div>
     </div>
     <div class="stamp">SXM</div>
@@ -42,29 +42,32 @@ In my free time, I enjoy traveling, photography, exploring new cuisines, and spe
   </div>
   <div class="card-body">
     <div class="card-label">Recently</div>
-    <div class="card-text">Sint Maarten</div>
+    <div class="card-text">Exploring new places</div>
   </div>
 </div>
     <div class="up-to-card">
       <div class="card-visual vis-study">
         <div class="terminal-block">
-          <div class="terminal-line">$ spring 2026</div>
-          <div class="terminal-line dim">cybersecurity law</div>
-          <div class="terminal-line dim">data governance<span class="cursor-blink"></span></div>
+          <div class="terminal-line">$ summer 2026</div>
+          <div class="terminal-line dim">EU data privacy law</div>
+          <div class="terminal-line dim">healthcare compliance<span class="cursor-blink"></span></div>
         </div>
       </div>
       <div class="card-body">
         <div class="card-label">Studying</div>
-        <div class="card-text">Cybersecurity law, data governance</div>
+        <div class="card-text">EU data privacy law, healthcare compliance</div>
       </div>
     </div>
     <div class="up-to-card">
       <div class="card-visual vis-life">
-        <div class="leaf-shape"></div>
+        <div class="polaroid polaroid-landscape">
+          <img src="/images/camel-latte.jpg" alt="Camel latte art" class="polaroid-img">
+          <div class="polaroid-caption">one cute latte, please</div>
+        </div>
       </div>
       <div class="card-body">
-        <div class="card-label">Making</div>
-        <div class="card-text">Herbal tea blends for spring</div>
+        <div class="card-label">Sipping</div>
+        <div class="card-text">Discovering new coffee spots</div>
       </div>
     </div>
   </div>
