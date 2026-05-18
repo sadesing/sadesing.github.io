@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sade</title>
+  <title>Sade | Accessibility Engineer</title>
   <link rel="stylesheet" href="main.min.css" />
   <link rel="stylesheet" href="./output.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
 </head>
 
@@ -41,13 +45,6 @@
             </path>
           </svg>
         </a>
-        <a href="mailto:sadensingleton@gmail.com" class="header-icon" aria-label="Email">
-          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
-            </path>
-          </svg>
-        </a>
       </div>
     </nav>
     <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
@@ -73,39 +70,70 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mt-4">
 
 
-        <a href="ewb.html" aria-label="Engineers without Borders project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/ewb/ewb-cover.png"
+        <a href="ewb.html" aria-label="Engineers Without Borders — Website redesign and accessibility audit" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/ewb/ewb-cover.png"
             alt="Cover for Engineers Without Borders North Texas project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Engineers Without Borders</p>
+              <p class="text-white/90 text-xs mt-1">Website redesign &amp; accessibility audit</p>
+            </div>
+          </div>
         </a>
 
-
-        <a href="airmail-downtown.html" aria-label="Air Mail downtown project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/downtown-cover.gif"
+        <a href="airmail-downtown.html" aria-label="Air Mail Downtown — Animated editorial celebrating 50 influential New Yorkers" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/downtown-cover.gif"
             alt="Cover for Air Mail Downtown project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Air Mail Downtown</p>
+              <p class="text-white/90 text-xs mt-1">Animated editorial celebrating 50 influential New Yorkers</p>
+            </div>
+          </div>
         </a>
 
-
-        <a href="airmail-shopify.html" aria-label="Air Mail Shopify project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/am-shop-cover.jpg"
+        <a href="airmail-shopify.html" aria-label="Air Mail Shopify — Shopify Plus multi-brand storefront" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/am-shop-cover.jpg"
             alt="Cover for Air Mail Shopify project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Air Mail Shopify</p>
+              <p class="text-white/90 text-xs mt-1">Shopify Plus multi-brand storefront</p>
+            </div>
+          </div>
         </a>
 
-
-        <a href="airmail-arts.html" aria-label="Air Mail Arts Intel project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/arts-cover.png"
+        <a href="airmail-arts.html" aria-label="Air Mail Arts Intel — Global culture vertical redesign" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/arts-cover.png"
             alt="Cover for Air Mail Arts Intel project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Air Mail Arts Intel</p>
+              <p class="text-white/90 text-xs mt-1">Global culture vertical redesign</p>
+            </div>
+          </div>
         </a>
 
-
-        <a href="pourri.html" aria-label="Pourri project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/pourri-cover.png"
+        <a href="pourri.html" aria-label="Pourri — International Shopify Plus e-commerce expansion" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/pourri-cover.png"
             alt="Cover for Pourri project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Pourri</p>
+              <p class="text-white/90 text-xs mt-1">International Shopify Plus e-commerce expansion</p>
+            </div>
+          </div>
         </a>
 
-
-        <a href="kai.html" aria-label="Kai project" class="portfolio-item">
-          <img class="w-full h-full object-cover z-10 hover:scale-95" src="assets/images/kai.gif"
+        <a href="kai.html" aria-label="Kai — Custom Shopify theme with GSAP animations" class="portfolio-item group relative overflow-hidden block">
+          <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-95" src="assets/images/kai.gif"
             alt="Cover for Kai project" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4" aria-hidden="true">
+            <div>
+              <p class="text-white text-sm font-semibold">Kai</p>
+              <p class="text-white/90 text-xs mt-1">Custom Shopify theme with GSAP animations</p>
+            </div>
+          </div>
         </a>
 
       </div>
@@ -148,17 +176,10 @@
           </path>
         </svg>
       </a>
-      <a href="mailto:sadensingleton@gmail.com" aria-label="Email">
-        <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
-          <path
-            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
-          </path>
-        </svg>
-      </a>
     </div>
     <p class="text-white text-center pt-4">
       Made with 🍵 and
-      <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2025
+      <span class="animate-pulse"> ❤️ </span> by, yours truly. © 2026
     </p>
   </footer>
   <script src="script.js"></script>
