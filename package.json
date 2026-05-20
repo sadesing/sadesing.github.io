@@ -12,5 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "overrides": {
+    "glob": ">=10.5.0",
+    "postcss": ">=8.5.10"
+  }
 }
