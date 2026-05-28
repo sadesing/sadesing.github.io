@@ -19,6 +19,7 @@
       class="sticky top-0 w-full z-50 bg-black transition-all duration-300"
     >
       <nav
+        aria-label="Primary navigation"
         class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12"
       >
         <ul class="hidden md:flex space-x-5 text-base">
@@ -39,15 +40,15 @@
             >
           </li>
         </ul>
-        <h1
+        <p
           id="header-logo"
           class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300"
         >
           <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
-        </h1>
+        </p>
         <div class="hidden md:flex space-x-4">
           <a
-            href="https://www.linkedin.com/in/snsingleton/"
+            href="https://www.linkedin.com/in/singsn/"
             class="header-icon"
             target="_blank"
             rel="noopener noreferrer"
@@ -85,24 +86,26 @@
           </a>
         </div>
       </nav>
-      <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
-        <li>
-          <a
-            href="index.html"
-            class="nav-link nav-link--header transition-all duration-300"
-            aria-label="Go to Portfolio"
-            >Portfolio</a
-          >
-        </li>
-        <li>
-          <a
-            href="about.html"
-            class="nav-link nav-link--header transition-all duration-300"
-            aria-label="Go to About Section"
-            >About</a
-          >
-        </li>
-      </ul>
+      <nav aria-label="Mobile navigation">
+        <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link nav-link--header transition-all duration-300"
+              aria-label="Go to Portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link nav-link--header transition-all duration-300"
+              aria-label="Go to About Section"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <!-- Content -->
     <main
@@ -384,11 +387,10 @@
     </button>
     <footer
       class="bg-black text-xs bottom-0 w-full h-28 z-40"
-      role="contentinfo"
     >
       <div class="flex justify-center items-center space-x-4 pt-8">
         <a
-          href="https://www.linkedin.com/in/snsingleton/"
+          href="https://www.linkedin.com/in/singsn/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"

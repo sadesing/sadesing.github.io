@@ -11,6 +11,13 @@
   src: url("fonts/StudyHard.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Bethoman";
+  src: url("fonts/Bethoman.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -90,11 +97,6 @@ p {
   font-size: 1.875rem;
 }
 
-@media (max-width: 40rem) {
-  .heading-h1 {
-    font-size: 1.875rem;
-  }
-}
 
 .heading-h2 {
   font-family: "Urbanist", sans-serif;
@@ -339,7 +341,7 @@ p {
   position: relative;
 }
 
-.polaroid-caption h2 {
+.polaroid-caption p {
   font-family: "Gloria Hallelujah", cursive;
   margin: 0.5rem;
   transform: rotate(-2deg);
@@ -361,7 +363,7 @@ p {
     height: 160px;
   }
 
-  .polaroid-caption h2 {
+  .polaroid-caption p {
     font-size: 0.875rem;
   }
 
@@ -372,4 +374,292 @@ p {
   .polaroid-group {
     min-height: auto;
   }
+}
+
+/* =============================================================
+   ABOUT — "What I'm up to" cards
+   ============================================================= */
+
+.up-to-card {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-label {
+  font-family: monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 3px;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #020101;
+  line-height: 1.45;
+}
+
+/* Reading card */
+.vis-book { background: linear-gradient(135deg, #1a3a4a, #2a5a6a); }
+
+.book-3d,
+.book-3d::after,
+.book-3d::before {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.book-3d {
+  width: 95px;
+  height: 130px;
+  position: relative;
+  background: #1a2a3a;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow 0.3s linear;
+  display: flex;
+}
+
+.book-3d img {
+  margin: 0;
+  border-radius: 0 5px 5px 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all 0.45s ease;
+}
+
+.book-3d:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 9px 20px 0 rgba(0, 0, 0, 0.45);
+}
+
+.book-3d:hover img {
+  transform: rotateY(-25deg);
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-3d::after,
+.book-3d::before {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: white;
+  border: 1px solid #d9d9d9;
+}
+
+.book-3d::before { left: -3px; }
+.book-3d::after  { left: -6px; }
+
+@media (max-width: 768px) {
+  .book-3d { width: 120px; height: 165px; }
+}
+
+/* Travel card */
+.vis-travel { background: linear-gradient(160deg, #f5ebe0, #e8d5c4); }
+
+.stamp {
+  position: absolute;
+  border: 2px solid #b8725d;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #b8725d;
+  transform: rotate(12deg);
+  opacity: 0.6;
+  top: 10px;
+  right: 14px;
+  letter-spacing: 0.05em;
+}
+
+.card-polaroid {
+  width: 120px;
+  background: #fff;
+  padding: 8px 8px 10px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.12);
+  transform: rotate(-4deg);
+  position: relative;
+  z-index: 1;
+}
+
+.card-polaroid-img {
+  width: 100%;
+  aspect-ratio: 2.7 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.card-polaroid-caption {
+  font-family: "Bethoman", cursive;
+  font-size: 0.85rem;
+  color: #5a5046;
+  text-align: center;
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+}
+
+.plane-anim {
+  position: absolute;
+  z-index: 0;
+  animation: fly-takeoff 7s ease-in-out infinite;
+}
+
+@keyframes fly-takeoff {
+  0%   { left: -40px; top: 55%; opacity: 0; }
+  10%  { opacity: 0.8; }
+  50%  { top: 35%; }
+  90%  { opacity: 0.8; }
+  100% { left: 105%; top: 40%; opacity: 0; }
+}
+
+/* Study card */
+.vis-study { background: linear-gradient(145deg, #2d2438, #3d3450); }
+
+.terminal-block { text-align: left; }
+
+.terminal-line {
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: #a89cc8;
+  line-height: 1.7;
+}
+
+.terminal-line.dim { opacity: 0.5; }
+
+.cursor-blink {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  background: #a89cc8;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plane-anim { animation: none; opacity: 0.5; left: 40%; top: 42%; }
+  .cursor-blink { animation: none; opacity: 0.5; }
+  .mascot { transition: none; }
+  .ub::after, .tsu::after { transition: none; }
+}
+
+/* Life / coffee card */
+.vis-life { background: linear-gradient(135deg, #1b3026, #2a4a38); }
+
+.card-polaroid-landscape {
+  width: 150px;
+  padding: 5px 5px 16px;
+  transform: rotate(-2deg);
+}
+
+.card-polaroid-landscape .card-polaroid-img {
+  aspect-ratio: 3 / 2;
+}
+
+/* Bio section */
+.bio-para::first-letter {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  float: left;
+  line-height: 0.78;
+  margin-right: 8px;
+  margin-top: 6px;
+  color: #d85a30;
+}
+
+.ub,
+.tsu {
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.ub { color: #0054B3; }
+.tsu { color: #73263A; }
+
+.ub a,
+.tsu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mascot {
+  display: inline-block;
+  vertical-align: -4px;
+  margin-left: 4px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mascot svg { width: 24px; height: 24px; }
+
+.ub:hover .mascot,
+.ub:focus-within .mascot { transform: scale(1.3) rotate(-10deg) translateY(-2px); }
+
+.tsu:hover .mascot,
+.tsu:focus-within .mascot { transform: scale(1.3) rotate(8deg) translateY(-2px); }
+
+.ub::after,
+.tsu::after {
+  content: attr(data-detail);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  white-space: nowrap;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  transform: translateY(-4px);
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.ub:hover::after,
+.ub:focus-within::after,
+.tsu:hover::after,
+.tsu:focus-within::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Profile photo */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: filter 0.5s ease;
+}
+
+.profile-photo:hover {
+  filter: grayscale(1);
 }

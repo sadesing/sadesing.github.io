@@ -16,22 +16,22 @@
 
 <body class="w-full">
   <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
-    <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
+    <nav aria-label="Primary navigation" class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
       <ul class="hidden md:flex space-x-5 text-base">
         <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300"
             aria-label="Go to Portfolio">Portfolio</a></li>
         <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300"
-            aria-label="Go to About Section">About</a></li>
+            aria-label="Go to About Section" aria-current="page">About</a></li>
       </ul>
-      <h1 id="header-logo"
+      <p id="header-logo"
         class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
         <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
-      </h1>
+      </p>
       <div class="hidden md:flex space-x-4">
-        <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.linkedin.com/in/singsn/" class="header-icon" target="_blank" rel="noopener noreferrer"
           aria-label="LinkedIn">
           <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
               d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
             </path>
@@ -39,7 +39,7 @@
         </a>
         <a href="https://github.com/sadesing" class="header-icon" target="_blank" rel="noopener noreferrer"
           aria-label="GitHub">
-          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor">
+          <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path
               d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
             </path>
@@ -47,41 +47,131 @@
         </a>
       </div>
     </nav>
-    <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
-      <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
-          aria-label="Go to Portfolio">Portfolio</a></li>
-      <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
-          aria-label="Go to About Section">About</a></li>
-    </ul>
+    <nav aria-label="Mobile navigation">
+      <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
+        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
+            aria-label="Go to Portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
+            aria-label="Go to About Section" aria-current="page">About</a></li>
+      </ul>
+    </nav>
   </header>
   <!-- Content -->
   <main class="pt-4 mx-auto max-w-[1000px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
-    <section class="pt-14 md:pt-24">
-      <div class="flex flex-col space-x-2 justify-center items-center">
-        <!--
-            <img class="h-36 max-w-full" src="assets/images/profile.png" alt="Black and white profile image of Sade" />
-            -->
-        <h2 class="heading-h2 pt-2 mb-4">About Me</h2>
-      </div>
+    <section class="mt-12 md:pt-14 border border-grey-500 shadow-lg">
       <div class="p-6 pt-4 shadow-lg">
-        <p class="text-base">
-          I&#39;m a proud alumna of <a class="nav-link font-bold" href="https://engineering.buffalo.edu/"
-            target="_blank" rel="noopener noreferrer">University at Buffalo (SUNY)</a> and <a class="nav-link font-bold"
-            href="https://www.tsu.edu/" target="_blank" rel="noopener noreferrer">Texas Southern University</a>. My
-          background in human factors and systems thinking continues to shape how I approach digital experiences, with
-          empathy, usability, and real-world impact in mind.
-          <br />
-          <br />
-          I specialize in building fast, inclusive websites that work beautifully across devices. My approach combines
-          accessible code, thoughtful UX, and data-driven design decisions to ensure each project is both user-friendly
-          and high performing. Whether I&#39;m developing from scratch or working within a CMS like Shopify, I focus on
-          creating experiences that are intuitive, responsive, and built with purpose.
-          <br />
-          <br />
-          In my free time, I enjoy traveling, spending time with family, exploring different cuisines, and having fun
-          with photography. I strive to envision what others might deem impossible, to dedicate myself to meaningful
-          work, and to cultivate relationships with those who inspire me.
-        </p>
+        <div class="flex flex-col gap-4 items-center mb-2">
+          <img class="profile-photo" src="assets/images/profile.png" alt="Profile photo of Sade" />
+          <h1 class="heading-h2">About Me</h1>
+          <div class="w-full md:px-12">
+            <p class="text-base bio-para">
+              I&#39;m a proud alumna of <span class="ub" data-detail="grad ・ human factors engineering"><a
+                  href="https://engineering.buffalo.edu/" target="_blank" rel="noopener noreferrer">University at
+                  Buffalo (SUNY)</a><span class="mascot" aria-hidden="true">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254.000000 1254.000000"
+                    preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,1254.000000) scale(0.100000,-0.100000)" fill="#0054B3"
+                      stroke="#0054B3" stroke-width="400" stroke-linejoin="round">
+                      <path d="M10573 10275 c-35 -35 -35 -36 -30 -108 2 -39 7 -81 10 -92 67 -262
+80 -489 35 -655 -66 -243 -191 -506 -324 -680 -58 -76 -192 -208 -299 -295
+-232 -187 -456 -298 -765 -379 -313 -82 -516 -108 -860 -110 -213 -2 -281 -5
+-345 -20 -110 -24 -162 -49 -177 -83 -7 -15 -13 -30 -14 -32 -2 -1 -47 15
+-102 38 -210 86 -403 136 -642 168 -106 14 -198 17 -425 16 -684 -3 -961 -54
+-1770 -325 -99 -33 -191 -67 -204 -75 -21 -14 -28 -13 -80 10 -122 55 -311 92
+-656 127 -526 53 -765 92 -1050 170 -388 107 -605 242 -734 455 -79 130 -90
+241 -42 427 57 219 264 802 323 908 40 72 113 166 144 187 69 45 71 154 3 189
+-44 22 -76 17 -188 -33 -148 -65 -243 -121 -334 -197 -133 -110 -422 -373
+-487 -443 -220 -234 -382 -504 -484 -804 -89 -264 -99 -543 -25 -763 58 -173
+180 -375 308 -509 255 -266 917 -543 1486 -621 207 -29 515 -52 835 -62 91 -3
+169 -9 174 -14 5 -5 -17 -16 -50 -25 -213 -61 -508 -186 -669 -285 -107 -65
+-221 -158 -315 -256 -85 -88 -211 -265 -232 -325 -13 -39 2 -97 34 -126 73
+-66 371 -95 558 -54 153 34 388 129 512 207 87 55 191 137 309 244 66 61 130
+110 140 110 11 0 23 -10 28 -23 10 -25 62 -277 80 -387 13 -74 58 -325 65
+-355 61 -278 83 -352 139 -455 80 -150 212 -297 565 -629 180 -169 252 -260
+281 -356 25 -79 40 -209 42 -365 3 -171 31 -277 101 -382 60 -89 115 -148 206
+-220 189 -148 450 -240 792 -278 52 -5 145 -17 205 -26 162 -23 286 -28 373
+-14 188 29 294 92 480 285 155 160 161 174 172 403 5 97 12 209 15 247 24 270
+118 625 248 935 24 58 70 168 102 245 31 77 63 154 70 170 36 83 146 380 169
+455 44 145 74 298 96 485 11 99 22 196 25 215 2 19 4 44 5 56 0 11 6 28 13 39
+13 17 24 11 163 -86 289 -201 378 -229 735 -229 221 0 293 13 444 82 128 58
+141 68 156 118 16 54 0 93 -76 178 -98 110 -163 163 -272 219 -206 107 -426
+165 -775 204 -183 20 -159 25 252 54 242 17 413 46 685 115 518 133 709 223
+989 468 199 175 358 338 419 432 187 289 278 614 280 1000 2 296 -44 486 -212
+864 -115 260 -244 456 -386 587 -119 111 -180 126 -242 64z m235 -302 c97
+-113 190 -275 280 -488 94 -224 136 -361 163 -528 11 -75 8 -355 -6 -437 -41
+-243 -78 -367 -161 -532 -61 -122 -106 -187 -194 -281 -89 -96 -319 -304 -420
+-380 -169 -129 -419 -229 -830 -332 -266 -66 -398 -85 -700 -100 -69 -4 -186
+-13 -260 -20 -74 -8 -189 -19 -255 -25 -66 -6 -135 -18 -152 -25 -56 -25 -57
+-102 -3 -133 22 -13 28 -22 24 -38 -4 -15 3 -28 26 -47 34 -29 32 -29 265 -56
+478 -57 654 -96 844 -188 99 -49 223 -140 261 -193 12 -17 21 -33 19 -34 -13
+-11 -111 -49 -160 -61 -75 -20 -383 -20 -491 -1 -123 22 -141 33 -531 298
+-102 69 -178 75 -236 17 -38 -37 -56 -118 -71 -304 -15 -191 -47 -408 -76
+-520 -47 -183 -142 -435 -331 -880 -125 -295 -213 -557 -258 -773 -21 -103
+-45 -313 -45 -403 0 -110 -20 -290 -35 -319 -19 -36 -184 -201 -251 -251 -119
+-88 -252 -121 -405 -101 -244 32 -604 95 -679 118 -185 57 -395 189 -501 316
+-92 111 -115 190 -123 428 -9 267 -42 380 -151 530 -27 36 -160 175 -298 310
+-462 454 -478 482 -586 985 -16 77 -35 167 -41 200 -6 33 -20 94 -30 135 -82
+329 -105 414 -122 441 -20 33 -71 59 -115 59 -61 0 -102 -22 -195 -103 -312
+-273 -454 -363 -708 -448 -156 -52 -256 -66 -368 -51 -47 6 -90 16 -95 21 -15
+15 46 109 132 204 136 149 317 280 521 375 152 71 262 115 535 215 63 23 93
+39 100 54 8 18 17 21 61 21 60 -1 69 3 89 42 18 35 8 69 -28 93 -26 17 -189
+41 -347 52 -47 3 -110 8 -140 10 -30 3 -176 12 -325 21 -387 22 -592 49 -828
+109 -249 64 -418 125 -670 244 -181 85 -326 181 -425 282 -72 73 -196 260
+-236 356 -110 260 -98 521 38 861 97 242 257 474 467 678 187 183 450 404 480
+404 5 0 4 -12 -2 -27 -6 -16 -40 -111 -76 -213 -268 -765 -295 -873 -259
+-1045 51 -245 235 -460 512 -598 192 -96 607 -203 982 -252 102 -13 419 -44
+627 -60 96 -8 250 -30 354 -51 130 -26 196 -50 229 -83 17 -17 40 -31 51 -31
+35 0 71 19 82 44 14 30 64 53 264 118 462 151 728 220 995 258 203 28 744 39
+960 19 237 -21 475 -83 665 -173 151 -72 218 -117 302 -202 67 -68 76 -74 114
+-74 53 0 78 14 95 56 31 73 -16 142 -165 241 -61 41 -60 44 39 67 99 22 222
+28 365 15 272 -24 701 41 1070 162 298 98 597 289 835 535 136 141 215 254
+305 439 194 397 234 615 180 973 -8 53 -15 100 -15 105 0 19 22 2 68 -50z" />
+                      <path d="M6323 9719 c-12 -4 -26 -17 -32 -27 -27 -51 -42 -553 -20 -722 18
+-144 52 -194 122 -176 42 10 48 44 31 153 -12 70 -17 190 -19 421 -3 214 -8
+328 -15 337 -15 18 -42 24 -67 14z" />
+                      <path d="M7510 9473 c-51 -19 -149 -161 -279 -406 -93 -176 -121 -276 -85
+-311 21 -21 77 -20 96 2 19 21 338 654 338 670 0 14 -36 52 -47 51 -5 0 -15
+-3 -23 -6z" />
+                      <path d="M5042 9058 c-10 -13 -15 -33 -13 -56 0 -7 23 -37 49 -65 26 -29 68
+-77 92 -107 146 -182 222 -251 279 -252 41 -1 61 18 61 58 0 30 -19 54 -155
+202 -86 93 -175 183 -199 200 -46 33 -96 42 -114 20z" />
+                    </g>
+                  </svg></span></span> and <span class="tsu" data-detail="undergrad ・ human performance"><a
+                  href="https://www.tsu.edu/" target="_blank" rel="noopener noreferrer">Texas Southern
+                  University</a><span class="mascot" aria-hidden="true"><svg viewBox="-4 -3 48 38" fill="none"
+                    stroke="#73263A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M 12 30 Q 5 27 7 21 Q 9 15 15 13 Q 18 11 20 13 Q 22 11 26 13 Q 32 15 33 21 Q 34 27 27 30 Q 20 32 12 30 Z" />
+                    <path d="M 4 13 Q 2 9 5 6 Q 8 3 12 5 Q 14 8 12 12 Q 9 15 4 13 Z" />
+                    <path d="M 12 10 Q 12 6 16 4 Q 20 3 21 7 Q 21 11 18 12 Q 13 13 12 10 Z" />
+                    <path d="M 19 10 Q 19 6 23 4 Q 27 3 28 7 Q 28 11 25 12 Q 21 13 19 10 Z" />
+                    <path d="M 28 13 Q 26 9 29 6 Q 32 3 36 5 Q 38 8 36 12 Q 33 15 28 13 Z" />
+                  </svg></span></span>. My
+              background in human factors and systems thinking continues to shape how I approach digital experiences,
+              with
+              empathy, usability, and real-world impact in mind.
+            </p>
+            <p class="text-base mt-4">
+              I specialize in building fast, inclusive websites that work beautifully across devices. My approach
+              combines
+              accessible code, thoughtful UX, and data-driven design decisions to ensure each project is both
+              user-friendly
+              and high performing. Whether I&#39;m developing from scratch or working within a CMS like Shopify, I focus
+              on
+              creating experiences that are intuitive, responsive, and built with purpose.
+            </p>
+            <p class="text-base mt-4">
+              In my free time, I enjoy traveling, spending time with family, exploring different cuisines, and having
+              fun
+              with photography.
+            </p>
+          </div>
+        </div>
+        <!-- HOBBIES SECTION -->
+
         <div class="polaroid-group" aria-label="Collection of polaroid photos">
           <div
             class="drybn-polaroid group z-20 w-72 h-80 bg-white p-4 shadow-lg mx-auto mb-8 md:mb-0 transform transition-transform duration-200 hover:z-10"
@@ -97,15 +187,15 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
+                <p class="font-gloria text-sm -rotate-1 transform">
                   Palm Trees in Marrakesh
-                </h2>
+                </p>
               </div>
             </div>
           </div>
           <div
             class="drybn-polaroid group w-72 h-80 bg-white p-4 shadow-lg mx-auto mb-8 md:mb-0 transform transition-transform duration-200 hover:z-10"
-            aria-label="Polaroid photo: The streets of Cochabomba, Bolivia on Septemeber 28, 2024" tabindex="0">
+            aria-label="Polaroid photo: The streets of Cochabamba, Bolivia on September 28, 2024" tabindex="0">
             <div class="relative h-full">
               <div class="polaroid-image h-60 bg-gray-800 overflow-hidden">
                 <img src="assets/images/photos/cocha.jpg"
@@ -118,9 +208,9 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
-                  The streets of Cochabomba, Bolivia
-                </h2>
+                <p class="font-gloria text-sm -rotate-1 transform">
+                  The streets of Cochabamba, Bolivia
+                </p>
               </div>
             </div>
           </div>
@@ -130,7 +220,7 @@
             <div class="relative h-full">
               <div class="polaroid-image h-60 bg-gray-800 overflow-hidden">
                 <img src="assets/images/photos/laguna.jpg"
-                  alt=" A sunset over the ocean with a rocky beach in the foreground"
+                  alt="A sunset over the ocean with a rocky beach in the foreground"
                   class="w-full h-full object-cover border border-gray-300 shadow-inner pointer-events-none">
               </div>
               <div class="polaroid-date mt-2">
@@ -139,9 +229,9 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
+                <p class="font-gloria text-sm -rotate-1 transform">
                   Sunset in Laguna Beach
-                </h2>
+                </p>
               </div>
             </div>
           </div>
@@ -160,15 +250,15 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
+                <p class="font-gloria text-sm -rotate-1 transform">
                   Maasai Adumu Dance
-                </h2>
+                </p>
               </div>
             </div>
           </div>
           <div
             class="drybn-polaroid group w-72 h-80 bg-white p-4 shadow-lg mx-auto mb-8 md:mb-0 transform transition-transform duration-200 hover:z-10"
-            aria-label="Polaroid photo: Rainbows in Kenya on February 1, 2022" tabindex="0">
+            aria-label="Polaroid photo: Rainbows in Kenya on January 2, 2022" tabindex="0">
             <div class="relative h-full">
               <div class="polaroid-image h-60 bg-gray-800 overflow-hidden">
                 <img src="assets/images/photos/rainbow.jpg" alt="A rainbow over a field with a tree in the foreground"
@@ -180,9 +270,9 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
+                <p class="font-gloria text-sm -rotate-1 transform">
                   Rainbows in Kenya
-                </h2>
+                </p>
               </div>
             </div>
           </div>
@@ -200,9 +290,9 @@
                 </p>
               </div>
               <div class="polaroid-caption text-center mt-2">
-                <h2 class="font-gloria text-sm -rotate-1 transform">
+                <p class="font-gloria text-sm -rotate-1 transform">
                   Views from the 6ix
-                </h2>
+                </p>
               </div>
             </div>
           </div>
@@ -210,12 +300,14 @@
         <p class="hidden md:block text-xs text-center mt-0 pb-8 italic">
           <strong>Click</strong> and <strong>drag</strong> the polaroids to move them around (:
         </p>
+      </div>
     </section>
   </main>
-  <button id="back-to-top" type="button" class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
+  <button id="back-to-top" type="button"
+    class="fixed bottom-32 right-4 p-2 rounded-full shadow-lg hover:bg-slate-50 animate-bounce"
     aria-label="Scroll to the top of the page">
-    <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
-      aria-label="Up arrow icon">
+    <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"
+      aria-hidden="true">
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
@@ -229,19 +321,18 @@
       </g>
     </svg>
   </button>
-  <footer class="bg-black text-xs bottom-0 w-full h-28 z-40" role="contentinfo">
+  <footer class="bg-black text-xs bottom-0 w-full h-28 z-40">
     <div class="flex justify-center items-center space-x-4 pt-8">
-      <a href="https://www.linkedin.com/in/snsingleton/" target="_blank" rel="noopener noreferrer"
-        aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/singsn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path
             d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z">
           </path>
         </svg>
       </a>
       <a href="https://github.com/sadesing" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff">
+        <svg class="w-5 h-5 hover:scale-125" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
           <path
             d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.912.832.091-.647.349-1.088.635-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.026 2.747-1.026.546 1.376.202 2.394.1 2.646.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.137 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z">
           </path>

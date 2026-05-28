@@ -16,19 +16,19 @@
 
 <body class="w-full">
   <header id="main-header" class="sticky top-0 w-full z-50 bg-black transition-all duration-300">
-    <nav class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
+    <nav aria-label="Primary navigation" class="relative container mx-auto flex items-center justify-between py-6 md:py-4 md:px-12">
       <ul class="hidden md:flex space-x-5 text-base">
         <li><a href="index.html" class="nav-link nav-link--header text-white transition-all duration-300"
             aria-label="Go to Portfolio">Portfolio</a></li>
         <li><a href="about.html" class="nav-link nav-link--header text-white transition-all duration-300"
             aria-label="Go to About Section">About</a></li>
       </ul>
-      <h1 id="header-logo"
+      <p id="header-logo"
         class="absolute left-1/2 transform -translate-x-1/2 text-xl font-semibold text-white transition-all duration-300">
         <a href="index.html" aria-label="Sade Portfolio Home">S A D E</a>
-      </h1>
+      </p>
       <div class="hidden md:flex space-x-4">
-        <a href="https://www.linkedin.com/in/snsingleton/" class="header-icon" target="_blank" rel="noopener noreferrer"
+        <a href="https://www.linkedin.com/in/singsn/" class="header-icon" target="_blank" rel="noopener noreferrer"
           aria-label="LinkedIn">
           <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
@@ -47,12 +47,14 @@
         </a>
       </div>
     </nav>
-    <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
-      <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
-          aria-label="Go to Portfolio">Portfolio</a></li>
-      <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
-          aria-label="Go to About Section">About</a></li>
-    </ul>
+    <nav aria-label="Mobile navigation">
+      <ul class="md:hidden flex justify-center space-x-5 text-base pb-4">
+        <li><a href="index.html" class="nav-link nav-link--header transition-all duration-300"
+            aria-label="Go to Portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-link--header  transition-all duration-300"
+            aria-label="Go to About Section">About</a></li>
+      </ul>
+    </nav>
   </header>
   <!-- Content -->
   <main class="pt-4 mx-auto max-w-[900px] px-6 pb-24 md:px-6 md:pb-44 md:pt-10">
@@ -118,9 +120,9 @@
       </g>
     </svg>
   </button>
-  <footer class="bg-black text-xs bottom-0 w-full h-28 z-40" role="contentinfo">
+  <footer class="bg-black text-xs bottom-0 w-full h-28 z-40">
     <div class="flex justify-center items-center space-x-4 pt-8">
-      <a href="https://www.linkedin.com/in/snsingleton/" target="_blank" rel="noopener noreferrer"
+      <a href="https://www.linkedin.com/in/singsn/" target="_blank" rel="noopener noreferrer"
         aria-label="LinkedIn">
         <svg class="w-5 h-5 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff"
           xmlns="http://www.w3.org/2000/svg">
